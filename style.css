@@ -803,7 +803,7 @@ footer {
 
 @media screen and (max-width: 375px) {
     .cover .title {
-        font-size: 2rem;
+        font-size: 1.9rem;
         padding-top: 3em;
     }
 
