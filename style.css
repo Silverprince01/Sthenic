@@ -25,6 +25,8 @@ header {
 
 .logo img{
     width: 100px;
+    z-index: 7;
+    position: relative;
 }
 
 nav {
@@ -613,6 +615,90 @@ footer {
     line-height: 24px;
 }
 
+/* CAREERS PAGE */
+
+.career-banner {
+    position: relative;
+}
+
+.career-banner img {
+    display: block;
+    width: 100%;
+}
+
+.career-container {
+    padding: 3em 6em;
+}
+
+.career-header {
+    color: #001D45;
+    margin-top: 2em;
+}
+
+.career-header h2 {
+    font-size: 40px;
+    line-height: 48px;
+}
+
+.career-header p {
+    font-size: 16px;
+    line-height: 24px;
+    margin-block: 1.5em;
+}
+
+.career-main {
+    width: 75%;
+    margin: 3em auto;
+}
+
+.career-main-img {
+    margin-bottom: 2em;
+}
+
+.career-main-img img{
+    width: 100%;
+    display: block;
+}
+
+.career-card-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.career-card {
+    width: 46%;
+    color: #001D45;
+}
+
+.career-card-title {
+    font-size: 22px;
+    line-height: 24px;
+}
+
+.career-card p {
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+.career-btn {
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    padding: .5em 1em;
+    background: #0177B2;
+    border: 1px solid transparent;
+    transition: .5s ease-in-out;
+}
+
+.career-btn:hover {
+    background: transparent;
+    border: 1px solid #0177B2;
+    color: #0177B2;
+}
+
+
 /* RESPONSIVENESS */
 
 /* small screen laptop */
@@ -902,6 +988,7 @@ footer {
         top: 58px;
         transform: translateY(-400px);
         opacity: 0;
+        z-index: 3;
         transition: all 0.6s ease-in-out;
     }
 
@@ -1073,6 +1160,40 @@ footer {
 
     .insights-card-wrapper {
         grid-template-columns: 1fr;
+    }
+
+    .career-banner {
+        display: none;
+    }
+
+    .career-container {
+        padding: 1em 2em;
+        padding-bottom: 0;
+    }
+
+    .career-header h2 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .career-main {
+        width: 100%;
+        margin: 3em auto;
+    }
+    
+    .career-main-img img{
+        width: 100%;
+        display: block;
+    }
+
+    .career-card-flex {
+        flex-direction: column;
+    }
+    
+    .career-card {
+        width: 100%;
+        color: #001D45;
+        margin-bottom: 2em;
     }
 
 }
