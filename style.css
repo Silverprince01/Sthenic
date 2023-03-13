@@ -37,11 +37,16 @@ nav {
 nav ul {
     display: flex;
     align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
 nav ul li {
     list-style: none;
-    margin-right: 2em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 nav ul li a{
@@ -51,10 +56,16 @@ nav ul li a{
     padding-bottom: 0.1em;
     border-bottom: 1px solid transparent;
     transition: .2s ease-in-out;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 1.5em;
 }
 
 nav ul li a:hover{
-    border-bottom: 1px solid #fff;
+    background: #5DDDFF;
+    color: #252525;
 }
 
 .menu {
@@ -110,7 +121,7 @@ nav ul li a:hover{
     padding: 0 6em;
     background: #001D45;
     color: #fff;
-    background: url(/images/aleksandr-popov-aW50su5Dwek-unsplash.jpg);
+    background: url(/images/bg-3.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -783,6 +794,114 @@ footer {
     color: #fff;
     margin-left: 1.5em;
 }
+
+/* EARLY CAREER PAGE */
+
+.top-band {
+    height: 20px;
+    width: 100%;
+    background: #85B8FF;
+}
+
+.top-band-B{
+    height: 20px;
+    width: 100%;
+    background: #00A8A8;
+}
+
+.early-career-container {
+    padding: 4em 10em;
+}
+
+.back {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5em;
+    font-size: 16px;
+    line-height: 24px;
+    color: #252525;
+}
+
+.back img {
+    margin-right: 1em;
+    width: 15px;
+}
+
+.early-career-text {
+    color:  #252525;
+}
+
+.early-career-text h3 {
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.early-career-text p {
+    margin: 2em 0;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.early-career-content {
+    width: 50%;
+    margin-left: 3em;
+    margin-top: 2em;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: .3em;
+    margin-bottom: 1em;
+}
+
+.form-section label {
+    font-size: 16px;
+    line-height: 24px;
+    color: #252525;
+}
+
+.select-wrapper {
+    width: 100%;
+    border: 1px solid #808080;
+    padding-inline: 1em;
+    border-radius: 2px;
+    transition: all .4s ease-in-out;
+}
+
+.select-wrapper select {
+    width: 100%;
+    height: 100%;
+    padding-block: 1em;
+    border: none;
+    outline: none;
+    color: #252525;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.select-wrapper:hover {
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.early-career-btn {
+    border: none;
+    background: #0177B2;
+    font-size: 18px;
+    line-height: 32px;
+    color: #fff;
+    padding: 0.5em 1em;
+    float: right;
+    border: 1px solid transparent;
+    transition: all 0.4s ease-in-out;
+}
+
+.early-career-btn:hover {
+    background: transparent;
+    border: 1px solid #0177B2;
+    color: #0177B2;
+}
+
 
 /* RESPONSIVENESS */
 
