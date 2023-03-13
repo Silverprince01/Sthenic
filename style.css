@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -24,7 +25,8 @@ header {
 }
 
 .logo img{
-    width: 100px;
+    width: 121px;
+    height: 125px;
     z-index: 7;
     position: relative;
 }
@@ -117,7 +119,7 @@ nav ul li a:hover{
 }
 
 .cover {
-    height: 784px;
+    height: 852px;
     padding: 0 6em;
     background: #001D45;
     color: #fff;
@@ -129,8 +131,8 @@ nav ul li a:hover{
 }
 
 .cover .title {
-    font-size: 4rem;
-    padding-top: 3em;
+    font-size: 3.5rem;
+    padding-top: 2em;
 }
 
 .subtitle {
@@ -152,25 +154,38 @@ nav ul li a:hover{
 .categories {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    width: 80%;
+    width: 100%;
+}
+
+.cat-card {
+    width: 30%;
+    padding: 1.5em 1em;
+    background: transparent;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+}
+
+.cat-card p {
+    line-height: 28px;
 }
 
 .cat {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1em;
 }
 
-.cat a{
+.cat p{
     width: 60%;
     line-height: 28px;
     font-size: 20px;
-    margin-right: 1em;
+    margin-right: 4em;
     color: #fff;
 }
 
-.cat a:hover {
-    text-decoration: underline;
+.para {
+    opacity: 0;
 }
 
 .we {
@@ -294,6 +309,12 @@ nav ul li a:hover{
     padding: 2em;
     border-radius: 10px;
     line-height: 25px;
+    transition: .4s ease-in-out;
+}
+
+.card:hover {
+    background: rgba(133, 184, 255, 0.1);
+    border: 1px solid transparent;
 }
 
 .card-title {
@@ -311,17 +332,20 @@ nav ul li a:hover{
 .vision {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     padding: 10em;
     background: linear-gradient(to right, #fff, #fef8df);
 }
 
 .vision-card {
-    border: 1px solid #0177B2;
-    width: 47%;
+    border: 1px solid #001D45;
+    width: 45%;
+    height: 250px;
     padding: 2em;
     border-radius: 5px;
     line-height: 25px;
     color: #001D45;
+    transition: .3s ease;
 }
 
 .vision-card p {
@@ -340,10 +364,12 @@ nav ul li a:hover{
 .title-flex h3 {
     font-size: 28px;
     line-height: 36px;
+    transition: .3s ease;
 }
 
 .title-flex img {
-    width: 30px;
+    width: 40px;
+    transition: .3s ease;
 }
 
 .more-info {
@@ -798,13 +824,13 @@ footer {
 /* EARLY CAREER PAGE */
 
 .top-band {
-    height: 20px;
+    height: 30px;
     width: 100%;
     background: #85B8FF;
 }
 
 .top-band-B{
-    height: 20px;
+    height: 30px;
     width: 100%;
     background: #00A8A8;
 }
