@@ -837,6 +837,9 @@ footer {
 
 .early-career-container {
     padding: 4em 10em;
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
 }
 
 .back {
@@ -869,9 +872,17 @@ footer {
 }
 
 .early-career-content {
-    width: 50%;
+    width: 45%;
     margin-left: 3em;
     margin-top: 2em;
+}
+
+.early-career-img {
+    width: 45%;
+}
+
+.early-career-img img{
+    width: 100%;
 }
 
 .form-section {
@@ -927,6 +938,379 @@ footer {
     border: 1px solid #0177B2;
     color: #0177B2;
 }
+
+/* About Us page */
+
+.about-us-cover {
+    height: 267px;
+    background: url(/images/Rectangle\ 23.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding-inline: 12em;
+}
+
+.about-us-cover h3 {
+    color: #fff;
+    font-size: 48px;
+    line-height: 56px;
+    width: 60%;
+}
+
+.about-us-main {
+    padding-inline: 11em;
+    padding-bottom: 5em;
+}
+
+.about-us-title h3 {
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    color: #001D45;
+    margin-block: 2em;
+}
+
+.about-us-main h4 {
+    font-size: 28px;
+    line-height: 36px;
+    color: #001D45;
+    margin-block: 1em;
+}
+
+.about-us-main p {
+    font-size: 16px;
+    line-height: 28px;
+    color: #000000;
+}
+
+.p-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.p-flex-item {
+    width: 45%;
+}
+
+.p-flex-item ul {
+    padding-left: 1.5em;
+}
+
+.story-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+}
+
+.story-text {
+    width: 60%;
+}
+
+.story-text h4 {
+    margin-block: .5em;
+}
+
+.story-text p {
+    line-height: 28px;
+}
+
+.story-text ul {
+    line-height: 28px;
+    padding-left: 1em;
+}
+
+.story-img {
+    width: 40%;
+}
+
+.about-more-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 2em;
+    height: auto;
+    margin-bottom: 0;
+}
+
+.about-more-info-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+}
+
+.about-more-info-text h2 {
+    font-size: 1.6rem;
+    line-height: 24px;
+    width: 50%
+}
+
+.about-more-info-text p {
+    width: 50%
+}
+
+
+.about-footer {
+    margin-top: 0;
+}
+
+
+/* FUNDS PAGE */
+
+.our-funds-cover {
+    height: 267px;
+    background: url(/images/Rectangle\ 23.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-inline: 12em;
+}
+
+.our-funds-cover h3 {
+    color: #fff;
+    font-size: 48px;
+    line-height: 56px;
+    width: 60%;
+}
+
+.our-funds-cover p {
+    color: #fff;
+    font-size: 18px;
+    line-height: 24px;
+    width: 60%;
+    margin-top: 1em;
+}
+
+.fund-main {
+    padding-inline: 11em;
+    padding-bottom: 5em;
+}
+
+.fund-main h3 {
+    font-size: 40px;
+    line-height: 48px;
+    color: #001D45;
+}
+
+.fund-main h4 {
+    font-size: 24px;
+    line-height: 32px;
+    color: #000;
+}
+
+.fund-main p {
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.about-the-fund {
+    margin-block: 3em;
+}
+
+.about-the-fund h4 {
+    font-size: 28px;
+    line-height: 36px;
+    color: #001D45;
+    margin-block: .5em;
+}
+
+.thesis h3 {
+    text-align: center;
+    margin-block: 1em;
+}
+
+.thesis-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+}
+
+.thesis-item h4 {
+    margin-bottom: 1em;
+}
+
+.structure-diagram {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4em;
+}
+
+.structure-heading {
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.structure-heading p{
+    font-size: 20px;
+    line-height: 28px;
+}
+
+/* PRODUCTS PAGE */
+
+.our-products-cover {
+    height: 267px;
+    background: url(/images/Rectangle\ 23.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-inline: 12em;
+}
+
+.our-products-cover h3 {
+    color: #fff;
+    font-size: 48px;
+    line-height: 56px;
+    width: 60%;
+}
+
+.products-main {
+   padding-inline: 11em;
+    padding-bottom: 5em; 
+}
+
+.product-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3em;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 5em;
+}
+
+.product-text {
+    width: 45%;
+}
+
+.product-text h3 {
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: .5em;
+}
+
+.product-text p {
+    font-size: 14px;
+    line-height: 28px;
+}
+
+.product-img {
+    width: 45%;
+}
+
+.product-img img {
+    display: block;
+    width: 100%;
+}
+
+
+/* INVESTOR PAGE */
+
+.investor-cover {
+    height: 267px;
+    background: url(/images/Rectangle\ 23.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-inline: 12em;
+}
+
+.investor-cover h3 {
+    color: #fff;
+    font-size: 48px;
+    line-height: 56px;
+    width: 60%;
+}
+
+.investor-main {
+   padding-inline: 11em;
+    padding-bottom: 5em; 
+}
+
+.investors {
+    margin-block: 4em;
+}
+
+.investors h3 {
+    font-size: 40px;
+    line-height: 48px;
+    color: #001D45;
+}
+
+.investors p {
+    font-size: 20px;
+    line-height: 28px;
+    margin-block: .5em;
+}
+
+.investees h3 {
+    font-size: 40px;
+    line-height: 48px;
+    color: #001D45;
+}
+
+.investees p {
+    font-size: 20px;
+    line-height: 28px;
+    margin-block: .5em;
+    width: 50%;
+}
+
+fieldset {
+    padding: 3em 6em;
+    width: 65%;
+    margin: 0 auto;
+    margin-top: 3em;
+}
+
+legend {
+    text-align: center;
+    color: #808080;
+    font-size: 18px;
+    line-height: 24px;
+    padding-inline: .5em;
+}
+
+
+.form-section input {
+    border: 1px solid #252525;
+    padding: 1.2em;
+    padding-left: 1.5em;
+    border-radius: 2px;
+    outline: none;
+    color: #252525;
+    transition: .3s ease-in-out;
+}
+
+.form-section input::placeholder {
+    color: #252525;
+}
+
+.form-section input:hover {
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.form-btn {
+    float: left;
+    margin-top: 1em;
+}
+
+
+
+
+
 
 
 /* RESPONSIVENESS */
