@@ -22,6 +22,9 @@ header {
     padding: 0 3em;
     background: #001D45;
     color: #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 6;
 }
 
 .logo img{
@@ -1306,6 +1309,210 @@ legend {
     float: left;
     margin-top: 1em;
 }
+
+
+
+/* about us page (sthenic finance) */
+
+.our-strategy {
+    height: 378px;
+    padding-inline: 11em;
+    display: flex;
+    align-items: center;
+    background: url(/images/Rectangle\ 31.png);
+    margin-bottom: 3em;
+}
+
+.strategy-text {
+    width: 50%;
+}
+
+.strategy-text h3 {
+    font-size: 40px;
+    line-height: 48px;
+    color: #fff;
+    margin-bottom: .5em
+}
+
+.strategy-text p {
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+}
+
+/* our services page */
+
+.our-services-cover {
+    height: 100vh;
+    background: url(/images/Rectangle\ 23.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-inline: 10em;
+}
+
+.our-services-cover h3 {
+    color: #fff;
+    font-size: 48px;
+    line-height: 56px;
+    width: 60%;
+}
+
+.services-main {
+   padding-inline: 6em;
+    padding-bottom: 5em; 
+}
+
+.services-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3em;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 5em;
+}
+
+.services-text {
+    width: 45%;
+}
+
+.services-text h3 {
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: .5em;
+}
+
+.services-text p {
+    font-size: 14px;
+    line-height: 28px;
+}
+
+.services-img {
+    width: 45%;
+}
+
+.services-img img {
+    display: block;
+    width: 100%;
+}
+
+/* CAPABILITIES PAGE */
+
+.capabilities-cover {
+    height: 100vh;
+    background: url(/images/Rectangle\ 23.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-inline: 10em;
+}
+
+.capabilities-cover h3 {
+    color: #fff;
+    font-size: 48px;
+    line-height: 56px;
+    width: 60%;
+}
+
+.capabilities-main {
+   padding-inline: 12em;
+    padding-block: 5em; 
+}
+
+.cap-grp-flex {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
+
+.cap-grp-item {
+    width: 30%;
+}
+
+.cap-grp-header {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding: .5em;
+    margin-bottom: .5em;
+}
+
+.cap-grp-header h4 {
+    font-size: 20px;
+    line-height: 28px;
+    color: #001D45;
+}
+
+.img-stack {
+    display: grid;
+    gap: .5em;
+    padding: 2em;
+    background: transparent;
+}
+
+.img-stack img {
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+}
+
+
+/* DEALBOOK PAGE */
+
+.dealbook-cover {
+    height: 100vh;
+    background: url(/images/Rectangle\ 23.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-inline: 10em;
+}
+
+.dealbook-cover h3 {
+    color: #fff;
+    font-size: 48px;
+    line-height: 56px;
+    width: 60%;
+}
+
+.dealbook-main {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding-block: 4em;
+}
+
+.dealbook-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 3em;
+}
+
+.dealbook-wrapper a {
+    color: #001D45;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.dealbook-wrapper img {
+    margin-top: 1em;
+}
+
+
+
+
+
+
+
+
 
 
 

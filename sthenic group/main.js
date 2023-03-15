@@ -80,5 +80,8 @@ vCard2.addEventListener('mouseleave', function () {
 
 // button hover effect 
 
-const btn = document.querySelectorAll('.btn')
-console.log(btn);
+document.addEventListener('click', e => {
+    if (e.target.matches('button')) {
+        console.log('this is a button');
+    }
+})
