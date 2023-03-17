@@ -1346,8 +1346,7 @@ legend {
 /* about us page (sthenic finance) */
 
 .our-strategy {
-    height: 100vh;
-    padding-inline: 11em;
+    padding: 11em;
     display: flex;
     align-items: center;
     background: url(/images/Rectangle\ 31.png);
@@ -2194,6 +2193,8 @@ legend {
         height: 58px;
         padding: 0 2em;
         position: relative;
+        position: fixed;
+        top: 0;
     }
 
     .logo img{
