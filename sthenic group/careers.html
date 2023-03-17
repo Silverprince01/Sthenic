@@ -19,7 +19,7 @@
                 <li><a href="home.html">Welcome</a></li>
                 <li><a href="history.html">History</a></li>
                 <li><a href="insights.html">Insights</a></li>
-                <li><a href="careers.html">Careers</a></li>
+                <li><a class="active" href="careers.html">Careers</a></li>
                 <li><a href="contact1.html">Contact Us</a></li>
             </ul>
         </nav>
@@ -29,9 +29,7 @@
         </div>
     </header>
 
-    <div class="career-banner">
-        <img src="/images/Rectangle 22.png" alt="">
-    </div>
+    <div class="career-banner"></div>
 
     <div class="career-container">
         <div class="career-header">
@@ -50,7 +48,7 @@
                     <p>Join our team and launch your career in finance! We offer 
                         exciting opportunities for driven and motivated individuals looking to kickstart their careers in the finance industry. We provide a work environment that fosters professional growth and ensures exposure to a wide range of financial services. Apply now to become a part of our dynamic team.
                     </p>
-                    <a href="early-career1.html" class="career-btn btn">Apply Here</a>
+                    <a href="early-career1.html" id="btnA" class="career-btn btn"><span>Apply Here</span><span><img id="btn-imgA" class="btn-img" src="/images/Vector.svg" alt=""></span></a>
                 </div>
 
                 <div class="career-card">
@@ -58,7 +56,7 @@
                     <p>Are you a motivated individual with proven expertise in
                         finance? You should become one of our talents. We are looking for experienced professionals who are driven to take their careers in finance to the next level. With our diverse range of financial services, we provide a dynamic work environment. Apply now and take the next step in your career.
                     </p>
-                    <a href="early-career2.html" class="career-btn btn">Apply Here</a>
+                    <a href="early-career2.html" id="btnB" class="career-btn btn"><span>Apply Here</span><span><img id="btn-imgB" class="btn-img" src="/images/Vector.svg" alt=""></span></a>
                 </div>
             </div>
         </div>
@@ -103,5 +101,43 @@
             <p>Copyright 2023 by Sthenic Finance and Advisory Limited. All Right Reserved.</p>
         </div>
     </footer>
+
+    <script>
+        const btnA = document.getElementById('btnA')
+        const btnB = document.getElementById('btnB')
+        const btnImgA = document.getElementById('btn-imgA');
+        const btnImgB = document.getElementById('btn-imgB');
+
+        // for 1st btn
+        btnA.addEventListener('mouseover', () => {
+            btnA.style.backgroundColor = '#3DB2ED';
+            btnImgA.style.opacity = '1';
+            btnImgA.style.display = 'inline-block'
+            btnA.style.width = '222px'
+        })
+
+        btnA.addEventListener('mouseleave', () => {
+            btnA.style.backgroundColor = '#0177B2';
+            btnImgA.style.opacity = '0';
+            btnImgA.style.display = 'none'
+            btnA.style.width = '172px'
+        })
+
+        // for 2nd btn
+        btnB.addEventListener('mouseover', () => {
+            btnB.style.backgroundColor = '#3DB2ED';
+            btnImgB.style.opacity = '1';
+            btnImgB.style.display = 'inline-block'
+            btnB.style.width = '222px'
+        })
+
+        btnB.addEventListener('mouseleave', () => {
+            btnB.style.backgroundColor = '#0177B2';
+            btnImgB.style.opacity = '0';
+            btnImgB.style.display = 'none'
+            btnB.style.width = '172px'
+        })
+
+    </script>
 </body>
 </html>

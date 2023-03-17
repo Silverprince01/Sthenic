@@ -18,7 +18,7 @@
             <ul>
                 <li><a href="home.html">Welcome</a></li>
                 <li><a href="history.html">History</a></li>
-                <li><a href="history.html">Insights</a></li>
+                <li><a class="active" href="history.html">Insights</a></li>
                 <li><a href="careers.html">Careers</a></li>
                 <li><a href="contact1.html">Contact Us</a></li>
             </ul>
@@ -132,7 +132,7 @@
                 </div>
 
                 <div class="insight-btn">
-                    <button class="btn">Next</button>
+                    <button class="btn"><span>Next</span><span><img class="btn-img" src="/images/Vector.svg" alt=""></span></button>
                 </div>
             </main>
 
@@ -194,5 +194,24 @@
             <p>Copyright 2023 by Sthenic Finance and Advisory Limited. All Right Reserved.</p>
         </div>
     </footer>
+
+    <script>
+        const btn = document.querySelector('.btn')
+        const btnImg = document.querySelector('.btn-img');
+
+        btn.addEventListener('mouseover', () => {
+            console.log(btn);
+            btn.style.backgroundColor = '#3DB2ED';
+            btnImg.style.opacity = '1';
+            btn.style.width = '158px'
+        })
+
+        btn.addEventListener('mouseleave', () => {
+            console.log(btn);
+            btn.style.backgroundColor = '#5DDDFF';
+            btnImg.style.opacity = '0';
+            btn.style.width = '108px'
+        })
+    </script>
 </body>
 </html>

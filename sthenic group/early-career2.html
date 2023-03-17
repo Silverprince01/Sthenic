@@ -101,7 +101,7 @@
                     
                 </div>
         
-                <input class="early-career-btn btn" type="submit" value="Submit">
+                <button class="early-career-btn btn"><span>Submit</span><span><img class="btn-img" src="/images/Vector.svg" alt=""></span></button>
             </form>
         </div>
         
@@ -150,5 +150,24 @@
             <p>Copyright 2023 by Sthenic Finance and Advisory Limited. All Right Reserved.</p>
         </div>
     </footer>
+
+    <script>
+        const btn = document.querySelector('.btn')
+        const btnImg = document.querySelector('.btn-img');
+
+        btn.addEventListener('mouseover', () => {
+            console.log(btn);
+            btn.style.backgroundColor = '#3DB2ED';
+            btnImg.style.opacity = '1';
+            btn.style.width = '189px'
+        })
+
+        btn.addEventListener('mouseleave', () => {
+            console.log(btn);
+            btn.style.backgroundColor = '#0177B2';
+            btnImg.style.opacity = '0';
+            btn.style.width = '139px'
+        })
+    </script>
 </body>
 </html>

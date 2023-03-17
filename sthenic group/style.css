@@ -23,6 +23,7 @@ header {
     background: #001D45;
     color: #fff;
     position: fixed;
+    top: 0;
     width: 100%;
     z-index: 6;
 }
@@ -69,6 +70,11 @@ nav ul li a{
 }
 
 nav ul li a:hover{
+    background: #5DDDFF;
+    color: #252525;
+}
+
+.active {
     background: #5DDDFF;
     color: #252525;
 }
@@ -122,7 +128,7 @@ nav ul li a:hover{
 }
 
 .cover {
-    height: 852px;
+    height: 100vh;
     padding: 0 6em;
     background: #001D45;
     color: #fff;
@@ -131,6 +137,10 @@ nav ul li a:hover{
     background-size: cover;
     background-position: center;
     background-position: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 68px;
 }
 
 .cover .title {
@@ -400,22 +410,24 @@ nav ul li a:hover{
 }
 
 .enquiry {
-    padding: .5em 1.5em;
+    padding: 15px 30px;
+    height: 62px;
+    width: 139px;
     background: #001D45;
     color: #fff;
     cursor: pointer;
     margin-top: 2em;
-    border: none;
-    font-size: 20px;
+    font-size: 24px;
     line-height: 32px;
-    border: 1px solid transparent;
-    transition: .3s ease-in-out;
+    border: none;
+    transition: all .3s ease-in-out;
+    display: flex;
 }
 
-.enquiry:hover {
-    background: transparent;
-    color: #001D45;
-    border: 1px solid #001D45;
+.btn-img {
+    margin-left: 1em;
+    opacity: 0;
+    transition: all .3s ease-in-out;
 }
 
 .more-info-img {
@@ -482,7 +494,10 @@ footer {
 /* HISTORY PAGE */
 
 .history-cover {
-    height: 600px;
+    height: 100vh;
+    padding-top: 68px;
+    display: flex;
+    justify-content: center;
 }
 
 .history-text {
@@ -506,12 +521,14 @@ footer {
 
 .main-content {
     padding: 6em;
+    margin-top: 100px;
     display: flex;
     justify-content: space-between;
 }
 
 .insights-container {
     width: 60%;
+   
 }
 
 .insights-card-wrapper {
@@ -519,10 +536,6 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     gap: 2em;
 }
-
-/* .insight-card {
-    border: 1px solid red;
-} */
 
 .insight-card img{
     width: 100%;
@@ -563,18 +576,14 @@ footer {
 
 .insight-btn button {
     font-size: 24px;
+    width: 108px;
     line-height: 32px;
     color: #fff;
     padding: .5em 1em;
     background: #5DDDFF;
     border: 1px solid transparent;
     transition: .5s ease-in-out;
-}
-
-.insight-btn button:hover {
-    background: transparent;
-    border: 1px solid #5DDDFF;
-    color: #5DDDFF;
+    display: flex;
 }
 
 .insight-aside {
@@ -659,11 +668,17 @@ footer {
 
 .career-banner {
     position: relative;
+    height: 100vh;
+    background: url(/images/Rectangle\ 22.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
 }
 
 .career-banner img {
     display: block;
     width: 100%;
+    
 }
 
 .career-container {
@@ -723,26 +738,35 @@ footer {
 }
 
 .career-btn {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 24px;
+    line-height: 32px;
+    width: 172px;
     color: #fff;
-    padding: .5em 1em;
+    padding: 15px 30px;
     background: #0177B2;
     border: 1px solid transparent;
-    transition: .5s ease-in-out;
+    transition: all .5s ease;
 }
 
-.career-btn:hover {
-    background: transparent;
-    border: 1px solid #0177B2;
-    color: #0177B2;
+#btn-imgA {
+    opacity: 0;
+    display: none;
+}
+
+#btn-imgB {
+   opacity: 0;
+   display: none;
 }
 
 /* CONTACT PAGE */
 
 .contact-container {
     padding: 6em 11em;
-    padding-top: 3em;
+    padding-top: 162px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .contact-title {
@@ -813,15 +837,24 @@ footer {
 }
 
 .contact-btn {
-    padding: .5em 1em;
-    font-size: 18px;
-    line-height: 24px;
+    padding: 15px 30px;
+    padding-left: 15px;
+    font-size: 24px;
+    width: 111px;
+    height: 52px;
+    line-height: 32px;
     margin-top: 1.5em;
-    border: 1px solid #5DDDFF;
     background: #5DDDFF;
     border: none;
     color: #fff;
-    margin-left: 1.5em;
+    margin-left: 1em;
+    display: flex;
+    align-items: center;
+    transition: all .3s ease-in-out;
+}
+
+.contact-btn2 {
+    padding-left: 15px;
 }
 
 /* EARLY CAREER PAGE */
@@ -927,25 +960,23 @@ footer {
 .early-career-btn {
     border: none;
     background: #0177B2;
-    font-size: 18px;
+    width: 131px;
+    height: 62px;
+    font-size: 24px;
     line-height: 32px;
     color: #fff;
-    padding: 0.5em 1em;
-    float: right;
+    padding: 15px 30px;
     border: 1px solid transparent;
     transition: all 0.4s ease-in-out;
-}
-
-.early-career-btn:hover {
-    background: transparent;
-    border: 1px solid #0177B2;
-    color: #0177B2;
+    cursor: pointer;
+    display: flex;
+    margin-top: 1.5em;
 }
 
 /* About Us page */
 
 .about-us-cover {
-    height: 267px;
+    height: 100vh;
     background: url(/images/Rectangle\ 23.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -1065,7 +1096,7 @@ footer {
 /* FUNDS PAGE */
 
 .our-funds-cover {
-    height: 267px;
+    height: 100vh;
     background: url(/images/Rectangle\ 23.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -1160,7 +1191,7 @@ footer {
 /* PRODUCTS PAGE */
 
 .our-products-cover {
-    height: 267px;
+    height: 100vh;
     background: url(/images/Rectangle\ 23.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -1220,7 +1251,7 @@ footer {
 /* INVESTOR PAGE */
 
 .investor-cover {
-    height: 267px;
+    height: 100vh;
     background: url(/images/Rectangle\ 23.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -1315,11 +1346,13 @@ legend {
 /* about us page (sthenic finance) */
 
 .our-strategy {
-    height: 378px;
+    height: 100vh;
     padding-inline: 11em;
     display: flex;
     align-items: center;
     background: url(/images/Rectangle\ 31.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     margin-bottom: 3em;
 }
 
@@ -1508,25 +1541,25 @@ legend {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* RESPONSIVENESS */
 
 /* small screen laptop */
 
 @media screen and (max-width: 1024px) {
+    .cover {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 68px;
+    }
+
     .cover .title {
         font-size: 3.5rem;
+    }
+
+    .cat-card {
+        width: 45%;
     }
 
     .we {
@@ -1602,13 +1635,150 @@ legend {
         padding: 7em;
         color: #fff;
     }
+
+    /* sthenic cap mgt group */
+
+    .about-us-cover {
+        padding-inline: 10em;
+    }
+    
+    .about-us-cover h3 {
+        width: 80%;
+    }
+
+    .about-us-main {
+        padding-inline: 6em;
+        padding-bottom: 4em;
+        width: 100%;
+    }
+
+    .story-text {
+        width: 50%;
+    }
+
+    .story-img {
+        width: 50%;
+    }
+
+    .about-more-info-text {
+        width: 100%;
+    }
+
+    .our-funds-cover h3 {
+        width: 80%;
+    }
+    
+    .our-funds-cover p {
+        width: 90%;    
+    }
+
+    .fund-main {
+        padding-inline: 6em;
+    }
+
+    .products-main {
+        padding-inline: 5em;
+        padding-bottom: 5em; 
+    }
+
+    .investor-main {
+        padding-inline: 6em;
+        padding-bottom: 5em; 
+    }
+
+    /* sthenic financial group */
+
+    .about-us-cover {
+        padding-inline: 6em;
+    }
+    
+    .about-us-cover h3 {
+        width: 90%;
+    }
+
+    .about-us-main {
+        padding-inline: 6em;
+        padding-bottom: 4em;
+        width: 100%;
+    }
+
+    .our-strategy {
+        padding: 6em;
+        height: max-content;
+    }
+
+    .strategy-text {
+        width: 100%;
+    }
+
+    .our-services-cover {
+        padding-inline: 6em;
+    }
+    
+    .our-services-cover h3 {
+        width: 90%;
+    }
+
+    .services-main {
+        padding-inline: 3em;
+        padding-bottom: 4em;
+        width: 100%;
+    }
+
+    .services-flex {
+        height: max-content;
+    }
+
+    .services-img {
+        width: 48%;
+    }
+
+    .services-img img {
+        height: 370px !important;
+        object-fit: fill;
+    }
+
+    .services-text {
+        width: 48%;
+    }
+
+    .capabilities-cover {
+        padding-inline: 6em;
+    }
+    
+    .capabilities-cover h3 {
+        width: 90%;
+    }
+
+    .capabilities-main {
+        padding-inline: 3em;
+        padding-bottom: 4em;
+        width: 100%;
+    }
+
+    .dealbook-cover {
+        padding-inline: 6em;
+    }
+    
+    .dealbook-cover h3 {
+        width: 90%;
+    }
 }
 
 /* Tablet */
 
 @media screen and (max-width: 768px) {
+    .cap-nav ul li a {
+        font-size: .7rem;
+    }
+
     .cover {
-        height: 604px;
+        height: 100vh;
+        display: flex;
+        padding-inline: 3em;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 68px;
     }
 
     .cover .title {
@@ -1631,10 +1801,27 @@ legend {
 
     .categories {
         width: 100%;
+        padding-inline: 0;
     }
 
-    .cat a{
+    .cat-card {
+        width: 48%;
+    }
+
+    .cat-card a{
         font-size: 14px;
+    }
+
+    
+
+    .cat p {
+        width: 70%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .cat-icon {
+        width: max-content;
     }
 
     .upper-grp {
@@ -1813,6 +2000,191 @@ legend {
         font-size: 16px;
         line-height: 24px;
     }
+
+    /* sthenic cap mgt group */
+
+    .about-us-cover {
+        padding-inline: 7em;
+    }
+    
+    .about-us-cover h3 {
+        width: 100%;
+    }
+
+    .about-us-main {
+        padding-inline: 4em;
+        padding-bottom: 4em;
+        width: 100%;
+    }
+
+    .story-flex {
+        flex-direction: column;
+    }
+
+    .story-text {
+        width: 100%;
+    }
+
+    .story-img {
+        width: max-content;
+    }
+
+    .about-more-info-text {
+        width: 100%;
+        padding-inline: 0;
+    }
+
+    .about-more-info-text h2,
+    .about-more-info-text p {
+        width: 80%;
+    }
+
+    .our-funds-cover {
+        padding-inline: 6em;
+    }
+
+    .our-funds-cover h3 {
+        width: 100%;
+    }
+    
+    .our-funds-cover p {
+        width: 100%;    
+    }
+
+    .fund-main {
+        padding-inline: 4em;
+    }
+
+    .thesis-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .thesis-item h4 {
+        margin-bottom: 0.5em;
+    }
+
+    .structure-img {
+        width: 100%;
+    }
+
+    .structure-img img {
+        width: 100%;
+    }
+
+    .our-products-cover {
+        padding-inline: 6em;
+    }
+
+    .our-products-cover h3 {
+        width: 100%;
+    }
+
+    .products-main {
+        padding-inline: 2em;
+        padding-bottom: 5em; 
+    }
+
+    .investor-cover {
+        padding-inline: 6em;
+    }
+
+    .investor-cover h3 {
+        width: 100%;
+    }
+
+    .investor-main {
+        padding-inline: 5em;
+        padding-bottom: 5em; 
+    }
+
+    fieldset {
+        width: 100%;
+    }
+
+    /* sthenic financial group */
+
+    .about-us-cover {
+        padding-inline: 6em;
+    }
+    
+    .about-us-cover h3 {
+        width: 90%;
+    }
+
+    .about-us-main {
+        padding-inline: 6em;
+        padding-bottom: 4em;
+        width: 100%;
+    }
+
+    .our-strategy {
+        padding: 6em;
+        height: max-content;
+    }
+
+    .strategy-text {
+        width: 100%;
+    }
+
+    .our-services-cover {
+        padding-inline: 6em;
+    }
+    
+    .our-services-cover h3 {
+        width: 90%;
+    }
+
+    .services-main {
+        padding-inline: 3em;
+        padding-bottom: 4em;
+        width: 100%;
+    }
+
+    .services-flex {
+        height: max-content;
+    }
+
+    .services-img {
+        width: 48%;
+    }
+
+    .services-img img {
+        height: 370px !important;
+        object-fit: fill;
+    }
+
+    .services-text {
+        width: 48%;
+    }
+
+    .capabilities-cover {
+        padding-inline: 6em;
+    }
+    
+    .capabilities-cover h3 {
+        width: 90%;
+    }
+
+    .capabilities-main {
+        padding-inline: 3em;
+        padding-bottom: 4em;
+        width: 100%;
+    }
+
+    .dealbook-cover {
+        padding-inline: 6em;
+    }
+    
+    .dealbook-cover h3 {
+        width: 90%;
+    }
+
+    .dealbook-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
 }
 
 /* mobile */
@@ -1825,7 +2197,8 @@ legend {
     }
 
     .logo img{
-        width: 80px;
+        width: 58px;
+        height: 58px;
         position: relative;
         z-index: 7;
     }
@@ -1849,6 +2222,20 @@ legend {
         gap: 1.5em;
         padding: 1em 0;
         z-index: 2;
+    }
+
+    nav ul li {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav ul li a {
+        width: 100%;
+        display: flex;
+        align-items: end;
+        justify-content: right;
     }
 
     .menu {
@@ -1885,16 +2272,27 @@ legend {
 
     .categories {
         width: 100%;
+        flex-direction: column;
+    }
+
+    .cat-card {
+        width: 100%;
+        justify-content: space-between;
+        padding-left: 0;
     }
 
     .cat {
-        width: 48%;
+        width: 100%;
     }
 
     .cat a{
-        width: 80%;
+        width: 100%;
         font-size: 12px;
         line-height: 20px;
+    }
+
+    .para {
+        display: none;
     }
 
     .we {
@@ -1933,6 +2331,16 @@ legend {
     .vision-card {
         width: 100%;
         margin-bottom: 2em;
+        /* height: 350px; */
+    }
+
+    #v-card2 {
+        height: 300px !important;
+    }
+
+    .title-flex {
+        margin-bottom: 1em;
+        height: 60px;
     }
 
     .more-info {
@@ -2073,6 +2481,266 @@ legend {
 
     .contact-btn {
         margin-left: 0;
+        width: max-content !important;
+    }
+
+    .btn-img {
+        display: none;
+    }
+
+    .btn {
+        width: max-content !important;
+    }
+
+    .history-cover {
+        height: 100vh;
+        padding-top: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .insight-btn button{
+        width: max-content;
+    }
+
+    .main-content {
+        margin-top: 0;
+    }
+
+
+    /* sthenic cap mgt group */
+
+    .about-us-cover {
+        padding-inline: 2em;
+    }
+    
+    .about-us-cover h3 {
+        width: 100%;
+        font-size: 36px;
+    }
+
+    .about-us-main {
+        padding-inline: 2em;
+        padding-bottom: 4em;
+        width: 100%;
+    }
+
+    .p-flex {
+        flex-direction: column;
+    }
+
+    .p-flex-item {
+        width: 100%;
+    }
+
+    .story-flex {
+        flex-direction: column;
+    }
+
+    .story-text {
+        width: 100%;
+    }
+
+    .story-img {
+        width: max-content;
+    }
+
+    .about-more-info-text {
+        width: 100%;
+        padding-inline: 0;
+    }
+
+    .about-more-info-text h2,
+    .about-more-info-text p {
+        width: 100%;
+    }
+
+    .our-funds-cover {
+        padding-inline: 2em;
+    }
+
+    .our-funds-cover h3 {
+        width: 100%;
+        font-size: 36px;
+    }
+    
+    .our-funds-cover p {
+        width: 100%;    
+    }
+
+    .fund-main {
+        padding-inline: 2em;
+    }
+
+    .thesis-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .thesis-item h4 {
+        margin-bottom: 0.5em;
+    }
+
+    .structure-img {
+        width: 100%;
+    }
+
+    .structure-img img {
+        width: 100%;
+    }
+
+    .our-products-cover {
+        padding-inline: 2em;
+    }
+
+    .our-products-cover h3 {
+        width: 100%;
+        font-size: 36px;
+    }
+
+    .products-main {
+        padding-inline: 1em;
+        padding-bottom: 5em; 
+    }
+
+    .product-flex {
+        flex-direction: column;
+    }
+
+    .product-text {
+        width: 100%;
+        order: 2;
+    }
+
+    .product-img {
+        width: 100%;
+        order: 1;
+    }
+
+    .investor-cover {
+        padding-inline: 2em;
+    }
+
+    .investor-cover h3 {
+        width: 100%;
+        font-size: 36px;
+    }
+
+    .investor-main {
+        padding-inline: 2em;
+        padding-bottom: 5em; 
+    }
+
+    fieldset {
+        width: 100%;
+        padding-inline: 2em;
+    }
+
+    .investees h3, .investees p{
+        width: 100%;
+    }
+
+    /* sthenic financial group */
+
+    .about-us-cover {
+        padding-inline: 2em;
+    }
+    
+    .about-us-cover h3 {
+        width: 100%;
+        font-size: 36px;
+    }
+
+    .about-us-main {
+        padding-inline: 2em;
+        padding-bottom: 4em;
+        width: 100%;
+    }
+
+    .our-strategy {
+        padding: 2em;
+        height: max-content;
+    }
+
+    .strategy-text {
+        width: 100%;
+    }
+
+    .our-services-cover {
+        padding-inline: 2em;
+    }
+    
+    .our-services-cover h3 {
+        width: 100%;
+        font-size: 36px;
+    }
+
+    .services-main {
+        padding-inline: 2em;
+        padding-bottom: 4em;
+        width: 100%;
+    }
+
+    .services-flex {
+        height: max-content;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .services-img {
+        width: 100%;
+        order: 1;
+    }
+
+    .services-img img {
+        height: 370px !important;
+        object-fit: fill;
+    }
+
+    .services-text {
+        width: 100%;
+        order: 2;
+    }
+
+    .capabilities-cover {
+        padding-inline: 2em;
+    }
+    
+    .capabilities-cover h3 {
+        width: 100%;
+        font-size: 36px;
+    }
+
+    .capabilities-main {
+        padding-inline: 2em;
+        padding-bottom: 4em;
+        width: 100%;
+    }
+
+    .cap-grp-flex {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .cap-grp-item {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    .dealbook-cover {
+        padding-inline: 2em;
+    }
+    
+    .dealbook-cover h3 {
+        width: 100%;
+        font-size: 36px;
+    }
+
+    .deal-investor, .deal-potential {
+        width: 80%;
+    }
+
+    .deal-investor img, .deal-potential img {
+        width: 100%;
     }
 
 }

@@ -78,10 +78,3 @@ vCard2.addEventListener('mouseleave', function () {
     vCard2.style.height = '250px'
 })
 
-// button hover effect 
-
-document.addEventListener('click', e => {
-    if (e.target.matches('button')) {
-        console.log('this is a button');
-    }
-})

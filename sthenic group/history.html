@@ -17,7 +17,7 @@
         <nav id="nav">
             <ul>
                 <li><a href="home.html">Welcome</a></li>
-                <li><a href="history.html">History</a></li>
+                <li><a class="active" href="history.html">History</a></li>
                 <li><a href="insights.html">Insights</a></li>
                 <li><a href="careers.html">Careers</a></li>
                 <li><a href="contact1.html">Contact Us</a></li>
@@ -57,7 +57,7 @@
                 investment opportunities</h2>
             <p>Sthenic finance has amassed a large and ever-expanding base of Fund investors 
                 from all over the world. The team at Sthenic Investor would love to hear from you.</p>
-            <button class="enquiry btn">Enquiry</button>
+            <button class="enquiry btn"><span>Enquiry</span><span><img class="btn-img" src="/images/Vector.svg" alt=""></span></button>
         </div>
 
         <div class="img-overlay"></div>
@@ -107,13 +107,23 @@
         </div>
     </footer>
 
-    <!-- <script>
-        document.addEventListener('mouseover', e => {
-            if (e.target.matches('button')) {
-                console.log('this is a button');
-                e.target.style.width = '300px'
-            }
+    <script>
+        const btn = document.querySelector('.btn')
+        const btnImg = document.querySelector('.btn-img');
+
+        btn.addEventListener('mouseover', () => {
+            console.log(btn);
+            btn.style.backgroundColor = '#3DB2ED';
+            btnImg.style.opacity = '1';
+            btn.style.width = '189px'
         })
-    </script> -->
+
+        btn.addEventListener('mouseleave', () => {
+            console.log(btn);
+            btn.style.backgroundColor = '#001D45';
+            btnImg.style.opacity = '0';
+            btn.style.width = '139px'
+        })
+    </script>
 </body>
 </html>
