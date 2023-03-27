@@ -78,3 +78,17 @@ vCard2.addEventListener('mouseleave', function () {
     vCard2.style.height = '250px'
 })
 
+
+
+
+
+// const dropdownBtn = document.querySelector('#dropdown-btn');
+// const dropdown = document.querySelector('.dropdown');
+
+// dropdownBtn.addEventListener('click', () => {
+//     if (dropdown.contains('hide-dropdown')) {
+//         dropdown.classList.remove('hide-dropdown')
+//     } else {
+//         dropdown.classList.add('hide-dropdown') 
+//     }
+// })

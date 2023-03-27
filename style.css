@@ -79,6 +79,11 @@ nav ul li a:hover{
     color: #252525;
 }
 
+.dropdown-link:focus {
+    background: #5DDDFF;
+    color: #252525;
+}
+
 .menu {
     position: relative;
     display: none;
@@ -144,23 +149,25 @@ nav ul li a:hover{
 }
 
 .cover .title {
-    font-size: 3.5rem;
+    font-size: 84px;
+    line-height: 56px;
     padding-top: 2em;
 }
 
 .subtitle {
     width: 60%;
-    margin: 2em 1em 3em 0;
-    line-height: 25px;
+    margin: 2em 1em 1em 0;
 }
 
 .subtitle h3 {
+    margin-top: 1em;
     margin-bottom: .5em;
-    font-size: 1.7rem;
+    font-size: 28px;
+    line-height: 36px;
 }
 
 .subtitle p {
-    font-size: 1.5rem;
+    font-size: 24px;
     line-height: 32px;
 }
 
@@ -187,6 +194,9 @@ nav ul li a:hover{
     align-items: center;
     justify-content: space-between;
     margin-bottom: 1em;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
 }
 
 .cat p{
@@ -340,6 +350,7 @@ nav ul li a:hover{
 .card-details p {
     font-size: 14px;
     line-height: 24px;
+    font-weight: 400;
 }
 
 .vision {
@@ -430,6 +441,12 @@ nav ul li a:hover{
     transition: all .3s ease-in-out;
 }
 
+.enquiry-img {
+    margin-left: 1em;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}
+
 .more-info-img {
     position: absolute;
     bottom: -50px;
@@ -495,9 +512,20 @@ footer {
 
 .history-cover {
     height: 100vh;
-    padding-top: 68px;
     display: flex;
     justify-content: center;
+    padding-left: 169px;
+    padding-top: 0 !important;
+}
+
+.history-cover h2 {
+    font-size: 94px;
+    line-height: 56px;
+}
+
+.history-cover p {
+    font-size: 24px;
+    line-height: 32px;
 }
 
 .history-text {
@@ -518,6 +546,15 @@ footer {
 }
 
 /* INSIGHTS PAGE */
+
+.insight-cover {
+    /* background: ; */
+    padding-left: 169px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 0 !important;
+}
 
 .main-content {
     padding: 6em;
@@ -669,7 +706,7 @@ footer {
 .career-banner {
     position: relative;
     height: 100vh;
-    background: url(/images/Rectangle\ 22.png);
+    background: url(/images/Rectangle\ 22\ \(1\).png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
@@ -679,6 +716,28 @@ footer {
     display: block;
     width: 100%;
     
+}
+
+.career-cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 45%;
+    margin-left: 169px;
+}
+
+.career-cover h2 {
+    font-size: 94px;
+    line-height: 56px;
+    color: #fff;
+}
+
+.career-cover p {
+    font-size: 24px;
+    line-height: 32px;
+    color: #fff;
+    margin-top: 1em;
 }
 
 .career-container {
@@ -713,6 +772,8 @@ footer {
 .career-main-img img{
     width: 100%;
     display: block;
+    height: 336px;
+    object-fit: cover;
 }
 
 .career-card-flex {
@@ -759,6 +820,11 @@ footer {
 }
 
 /* CONTACT PAGE */
+
+.contact-cover {
+    background-image: url(/images/Rectangle\ 22\ \(2\).png);
+    padding-top: 0 !important;
+}
 
 .contact-container {
     padding: 6em 11em;
@@ -977,7 +1043,7 @@ footer {
 
 .about-us-cover {
     height: 100vh;
-    background: url(/images/Rectangle\ 23.png);
+    background: url(/images/Rectangle\ 23\ \(1\).png);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -987,9 +1053,9 @@ footer {
 
 .about-us-cover h3 {
     color: #fff;
-    font-size: 48px;
-    line-height: 56px;
-    width: 60%;
+    font-size: 98px;
+    line-height: 90px;
+    width: 80%;
 }
 
 .about-us-main {
@@ -1092,6 +1158,60 @@ footer {
     margin-top: 0;
 }
 
+.dropdown-link {
+    position: relative;
+}
+
+.dropdown {
+    height: max-content;
+    position: absolute;
+    display: block;
+    width: 280px;
+    flex-direction: column;
+    top: 90px;
+    left: auto;
+    background: #fff;
+    padding: 2em;
+    box-sizing: content-box;
+    border-radius: 16px;
+    margin-left: 200px;
+}
+
+.dropdown2 {
+    right: 6em;
+}
+
+.dropdown li a {
+    display: block;
+    padding: 1em;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.dropdown h3 {
+    font-size: 16px;
+    line-height: 24px;
+    color: #001D45;
+}
+
+.dropdown p {
+    font-size: 12px;
+    line-height: 20px;
+    color: #808080;
+}
+
+.dropdown li a:hover {
+    background: rgba(133, 184, 255, .3);
+}
+
+.dropdown-active {
+    opacity: .3;
+    cursor: not-allowed;
+}
+
+.hide-dropdown {
+    display: none;
+}
 
 /* FUNDS PAGE */
 
@@ -1108,7 +1228,7 @@ footer {
 
 .our-funds-cover h3 {
     color: #fff;
-    font-size: 48px;
+    font-size: 94px;
     line-height: 56px;
     width: 60%;
 }
@@ -1203,7 +1323,7 @@ footer {
 
 .our-products-cover h3 {
     color: #fff;
-    font-size: 48px;
+    font-size: 94px;
     line-height: 56px;
     width: 60%;
 }
@@ -1263,9 +1383,17 @@ footer {
 
 .investor-cover h3 {
     color: #fff;
-    font-size: 48px;
+    font-size: 94px;
     line-height: 56px;
+    width: 80%;
+}
+
+.investor-cover p {
+    color: #fff;
+    font-size: 18px;
+    line-height: 24px;
     width: 60%;
+    margin-top: 2em;
 }
 
 .investor-main {
@@ -1374,11 +1502,15 @@ legend {
 
 /* our services page */
 
-.our-services-cover {
-    height: 100vh;
-    background: url(/images/Rectangle\ 23.png);
+.our-services-header {
+    background: url(/images/women.png);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.our-services-cover {
+    height: 100vh;
+    background: rgba(0 0 0 / 0.5);
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -1387,8 +1519,8 @@ legend {
 
 .our-services-cover h3 {
     color: #fff;
-    font-size: 48px;
-    line-height: 56px;
+    font-size: 92px;
+    line-height: 90px;
     width: 60%;
 }
 
@@ -1433,11 +1565,15 @@ legend {
 
 /* CAPABILITIES PAGE */
 
-.capabilities-cover {
-    height: 100vh;
-    background: url(/images/Rectangle\ 23.png);
+.capabilities-header {
+    background: url(/images/dart.png);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.capabilities-cover {
+    height: 100vh;
+    background: rgba(0 0 0 / 0.5);
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -1446,8 +1582,8 @@ legend {
 
 .capabilities-cover h3 {
     color: #fff;
-    font-size: 48px;
-    line-height: 56px;
+    font-size: 92px;
+    line-height: 90px;
     width: 60%;
 }
 
@@ -1497,11 +1633,15 @@ legend {
 
 /* DEALBOOK PAGE */
 
-.dealbook-cover {
-    height: 100vh;
-    background: url(/images/Rectangle\ 23.png);
+.dealbook-header {
+    background: url(/images/hand.png);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.dealbook-cover {
+    height: 100vh;
+    background: rgba(0 0 0 / 0.5);
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -1510,8 +1650,8 @@ legend {
 
 .dealbook-cover h3 {
     color: #fff;
-    font-size: 48px;
-    line-height: 56px;
+    font-size: 92px;
+    line-height: 90px;
     width: 60%;
 }
 

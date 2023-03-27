@@ -16,11 +16,39 @@
 
         <nav id="nav" class="cap-nav">
             <ul>
-                <li><a href="about-us.html">About Us</a></li>
+                <li id="dropdown-btn"><a href="#" class="dropdown-link" >About Us<span id="down-arrow" style="margin-left: .5em;"><img src="/images/down.png" alt=""></span></a>
+                    <ul id="dropdown" class="dropdown hide-dropdown">
+                        <li><a href="/sthenic cap mgt/about-us.html">
+                            <h3>Overview</h3>
+                            <p>Know more about where we have been and what 
+                                we have done</p>
+                        </a></li>
+                        <li><a href="/sthenic cap mgt/about-us (story).html">
+                            <h3>Our Story</h3>
+                            <p>Know more about where we have been and what 
+                                we have done</p>
+                        </a></li>
+                        <li><a href="/sthenic cap mgt/about-us (approach).html">
+                            <h3>Our Approach</h3>
+                            <p>Get more insight on our work processes</p>
+                        </a></li>
+                    </ul>
+                </li>
                 <li><a href="our-fund.html">Our Funds</a></li>
                 <li><a href="our-products.html">Our Products</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a class="active" href="investor.html">Investor</a></li>
+                <li id="dropdown-btn2"><a class="active dropdown-link" href="#">Investor<span id="down-arrow2" style="margin-left: .5em;"><img src="/images/down.png" alt=""></span></a>
+                    <ul id="dropdown2" class="dropdown dropdown2 hide-dropdown">
+                        <li><a class="dropdown-active" href="/sthenic cap mgt/investor.html">
+                            <h3>Investors</h3>
+                            <p>I have capital to invest</p>
+                        </a></li>
+                        <li><a href="/sthenic cap mgt/investor2.html">
+                            <h3>Investees</h3>
+                            <p>I need capital investment for my business</p>
+                        </a></li>
+                    </ul>
+                </li>
                 <li><a href="/careers.html">Careers</a></li>
             </ul>
         </nav>
@@ -33,6 +61,7 @@
     <div class="investor-header">
         <div class="investor-cover">
             <h3>Investor Relations</h3>
+            <p>Sthenic Capital Management portfolio includes a wide range of funds that may offer organizations financial sustainability and development at levels of execution structure, speed, and cost that are unmatched globally. (confirm what industries they invest in.)</p>
         </div>
     </div>
     
@@ -88,62 +117,12 @@
                         <input type="date">
                     </div>
             
-                    <input class="early-career-btn form-btn btn" type="submit" value="Submit">
+                    <button class="early-career-btn btn"><span>Submit</span><span><img class="btn-img" src="/images/Vector.svg" alt=""></span></button>
                 </form>
             </fieldset>
         </div>
 
-        <div class="investees">
-            <h3>Investees</h3>
-            <p>To access detailed information regarding our funds
-                simply provide your details below, specify your
-                interests and our team will contact you.
-            </p>
-
-            <fieldset>
-                <legend>Fields Marked * are required</legend>
-
-                <form class="early-career-form investor-form" action="">
-                    
-            
-                    <div class="form-section">
-                        <label for="name"> Name *</label>
-                        <input type="text" placeholder="Enter name">
-                    </div>
-
-                    <div class="form-section">
-                        <label for="prospective investor"> Prospective Investor *</label>
-                        <input type="text" placeholder="Select">
-                    </div>
-            
-                    <div class="form-section">
-                        <label for="company name">Company Name *</label>
-                        <input type="text" placeholder="Enter company name">
-                    </div>
-            
-                    <div class="form-section">
-                        <label for="phone number">Phone Number *</label>
-                        <input type="tel" placeholder="Enter phone number">
-                    </div>
-                    
-                    <div class="form-section">
-                        <label for="location">Select an Investment Plan *</label>
-                        <div class="select-wrapper">
-                            <select name="location" id="location">
-                                <option value="select-country">Select Country</option>
-                                <option value="Nigeria">Nigeria</option>
-                                <option value="Nigeria">USA</option>
-                                <option value="Nigeria">Canada</option>
-                                <option value="Nigeria">Australia</option>
-                                <option value="Nigeria">China</option>
-                            </select>
-                        </div>
-                    </div>
-            
-                    <input class="early-career-btn form-btn btn" type="submit" value="Submit">
-                </form>
-            </fieldset>
-        </div>
+        
     </div>
 
     <footer>
@@ -185,5 +164,71 @@
             <p>Copyright 2023 by Sthenic Finance and Advisory Limited. All Right Reserved.</p>
         </div>
     </footer>
+
+    <script>
+        const dropdownBtn = document.querySelector('#dropdown-btn');
+        const dropdown = document.querySelector('.dropdown');
+        const body = document.querySelector('body');
+        const downArrow = document.querySelector('#down-arrow');
+
+        dropdownBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            dropdown.classList.toggle('hide-dropdown')
+            if (dropdown.classList.contains('hide-dropdown')) {
+                downArrow.style.transform = 'rotateX(0deg)';
+            } else {
+                downArrow.style.transform = 'rotateX(180deg)';
+            }
+            
+        })
+
+        body.addEventListener('click', (e) => {
+            dropdown.classList.add('hide-dropdown')
+            downArrow.style.transform = 'rotateX(0deg)';
+        }, false )
+
+        // investor dropdown 
+
+        const dropdownBtn2 = document.querySelector('#dropdown-btn2');
+        const dropdown2 = document.querySelector('.dropdown2');
+        const body2 = document.querySelector('body');
+        const downArrow2 = document.querySelector('#down-arrow2');
+
+        dropdownBtn2.addEventListener('click', (e) => {
+            e.stopPropagation();
+            dropdown2.classList.toggle('hide-dropdown')
+            if (dropdown2.classList.contains('hide-dropdown')) {
+                downArrow2.style.transform = 'rotateX(0deg)';
+            } else {
+                downArrow2.style.transform = 'rotateX(180deg)';
+            }
+            
+        })
+
+        body2.addEventListener('click', (e) => {
+            dropdown2.classList.add('hide-dropdown')
+            downArrow2.style.transform = 'rotateX(0deg)';
+        }, false )
+
+        // form btn 
+
+        const btn = document.querySelector('.btn')
+        const btnImg = document.querySelector('.btn-img');
+
+        btn.addEventListener('mouseover', () => {
+            console.log(btn);
+            btn.style.backgroundColor = '#3DB2ED';
+            btnImg.style.opacity = '1';
+            btn.style.width = '189px'
+        })
+
+        btn.addEventListener('mouseleave', () => {
+            console.log(btn);
+            btn.style.backgroundColor = '#0177B2';
+            btnImg.style.opacity = '0';
+            btn.style.width = '139px'
+        })
+
+    </script>
 </body>
 </html>

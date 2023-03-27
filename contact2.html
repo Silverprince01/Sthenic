@@ -29,6 +29,15 @@
         </div>
     </header>
 
+    <div class="cover contact-cover">
+        <div class="title">
+            <h2>Contact Us</h2>
+        </div>
+        <div class="subtitle h-subtitle">
+            <p>We're delighted that you're interested in getting in touch with us! If you have any questions, feedback, or inquiries, please feel free to reach out to us using any of the methods below. Our dedicated team is always ready to assist you in any way we can.</p>
+        </div>
+    </div>
+
     <div class="contact-container">
         <h2 class="contact-title">Contact Us</h2>
 
@@ -60,7 +69,7 @@
                 investment opportunities</h2>
             <p>Sthenic finance has amassed a large and ever-expanding base of Fund investors 
                 from all over the world. The team at Sthenic Investor would love to hear from you.</p>
-            <button class="enquiry btn">Enquiry</button>
+                <button class="enquiry btn"><span>Enquiry</span><span><img class="enquiry-img" src="/images/Vector.svg" alt=""></span></button>
         </div>
 
         <div class="img-overlay"></div>
@@ -126,6 +135,23 @@
             btn.style.backgroundColor = '#5DDDFF';
             btnImg.style.opacity = '0';
             btn.style.width = '111px'
+        })
+
+        const enquiryBtn = document.querySelector('.enquiry');
+        const enquiryImg = document.querySelector('.enquiry-img');
+
+        enquiryBtn.addEventListener('mouseover', () => {
+            // console.log(btn);
+            enquiryBtn.style.backgroundColor = '#3DB2ED';
+            enquiryImg.style.opacity = '1';
+            enquiryBtn.style.width = '171px'
+        })
+
+        enquiryBtn.addEventListener('mouseleave', () => {
+            // console.log(btn);
+            enquiryBtn.style.backgroundColor = '#001D45';
+            enquiryImg.style.opacity = '0';
+            enquiryBtn.style.width = '141px'
         })
     </script>
 </body>

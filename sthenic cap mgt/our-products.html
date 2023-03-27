@@ -16,11 +16,39 @@
 
         <nav id="nav" class="cap-nav">
             <ul>
-                <li><a href="about-us.html">About Us</a></li>
+                <li id="dropdown-btn"><a href="#" class="dropdown-link" >About Us<span id="down-arrow" style="margin-left: .5em;"><img src="/images/down.png" alt=""></span></a>
+                    <ul id="dropdown" class="dropdown hide-dropdown">
+                        <li><a href="/sthenic cap mgt/about-us.html">
+                            <h3>Overview</h3>
+                            <p>Know more about where we have been and what 
+                                we have done</p>
+                        </a></li>
+                        <li><a href="/sthenic cap mgt/about-us (story).html">
+                            <h3>Our Story</h3>
+                            <p>Know more about where we have been and what 
+                                we have done</p>
+                        </a></li>
+                        <li><a href="/sthenic cap mgt/about-us (approach).html">
+                            <h3>Our Approach</h3>
+                            <p>Get more insight on our work processes</p>
+                        </a></li>
+                    </ul>
+                </li>
                 <li><a href="our-fund.html">Our Funds</a></li>
                 <li><a class="active" href="our-products.html">Our Products</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="investor.html">Investor</a></li>
+                <li id="dropdown-btn2"><a class="dropdown-link" href="#">Investor<span id="down-arrow2" style="margin-left: .5em;"><img src="/images/down.png" alt=""></span></a>
+                    <ul id="dropdown2" class="dropdown dropdown2 hide-dropdown">
+                        <li><a href="/sthenic cap mgt/investor.html">
+                            <h3>Investors</h3>
+                            <p>I have capital to invest</p>
+                        </a></li>
+                        <li><a href="/sthenic cap mgt/investor2.html">
+                            <h3>Investees</h3>
+                            <p>I need capital investment for my business</p>
+                        </a></li>
+                    </ul>
+                </li>
                 <li><a href="/careers.html">Careers</a></li>
             </ul>
         </nav>
@@ -123,5 +151,52 @@
             <p>Copyright 2023 by Sthenic Finance and Advisory Limited. All Right Reserved.</p>
         </div>
     </footer>
+
+    <script>
+        const dropdownBtn = document.querySelector('#dropdown-btn');
+        const dropdown = document.querySelector('.dropdown');
+        const body = document.querySelector('body');
+        const downArrow = document.querySelector('#down-arrow');
+
+        dropdownBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            dropdown.classList.toggle('hide-dropdown')
+            if (dropdown.classList.contains('hide-dropdown')) {
+                downArrow.style.transform = 'rotateX(0deg)';
+            } else {
+                downArrow.style.transform = 'rotateX(180deg)';
+            }
+            
+        })
+
+        body.addEventListener('click', (e) => {
+            dropdown.classList.add('hide-dropdown')
+            downArrow.style.transform = 'rotateX(0deg)';
+        }, false )
+
+        // investor dropdown 
+
+        const dropdownBtn2 = document.querySelector('#dropdown-btn2');
+        const dropdown2 = document.querySelector('.dropdown2');
+        const body2 = document.querySelector('body');
+        const downArrow2 = document.querySelector('#down-arrow2');
+
+        dropdownBtn2.addEventListener('click', (e) => {
+            e.stopPropagation();
+            dropdown2.classList.toggle('hide-dropdown')
+            if (dropdown2.classList.contains('hide-dropdown')) {
+                downArrow2.style.transform = 'rotateX(0deg)';
+            } else {
+                downArrow2.style.transform = 'rotateX(180deg)';
+            }
+            
+        })
+
+        body2.addEventListener('click', (e) => {
+            dropdown2.classList.add('hide-dropdown')
+            downArrow2.style.transform = 'rotateX(0deg)';
+        }, false )
+
+    </script>
 </body>
 </html>

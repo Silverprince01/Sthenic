@@ -16,11 +16,39 @@
 
         <nav id="nav" class="cap-nav">
             <ul>
-                <li><a class="active" href="about-us.html">About Us</a></li>
+                <li id="dropdown-btn"><a href="#" class="active dropdown-link" >About Us<span id="down-arrow" style="margin-left: .5em;"><img src="/images/down.png" alt=""></span></a>
+                    <ul id="dropdown" class="dropdown hide-dropdown">
+                        <li><a class="dropdown-active" href="#">
+                            <h3>Overview</h3>
+                            <p>Know more about where we have been and what 
+                                we have done</p>
+                        </a></li>
+                        <li><a href="/sthenic cap mgt/about-us (story).html">
+                            <h3>Our Story</h3>
+                            <p>Know more about where we have been and what 
+                                we have done</p>
+                        </a></li>
+                        <li><a href="/sthenic cap mgt/about-us (approach).html">
+                            <h3>Our Approach</h3>
+                            <p>Get more insight on our work processes</p>
+                        </a></li>
+                    </ul>
+                </li>
                 <li><a href="our-fund.html">Our Funds</a></li>
                 <li><a href="our-products.html">Our Products</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="investor.html">Investor</a></li>
+                <li id="dropdown-btn2"><a class="dropdown-link" href="#">Investor<span id="down-arrow2" style="margin-left: .5em;"><img src="/images/down.png" alt=""></span></a>
+                    <ul id="dropdown2" class="dropdown dropdown2 hide-dropdown">
+                        <li><a href="/sthenic cap mgt/investor.html">
+                            <h3>Investors</h3>
+                            <p>I have capital to invest</p>
+                        </a></li>
+                        <li><a href="/sthenic cap mgt/investor2.html">
+                            <h3>Investees</h3>
+                            <p>I need capital investment for my business</p>
+                        </a></li>
+                    </ul>
+                </li>
                 <li><a href="/careers.html">Careers</a></li>
             </ul>
         </nav>
@@ -66,37 +94,6 @@
             </div>
         </div>
 
-        <div class="our-story">
-            <div class="about-us-title">
-                <h3>Our Story</h3>
-            </div>
-
-            <div class="story-flex">
-                <div class="story-text">
-                    <h4>Company Overview and Strategy</h4>
-                    <p>Sthenic Capital Management Limited is a Nigerian registered business with a focus on investment management. The company offer services in specialized financing, investing and trading to clientele which span our network, partners and ecosystem. The company is well known for its strong risk management tactics driven by value-added approaches.
-                    It is led by a team with a deep understanding of the local investment terrain and strong capabilities for structuring private debt.
-                    </p>
-                    <h4>Our Strategy</h4>
-                    <p>The cornerstones of our strategy include execution strength, agility, and speed. Our platform helps us achieve this by bringing together established investors looking for alphas and growth firms looking for investments that unlock high returns to build value.
-                    </p>
-                    <h4>Our Approach</h4>
-                    <p>Three-level know-your-client (KYC) verification on the credit beneficiaries</p>
-                    <ul>
-                        <li>Systematic value add and support approach that is but not limited to</li>
-                        <li>Develop an adaptable financial reporting process</li>
-                        <li>Support with business development</li>
-                        <li>Develop risk management, corporate governance, and compliance systems</li>
-                        <li>Continuous monitoring and review of business processes with the online and real-time tracking of financials, working capital, credit obligation, liquidity, and employee gap.</li>
-                        <li>Local environment is driven by recovery and risk management</li>
-                    </ul>
-                </div>
-
-                <div class="story-img">
-                    <img src="/images/image 1.png" alt="">
-                </div>
-            </div>
-        </div>
     </div>
 
     <div class="more-info about-more-info">
@@ -105,7 +102,7 @@
                 investment opportunities</h2>
             <p>Sthenic finance has amassed a large and ever-expanding base of Fund investors 
                 from all over the world. The team at Sthenic Investor would love to hear from you.</p>
-            <button class="enquiry btn">Enquiry</button>
+                <button class="enquiry btn"><span>Enquiry</span><span><img class="btn-img" src="/images/Vector.svg" alt=""></span></button>
         </div>
     </div>
 
@@ -148,5 +145,69 @@
             <p>Copyright 2023 by Sthenic Finance and Advisory Limited. All Right Reserved.</p>
         </div>
     </footer>
+
+    <script>
+        const dropdownBtn = document.querySelector('#dropdown-btn');
+        const dropdown = document.querySelector('.dropdown');
+        const body = document.querySelector('body');
+        const downArrow = document.querySelector('#down-arrow');
+
+        dropdownBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            dropdown.classList.toggle('hide-dropdown')
+            if (dropdown.classList.contains('hide-dropdown')) {
+                downArrow.style.transform = 'rotateX(0deg)';
+            } else {
+                downArrow.style.transform = 'rotateX(180deg)';
+            }
+            
+        })
+
+        body.addEventListener('click', (e) => {
+            dropdown.classList.add('hide-dropdown')
+            downArrow.style.transform = 'rotateX(0deg)';
+        }, false )
+
+        const btn = document.querySelector('.btn')
+        const btnImg = document.querySelector('.btn-img');
+
+        btn.addEventListener('mouseover', () => {
+            console.log(btn);
+            btn.style.backgroundColor = '#3DB2ED';
+            btnImg.style.opacity = '1';
+            btn.style.width = '189px'
+        })
+
+        btn.addEventListener('mouseleave', () => {
+            console.log(btn);
+            btn.style.backgroundColor = '#001D45';
+            btnImg.style.opacity = '0';
+            btn.style.width = '139px'
+        })
+
+        // investor dropdown 
+
+        const dropdownBtn2 = document.querySelector('#dropdown-btn2');
+        const dropdown2 = document.querySelector('.dropdown2');
+        const body2 = document.querySelector('body');
+        const downArrow2 = document.querySelector('#down-arrow2');
+
+        dropdownBtn2.addEventListener('click', (e) => {
+            e.stopPropagation();
+            dropdown2.classList.toggle('hide-dropdown')
+            if (dropdown2.classList.contains('hide-dropdown')) {
+                downArrow2.style.transform = 'rotateX(0deg)';
+            } else {
+                downArrow2.style.transform = 'rotateX(180deg)';
+            }
+            
+        })
+
+        body2.addEventListener('click', (e) => {
+            dropdown2.classList.add('hide-dropdown')
+            downArrow2.style.transform = 'rotateX(0deg)';
+        }, false )
+
+    </script>
 </body>
 </html>
