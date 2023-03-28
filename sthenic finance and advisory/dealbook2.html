@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <script src="/main.js" defer></script>
+    <title>Dealbook</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/home.html"><img src="/images/Stenic Capital logo only 1.png" alt=""></a>
+        </div>
+
+        <nav id="nav" class="cap-nav">
+            <ul>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="our-services.html">Our Services</a></li>
+                <li><a href="capabilities.html">Our Capabilities</a></li>
+                <li><a class="active" href="dealbook.html">Dealbook</a></li>
+                <li><a href="/careers.html">Careers</a></li>
+                <li><a href="contact1.html">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="menu">
+            <div class="bar"></div>
+        </div>
+    </header>
+
+    <div class="dealbook-form-container">
+        <a href="/sthenic finance and advisory/dealbook.html" class="back">
+            <img src="/images/back.svg" alt="">
+            <span>Back</span>
+        </a>
+
+        
+
+        <div class="dealbook-form">
+            <div class="dealbook-heading">
+                <h4>Deal Book/Potential Clients</h4>
+                <p>For access to more details about our services, simply provide your details
+                    below. Ensure to specify your interests and our team will contact you.</p>
+            </div>
+
+            <div class="form-section">
+                <label for="name"> Name</label>
+                <input type="text" placeholder="Enter name">
+            </div>
+
+            <div class="form-section">
+                <label for="name">Company Name</label>
+                <input type="text" placeholder="Enter Company name">
+            </div>
+
+            <div class="form-section">
+                <label for="phone number">Phone Number</label>
+                <input type="tel" placeholder="Enter phone number">
+            </div>
+    
+            <div class="form-section">
+                <label for="company name">Email</label>
+                <input type="email" placeholder="Enter email">
+            </div>
+    
+            <div class="form-section">
+                <label for="location">Country</label>
+                <div class="select-wrapper">
+                    <select name="location" id="location">
+                        <option value="select-country">Select Country</option>
+                        <option value="Nigeria">Nigeria</option>
+                        <option value="Nigeria">USA</option>
+                        <option value="Nigeria">Canada</option>
+                        <option value="Nigeria">Australia</option>
+                        <option value="Nigeria">China</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <label for="location">Services</label>
+                <div class="select-wrapper">
+                    <select name="location" id="location">
+                        <option value="select-country">Select Service</option>
+                        <option value="Nigeria">Nigeria</option>
+                        <option value="Nigeria">USA</option>
+                        <option value="Nigeria">Canada</option>
+                        <option value="Nigeria">Australia</option>
+                        <option value="Nigeria">China</option>
+                    </select>
+                </div>
+            </div>
+
+            <button class="early-career-btn dealbook-btn btn"><span>Submit</span><span><img class="btn-img" src="/images/Vector.svg" alt=""></span></button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-flex">
+            <div class="footer-flex-item">
+                <div class="top">
+                    <h4>Capital Management</h4>
+                    <p>investmentinfo@sthenicfinance.com</p>
+                </div>
+    
+                <div class="bottom">
+                    <h4>Finance Advisory</h4>
+                    <p>advisoryinfo@sthenicfinance.com</p>
+                </div>
+            </div>
+
+            <div class="footer-flex-item">
+                <div class="top">
+                    <h4>Address</h4>
+                    <p>112a association road, Dolphin Estate, Ikoyi. Lagos</p>
+                </div>
+    
+                <div class="bottom">
+                    <h4>Customer Service </h4>
+                    <p>+234(0) 16330151</p>
+                </div>
+            </div>
+
+            <div class="footer-flex-item">
+                <ul>
+                    <li><a href="#"><img src="/images/facebook.png" alt=""></a></li>
+                    <li><a href="#"><img src="/images/twitter.png" alt=""></a></li>
+                    <li><a href="#"><img src="/images/insta.png" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>Copyright 2023 by Sthenic Finance and Advisory Limited. All Right Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.querySelector('.btn')
+        const btnImg = document.querySelector('.btn-img');
+
+        btn.addEventListener('mouseover', () => {
+            console.log(btn);
+            btn.style.backgroundColor = '#5DDDFF';
+            btnImg.style.opacity = '1';
+            btn.style.width = '189px'
+        })
+
+        btn.addEventListener('mouseleave', () => {
+            console.log(btn);
+            btn.style.backgroundColor = '#001D45';
+            btnImg.style.opacity = '0';
+            btn.style.width = '139px'
+        })
+    </script>
+</body>
+</html>

@@ -1674,8 +1674,44 @@ legend {
     line-height: 32px;
 }
 
+.dealbook-wrapper a:hover {
+    text-decoration: underline;
+}
+
 .dealbook-wrapper img {
     margin-top: 1em;
+}
+
+.dealbook-form-container {
+    margin-top: 68px;
+    padding: 35px 260px;
+}
+
+.dealbook-form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.dealbook-heading {
+    margin-block: 2em;
+}
+
+.dealbook-heading h4 {
+    font-size: 20px;
+    line-height: 28px;
+    color: #001D45;
+    margin-bottom: 1em;
+}
+
+.dealbook-heading p {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.dealbook-btn {
+    margin: 0 auto;
+    margin-top: 2em;
+    background: #001D45;
 }
 
 
