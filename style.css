@@ -2599,16 +2599,18 @@ legend {
 
     .subtitle {
         width: 100%;
+        margin-top: 1em;
     }
 
     .subtitle h3 {
         margin-bottom: .5em;
         font-size: 1.4rem;
+        margin-top: 0;
     }
     
     .subtitle p {
         font-size: 1rem;
-        line-height: 32px;
+        line-height: 28px;
     }
 
     .categories {
