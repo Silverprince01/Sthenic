@@ -136,6 +136,14 @@ nav ul li a:hover{
     transform: rotate(-45deg) translate(20px, 20px);
 }
 
+#down-arrow {
+    display: none;
+}
+
+#down-arrow2 {
+    display: none;
+}
+
 .cover-container {
     background: url(/images/bg-3.jpeg);
 }
@@ -2588,13 +2596,66 @@ legend {
         opacity: 1;
     }
 
+    #dropdown-btn {
+        position: relative;
+        flex-direction: column;
+    }
+
+    #dropdown {
+        position: static;
+        width: 100%;
+        padding-inline: 0;
+        margin-left: 0;
+        border-radius: 0;
+        padding-block: 0;
+    }
+
+    #dropdown li h3{
+        display: flex;
+        float: right;
+        font-size: 12px !important;
+        font-weight: 400;
+    }
+
+    #dropdown li p{
+        display: none;
+    }
+
+    #dropdown-btn2 {
+        position: relative;
+        flex-direction: column;
+    }
+
+    #dropdown2 {
+        position: static;
+        width: 100%;
+        padding-inline: 0;
+        margin-left: 0;
+        border-radius: 0;
+        padding-block: 0;
+    }
+
+    #dropdown2 li h3{
+        display: flex;
+        float: right;
+        font-size: 12px !important;
+        font-weight: 400;
+    }
+
+    #dropdown2 li p{
+        display: none;
+    }
+
     .cover {
         padding: 0 2em;
     }
 
     .cover .title {
-        font-size: 2.1rem;
         padding-top: 3em;
+    }
+
+    .cover .title h2 {
+        font-size: 50px !important;
     }
 
     .subtitle {
@@ -2604,7 +2665,7 @@ legend {
 
     .subtitle h3 {
         margin-bottom: .5em;
-        font-size: 1.4rem;
+        font-size: 20px !important;
         margin-top: 0;
     }
     
@@ -2740,11 +2801,11 @@ legend {
 
     .history-cover h2 {
         font-size: 52px;
-        line-height: 56px;
+        line-height: 56px !important;
     }
     
     .history-cover p {
-        font-size: 20px;
+        font-size: 16px;
         line-height: 32px;
     }
 
@@ -2952,7 +3013,7 @@ legend {
 
     .our-funds-cover h3 {
         width: 100%;
-        font-size: 36px;
+        font-size: 36px !important;
     }
     
     .our-funds-cover p {
@@ -2986,7 +3047,7 @@ legend {
 
     .our-products-cover h3 {
         width: 100%;
-        font-size: 36px;
+        font-size: 36px !important;
     }
 
     .products-main {
@@ -3015,7 +3076,7 @@ legend {
 
     .investor-cover h3 {
         width: 100%;
-        font-size: 32px;
+        font-size: 32px !important;
     }
 
     .investor-cover p {
@@ -3073,7 +3134,7 @@ legend {
     
     .about-us-cover h3 {
         width: 100%;
-        font-size: 36px;
+        font-size: 36px !important;
     }
 
     .about-us-main {
@@ -3098,7 +3159,7 @@ legend {
     
     .our-services-cover h3 {
         width: 100%;
-        font-size: 36px;
+        font-size: 36px !important;
     }
 
     .services-main {
@@ -3135,7 +3196,7 @@ legend {
     
     .capabilities-cover h3 {
         width: 100%;
-        font-size: 36px;
+        font-size: 36px !important;
     }
 
     .capabilities-main {
@@ -3161,7 +3222,7 @@ legend {
     
     .dealbook-cover h3 {
         width: 100%;
-        font-size: 36px;
+        font-size: 36px !important;
     }
 
     .deal-investor, .deal-potential {
@@ -3179,6 +3240,18 @@ legend {
 
     .dealbook-form {
         width: 100%;
+    }
+
+    h3 {
+        font-size: 24px !important;
+    }
+
+    h2 {
+        font-size: 24px !important;
+    }
+
+    h4 {
+        font-size: 18px !important;
     }
 
 }
@@ -3227,6 +3300,11 @@ legend {
         font-size: 1.7rem;
         padding-top: 3em;
     }
+
+    .cover .title h2 {
+        font-size: 40px !important;
+    }
+
 
     .subtitle h3 {
         margin-bottom: .5em;
