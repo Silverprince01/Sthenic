@@ -92,3 +92,11 @@ vCard2.addEventListener('mouseleave', function () {
 //         dropdown.classList.add('hide-dropdown') 
 //     }
 // })
+
+
+
+// const capGrpItem = document.querySelectorAll('.cap-grp-item');
+// const capHeader = document.querySelectorAll('.cap-grp-header');
+// const imgStack = document.querySelectorAll('.img-stack');
+
+// console.log(capGrpItem);

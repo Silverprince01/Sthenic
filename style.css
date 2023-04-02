@@ -203,6 +203,7 @@ nav ul li a:hover{
 
 .cat-card p {
     line-height: 28px;
+    text-align: start;
 }
 
 .cat {
@@ -1644,15 +1645,16 @@ legend {
     padding-block: 5em; 
 }
 
-.cap-grp-flex {
+.cap-grp-grid {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 2em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    place-items: center;
 }
 
 .cap-grp-item {
-    width: 30%;
+    width: 303px;
 }
 
 .cap-grp-header {
@@ -1661,6 +1663,7 @@ legend {
     gap: 1em;
     padding: .5em;
     margin-bottom: .5em;
+    /* border: 1px solid blue; */
 }
 
 .cap-grp-header h4 {
@@ -1674,12 +1677,17 @@ legend {
     gap: .5em;
     padding: 2em;
     background: transparent;
+    /* border: 1px solid green; */
 }
 
 .img-stack img {
     margin: 0 auto;
+    padding: 0;
+    object-fit: fill;
     display: block;
-    width: 100%;
+    width: 220px;
+    height: 70px;
+    filter: grayscale(100%);
 }
 
 
@@ -2508,6 +2516,11 @@ legend {
         width: 100%;
     }
 
+    .cap-grp-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2em;
+    }
+
     .dealbook-cover {
         padding-inline: 6em;
     }
@@ -3205,9 +3218,9 @@ legend {
         width: 100%;
     }
 
-    .cap-grp-flex {
-        flex-direction: column;
-        margin-bottom: 0;
+    .cap-grp-grid {
+        grid-template-columns: 1fr;
+        gap: 2em;
     }
 
     .cap-grp-item {
