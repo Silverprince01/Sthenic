@@ -146,6 +146,8 @@ nav ul li a:hover{
 
 .cover-container {
     background: url(/images/bg-3.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .cover {
@@ -517,10 +519,13 @@ footer {
 }
 
 .copyright {
-    text-align: center;
     font-size: 14px;
     line-height: 24px;
     padding-bottom: 2em;
+}
+
+.copyright p {
+    text-align: center;
 }
 
 
@@ -2790,6 +2795,19 @@ legend {
 
     .enquiry {
         font-size: 1rem;
+    }
+
+    .more-info {
+        margin-bottom: 0;
+        padding-block: 2em;
+        height: max-content;
+    }
+
+    footer {
+        margin-top: 0;
+        background:  #001D45;
+        color: #fff;
+        padding-top: 1em;
     }
 
     .footer-flex {
