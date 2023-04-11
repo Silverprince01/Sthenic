@@ -11,24 +11,24 @@
 <body>
     <header>
         <div class="logo">
-            <a href="/home.html"><img src="/images/Stenic Capital logo only 1.png" alt=""></a>
+            <a href="/index.html"><img src="/images/Stenic Capital logo only 1.png" alt=""></a>
         </div>
 
         <nav id="nav" class="cap-nav">
             <ul>
-                <li id="dropdown-btn"><a href="#" class="active dropdown-link" >About Us<span id="down-arrow" style="margin-left: .5em;"><img src="/images/down.png" alt=""></span></a>
+                <li id="dropdown-btn"><a class="active dropdown-link" href="#">About Us <span id="down-arrow" style="margin-left: .5em;"><img src="/images/down.png" alt=""></span></a>
                     <ul id="dropdown" class="dropdown hide-dropdown">
-                        <li><a class="dropdown-active" href="#">
+                        <li><a href="/scm/about.html">
                             <h3>Overview</h3>
                             <p>Know more about where we have been and what 
                                 we have done</p>
                         </a></li>
-                        <li><a href="/sthenic cap mgt/about-us (story).html">
+                        <li><a class="dropdown-active" href="#">
                             <h3>Our Story</h3>
                             <p>Know more about where we have been and what 
                                 we have done</p>
                         </a></li>
-                        <li><a href="/sthenic cap mgt/about-us (approach).html">
+                        <li><a href="/scm/approach.html">
                             <h3>Our Approach</h3>
                             <p>Get more insight on our work processes</p>
                         </a></li>
@@ -39,11 +39,11 @@
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li id="dropdown-btn2"><a class="dropdown-link" href="#">Investor<span id="down-arrow2" style="margin-left: .5em;"><img src="/images/down.png" alt=""></span></a>
                     <ul id="dropdown2" class="dropdown dropdown2 hide-dropdown">
-                        <li><a href="/sthenic cap mgt/investor.html">
+                        <li><a href="/scm/investor.html">
                             <h3>Investors</h3>
                             <p>I have capital to invest</p>
                         </a></li>
-                        <li><a href="/sthenic cap mgt/investor2.html">
+                        <li><a href="/scm/investees.html">
                             <h3>Investees</h3>
                             <p>I need capital investment for my business</p>
                         </a></li>
@@ -65,35 +65,28 @@
     </div>
     
     <div class="about-us-main">
-        <div class="about-us-title">
-            <h3>Overview</h3>
-        </div>
 
-        <div>
-            <h4>Who We Are</h4>
-            <p>Sthenic Capital Management Limited (SCM) is Sthenic’s investment management and regulated subsidiary, with a focus on structured private debt fund management. SCM is a specialized private debt fund management company that provides tailored financing solutions for mid-market companies. Our team of experienced professionals brings a deep understanding of the markets we operate in, enabling us to identify and unlock unique investment opportunities. We work closely with our clients to provide flexible financing solutions that meet their specific needs, helping them achieve their growth objectives.</p>
-        </div>
-
-        <div class="p-flex">
-            <div class="p-flex-item">
-                <h4>Pedigree</h4>
-                <ul>
-                    <li><p>With over two decades of combined expertise in the capital market, corporate banking, private equity investment, and portfolio management in Nigeria, our fund managers are recognized specialists in their field.
-                    </p></li>
-                    <li><p>Three active funds with a combined AUM of more than 500 million   NGN within three years of operation.</p></li>
-                    <li><p>Three active funds with a combined AUM of more than 500 million   NGN within three years of operation.</p></li>
-                </ul>
+        <div class="our-story">
+            <div class="about-us-title">
+                <h3>Our Story</h3>
             </div>
 
-            <div class="p-flex-item">
-                <h4>Platform and Personnel</h4>
-                <ul>
-                    <li><p>Sthenic is backed by robust consulting services and is built on a strong network of focus segment partners and associated ecosystems.</p></li>
-                    <li><p>A team of investment managers with systematic training and culture.</p></li>
-                </ul>
+            <div class="story-flex">
+                <div class="story-text">
+                    <h4>Company Overview and Strategy</h4>
+                    <p>Sthenic Capital Management Limited is a Nigerian registered business with a focus on investment management. The company offer services in specialized financing, investing and trading to clientele which span our network, partners and ecosystem. The company is well known for its strong risk management tactics driven by value-added approaches.
+                    It is led by a team with a deep understanding of the local investment terrain and strong capabilities for structuring private debt.
+                    </p>
+                    <h4>Our Strategy</h4>
+                    <p>The cornerstones of our strategy include execution strength, agility, and speed. Our platform helps us achieve this by bringing together established investors looking for alphas and growth firms looking for investments that unlock high returns to build value.
+                    </p>
+                </div>
+
+                <div class="story-img">
+                    <img src="/images/image 1.png" alt="">
+                </div>
             </div>
         </div>
-
     </div>
 
     <div class="more-info about-more-info">
@@ -168,6 +161,7 @@
             downArrow.style.transform = 'rotateX(0deg)';
         }, false )
 
+
         const btn = document.querySelector('.btn')
         const btnImg = document.querySelector('.btn-img');
 
@@ -196,6 +190,7 @@
             e.stopPropagation();
             dropdown2.classList.toggle('hide-dropdown')
             if (dropdown2.classList.contains('hide-dropdown')) {
+                downArrow2.style.transform = 'rotateX(0deg)';
             } else {
                 downArrow2.style.transform = 'rotateX(180deg)';
             }
@@ -204,8 +199,10 @@
 
         body2.addEventListener('click', (e) => {
             dropdown2.classList.add('hide-dropdown')
+            downArrow2.style.transform = 'rotateX(0deg)';
         }, false )
 
     </script>
+   
 </body>
 </html>

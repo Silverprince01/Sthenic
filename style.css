@@ -493,6 +493,7 @@ footer {
     background:  #001D45;
     color: #fff;
     padding-top: 3em;
+    background: url(/images/Footer\ 1.png);
 }
 
 .footer-flex {
@@ -1203,11 +1204,16 @@ footer {
     right: 6em;
 }
 
+.dropdown li {
+    height: max-content;
+}
+
 .dropdown li a {
     display: block;
     padding: 1em;
     width: 100%;
     border-radius: 10px;
+    height: max-content;
 }
 
 .dropdown h3 {
@@ -1479,6 +1485,7 @@ footer {
     font-size: 40px;
     line-height: 48px;
     color: #001D45;
+    margin-top: 2em;
 }
 
 .investees p {
