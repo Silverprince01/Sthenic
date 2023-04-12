@@ -261,7 +261,8 @@ nav ul li a:hover{
 }
 
 .pic img {
-    object-fit: fill;
+    -o-object-fit: fill;
+       object-fit: fill;
 }
 
 .overlay {
@@ -671,6 +672,30 @@ footer {
     line-height: 28px;
 }
 
+.searchbar input::-webkit-input-placeholder {
+    color: #E5E5E5;
+    font-size: 14px;
+    line-height: 28px;
+}
+
+.searchbar input::-moz-placeholder {
+    color: #E5E5E5;
+    font-size: 14px;
+    line-height: 28px;
+}
+
+.searchbar input:-ms-input-placeholder {
+    color: #E5E5E5;
+    font-size: 14px;
+    line-height: 28px;
+}
+
+.searchbar input::-ms-input-placeholder {
+    color: #E5E5E5;
+    font-size: 14px;
+    line-height: 28px;
+}
+
 .searchbar input::placeholder {
     color: #E5E5E5;
     font-size: 14px;
@@ -796,7 +821,8 @@ footer {
     width: 100%;
     display: block;
     height: 336px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .career-card-flex {
@@ -1072,6 +1098,7 @@ footer {
     display: flex;
     align-items: center;
     padding-inline: 12em;
+    border: 1px solid red;
 }
 
 .about-us-cover h3 {
@@ -1186,12 +1213,14 @@ footer {
 }
 
 .dropdown {
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     position: absolute;
     display: block;
     width: 280px;
     flex-direction: column;
-    top: 90px;
+    top: 69px;
     left: auto;
     background: #fff;
     padding: 2em;
@@ -1205,6 +1234,8 @@ footer {
 }
 
 .dropdown li {
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
 }
 
@@ -1213,6 +1244,8 @@ footer {
     padding: 1em;
     width: 100%;
     border-radius: 10px;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
 }
 
@@ -1521,6 +1554,22 @@ legend {
     transition: .3s ease-in-out;
 }
 
+.form-section input::-webkit-input-placeholder {
+    color: #252525;
+}
+
+.form-section input::-moz-placeholder {
+    color: #252525;
+}
+
+.form-section input:-ms-input-placeholder {
+    color: #252525;
+}
+
+.form-section input::-ms-input-placeholder {
+    color: #252525;
+}
+
 .form-section input::placeholder {
     color: #252525;
 }
@@ -1695,11 +1744,13 @@ legend {
 .img-stack img {
     margin: 0 auto;
     padding: 0;
-    object-fit: fill;
+    -o-object-fit: fill;
+       object-fit: fill;
     display: block;
     width: 220px;
     height: 70px;
-    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
 }
 
 
@@ -1821,7 +1872,8 @@ legend {
     .pic img {
         width: 100%;
         display: block;
-        object-fit: fill;
+        -o-object-fit: fill;
+           object-fit: fill;
     }
 
     .overlay {
@@ -1951,6 +2003,8 @@ legend {
 
     .our-strategy {
         padding: 6em;
+        height: -webkit-max-content;
+        height: -moz-max-content;
         height: max-content;
     }
 
@@ -1973,6 +2027,8 @@ legend {
     }
 
     .services-flex {
+        height: -webkit-max-content;
+        height: -moz-max-content;
         height: max-content;
     }
 
@@ -1982,7 +2038,8 @@ legend {
 
     .services-img img {
         height: 370px !important;
-        object-fit: fill;
+        -o-object-fit: fill;
+           object-fit: fill;
     }
 
     .services-text {
@@ -2093,6 +2150,8 @@ legend {
     }
 
     .cat-icon {
+        width: -webkit-max-content;
+        width: -moz-max-content;
         width: max-content;
     }
 
@@ -2128,7 +2187,8 @@ legend {
     .pic img {
         width: 100%;
         display: block;
-        object-fit: fill;
+        -o-object-fit: fill;
+           object-fit: fill;
     }
 
     .overlay {
@@ -2230,6 +2290,30 @@ legend {
 
     .searchbar input {
         padding: .5em 1em;
+        font-size: 12px;
+        line-height: 20px;
+    }
+    
+    .searchbar input::-webkit-input-placeholder {
+        color: #E5E5E5;
+        font-size: 12px;
+        line-height: 20px;
+    }
+    
+    .searchbar input::-moz-placeholder {
+        color: #E5E5E5;
+        font-size: 12px;
+        line-height: 20px;
+    }
+    
+    .searchbar input:-ms-input-placeholder {
+        color: #E5E5E5;
+        font-size: 12px;
+        line-height: 20px;
+    }
+    
+    .searchbar input::-ms-input-placeholder {
+        color: #E5E5E5;
         font-size: 12px;
         line-height: 20px;
     }
@@ -2353,6 +2437,8 @@ legend {
     }
 
     .story-img {
+        width: -webkit-max-content;
+        width: -moz-max-content;
         width: max-content;
     }
 
@@ -2472,6 +2558,8 @@ legend {
 
     .our-strategy {
         padding: 6em;
+        height: -webkit-max-content;
+        height: -moz-max-content;
         height: max-content;
     }
 
@@ -2496,6 +2584,8 @@ legend {
     }
 
     .services-flex {
+        height: -webkit-max-content;
+        height: -moz-max-content;
         height: max-content;
     }
 
@@ -2505,7 +2595,8 @@ legend {
 
     .services-img img {
         height: 370px !important;
-        object-fit: fill;
+        -o-object-fit: fill;
+           object-fit: fill;
     }
 
     .services-text {
@@ -2807,6 +2898,8 @@ legend {
     .more-info {
         margin-bottom: 0;
         padding-block: 2em;
+        height: -webkit-max-content;
+        height: -moz-max-content;
         height: max-content;
     }
 
@@ -2964,6 +3057,8 @@ legend {
 
     .contact-btn {
         margin-left: 0;
+        width: -webkit-max-content !important;
+        width: -moz-max-content !important;
         width: max-content !important;
     }
 
@@ -2972,6 +3067,8 @@ legend {
     }
 
     .btn {
+        width: -webkit-max-content !important;
+        width: -moz-max-content !important;
         width: max-content !important;
     }
 
@@ -2983,6 +3080,8 @@ legend {
     }
 
     .insight-btn button{
+        width: -webkit-max-content;
+        width: -moz-max-content;
         width: max-content;
     }
 
@@ -3031,6 +3130,8 @@ legend {
     }
 
     .story-img {
+        width: -webkit-max-content;
+        width: -moz-max-content;
         width: max-content;
     }
 
@@ -3183,6 +3284,8 @@ legend {
 
     .our-strategy {
         padding: 2em;
+        height: -webkit-max-content;
+        height: -moz-max-content;
         height: max-content;
     }
 
@@ -3207,6 +3310,8 @@ legend {
     }
 
     .services-flex {
+        height: -webkit-max-content;
+        height: -moz-max-content;
         height: max-content;
         width: 100%;
         flex-direction: column;
@@ -3219,7 +3324,8 @@ legend {
 
     .services-img img {
         height: 370px !important;
-        object-fit: fill;
+        -o-object-fit: fill;
+           object-fit: fill;
     }
 
     .services-text {
