@@ -168,49 +168,30 @@
     <script>
         const dropdownBtn = document.querySelector('#dropdown-btn');
         const dropdown = document.querySelector('.dropdown');
-        const body = document.querySelector('body');
+        const body = document.querySelector('.investor-cover');
         const downArrow = document.querySelector('#down-arrow');
+        const nav = document.querySelector('nav');
 
-        dropdownBtn.addEventListener('click', (e) => {
+        dropdownBtn.addEventListener('mouseover', (e) => {
             e.stopPropagation();
-            dropdown.classList.toggle('hide-dropdown')
-            if (dropdown.classList.contains('hide-dropdown')) {
-                downArrow.style.transform = 'rotateX(0deg)';
-            } else {
-                downArrow.style.transform = 'rotateX(180deg)';
-            }
+            dropdown.classList.remove('hide-dropdown')
+            // if (dropdown.classList.contains('hide-dropdown')) {
+            //     downArrow.style.transform = 'rotateX(0deg)';
+            // } else {
+            //     downArrow.style.transform = 'rotateX(180deg)';
+            // }
             
         })
 
-        body.addEventListener('click', (e) => {
+        body.addEventListener('mouseover', (e) => {
             dropdown.classList.add('hide-dropdown')
-            downArrow.style.transform = 'rotateX(0deg)';
-        }, false )
-
-        // investor dropdown 
-
-        const dropdownBtn2 = document.querySelector('#dropdown-btn2');
-        const dropdown2 = document.querySelector('.dropdown2');
-        const body2 = document.querySelector('body');
-        const downArrow2 = document.querySelector('#down-arrow2');
-
-        dropdownBtn2.addEventListener('click', (e) => {
-            e.stopPropagation();
-            dropdown2.classList.toggle('hide-dropdown')
-            if (dropdown2.classList.contains('hide-dropdown')) {
-                downArrow2.style.transform = 'rotateX(0deg)';
-            } else {
-                downArrow2.style.transform = 'rotateX(180deg)';
-            }
-            
+            // downArrow.style.transform = 'rotateX(0deg)';
         })
 
-        body2.addEventListener('click', (e) => {
-            dropdown2.classList.add('hide-dropdown')
-            downArrow2.style.transform = 'rotateX(0deg)';
-        }, false )
-
-        // form btn 
+        nav.addEventListener('mouseover', (e) => {
+            dropdown.classList.add('hide-dropdown')
+            // downArrow.style.transform = 'rotateX(0deg)';
+        })
 
         const btn = document.querySelector('.btn')
         const btnImg = document.querySelector('.btn-img');
@@ -224,9 +205,35 @@
 
         btn.addEventListener('mouseleave', () => {
             console.log(btn);
-            btn.style.backgroundColor = '#0177B2';
+            btn.style.backgroundColor = '#001D45';
             btnImg.style.opacity = '0';
             btn.style.width = '139px'
+        })
+
+        // investor dropdown 
+
+        const dropdownBtn2 = document.querySelector('#dropdown-btn2');
+        const dropdown2 = document.querySelector('.dropdown2');
+        // const body2 = document.querySelector('body');
+        const downArrow2 = document.querySelector('#down-arrow2');
+
+        dropdownBtn2.addEventListener('mouseover', (e) => {
+            e.stopPropagation();
+            dropdown2.classList.remove('hide-dropdown')
+            // if (dropdown2.classList.contains('hide-dropdown')) {
+            // } else {
+            //     downArrow2.style.transform = 'rotateX(180deg)';
+            // }
+            
+        })
+
+        body.addEventListener('mouseover', (e) => {
+            dropdown2.classList.add('hide-dropdown')
+        })
+
+        nav.addEventListener('mouseover', (e) => {
+            dropdown2.classList.add('hide-dropdown')
+            // downArrow.style.transform = 'rotateX(0deg)';
         })
 
     </script>
