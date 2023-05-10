@@ -11,6 +11,7 @@ body {
     font-family: 'EB Garamond', serif;
 }
 
+
 a {
     text-decoration: none;
 }
@@ -235,8 +236,8 @@ nav ul li a:hover{
 }
 
 .upper-grp {
-    display: flex;
-    justify-content: space-between;
+     display: flex; 
+    justify-content: space-between; 
     margin-bottom: 3em;
 }
 
@@ -330,7 +331,7 @@ nav ul li a:hover{
 }
 
 .core-pillars {
-    padding: 5em;
+    padding: 2em 10em;
 }
 
 .core-title {
@@ -343,13 +344,13 @@ nav ul li a:hover{
 
 .card-wrapper {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2em;
 }
 
 .card {
     border: 1px solid #0177B2;
-    padding: 2em;
+    padding: 1em;
     border-radius: 10px;
     line-height: 25px;
     transition: .4s ease-in-out;
@@ -385,7 +386,7 @@ nav ul li a:hover{
     border: 1px solid #001D45;
     width: 45%;
     height: 250px;
-    padding: 2em;
+    padding: 1em;
     border-radius: 5px;
     line-height: 25px;
     color: #001D45;
@@ -554,6 +555,7 @@ footer {
 
 .history-text {
     padding: 6em;
+    overflow-x: hidden;
 }
 
 .subheading {
@@ -582,14 +584,14 @@ footer {
 
 .main-content {
     padding: 6em;
-    margin-top: 100px;
+    /* margin-top: 100px; */
     display: flex;
-    justify-content: space-between;
+    flex-direction: column-reverse;
+    /* justify-content: space-between; */
 }
 
 .insights-container {
-    width: 60%;
-   
+    width: 100%;
 }
 
 .insights-card-wrapper {
@@ -648,16 +650,18 @@ footer {
 }
 
 .insight-aside {
-    width: 29%;
+    width: 100%;
+    margin-bottom: 2em;
 }
 
 .searchbar {
     border: 1px solid #808080;
-    width: 100%;
+    width: 50%;
     display: flex;
     align-items: center;
     border-radius: 6px;
     overflow: hidden;
+    margin: auto;
 }
 
 .searchbar input {
@@ -723,7 +727,11 @@ footer {
 }
 
 .category-list {
+    margin: auto;
+    width: 100%;
     list-style: none;
+    display: flex;
+    justify-content: space-between;
 }
 
 .category-list li{
