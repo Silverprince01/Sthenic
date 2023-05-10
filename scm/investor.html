@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/main.js" defer></script>
     <title>Investors</title>
 </head>
@@ -59,7 +61,7 @@
     </header>
 
     <div class="investor-header">
-        <div class="investor-cover">
+        <div class="investor-cover" >
             <h3>Investor Relations</h3>
             <p>Sthenic Capital Management portfolio includes a wide range of funds that may offer organizations financial sustainability and development at levels of execution structure, speed, and cost that are unmatched globally. (confirm what industries they invest in.)</p>
         </div>
@@ -67,10 +69,10 @@
     
     <div class="investor-main">
         <div class="investors">
-            <h3>Investors</h3>
-            <p>OPerational Organogram of Sthenic Capital Management</p>
+            <h3 data-aos="fade-left">Investors</h3>
+            <p data-aos="fade-left">OPerational Organogram of Sthenic Capital Management</p>
 
-            <fieldset>
+            <fieldset data-aos="fade-right">
                 <legend>Fields Marked * are required</legend>
                 <form class="early-career-form investor-form" action="">
                     <div class="form-section">
@@ -127,45 +129,55 @@
 
     <footer>
         <div class="footer-flex">
-            <div class="footer-flex-item">
-                <div class="top">
-                    <h4>Capital Management</h4>
-                    <p>investmentinfo@sthenicfinance.com</p>
-                </div>
-    
-                <div class="bottom">
-                    <h4>Finance Advisory</h4>
-                    <p>advisoryinfo@sthenicfinance.com</p>
-                </div>
+          <div class="footer-flex-item" data-aos="fade-right">
+            <div class="top">
+              <h4>Capital Management</h4>
+              <p>investmentinfo@sthenicfinance.com</p>
             </div>
-
-            <div class="footer-flex-item">
-                <div class="top">
-                    <h4>Address</h4>
-                    <p>112a association road, Dolphin Estate, Ikoyi. Lagos</p>
-                </div>
-    
-                <div class="bottom">
-                    <h4>Customer Service </h4>
-                    <p>+234(0) 16330151</p>
-                </div>
+  
+            <div class="bottom">
+              <h4>Finance Advisory</h4>
+              <p>advisoryinfo@sthenicfinance.com</p>
             </div>
-
-            <div class="footer-flex-item">
-                <ul>
-                    <li><a href="#"><img src="/images/facebook.png" alt=""></a></li>
-                    <li><a href="#"><img src="/images/twitter.png" alt=""></a></li>
-                    <li><a href="#"><img src="/images/insta.png" alt=""></a></li>
-                </ul>
+          </div>
+  
+          <div class="footer-flex-item" data-aos="fade-up">
+            <div class="top">
+              <h4>Address</h4>
+              <p>112a association road, Dolphin Estate, Ikoyi. Lagos</p>
             </div>
+  
+            <div class="bottom">
+              <h4>Customer Service</h4>
+              <p>+234(0) 16330151</p>
+            </div>
+          </div>
+  
+          <div class="footer-flex-item" data-aos="fade-left">
+            <ul>
+              <li>
+                <a href="#"><img src="/images/facebook.png" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="/images/twitter.png" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="/images/insta.png" alt="" /></a>
+              </li>
+            </ul>
+          </div>
         </div>
-
+  
         <div class="copyright">
-            <p>Copyright 2023 by Sthenic Finance and Advisory Limited. All Right Reserved.</p>
+          <p>
+            Copyright 2023 by Sthenic Finance and Advisory Limited. All Right
+            Reserved.
+          </p>
         </div>
-    </footer>
+      </footer>
 
     <script>
+        AOS.init()
         const dropdownBtn = document.querySelector('#dropdown-btn');
         const dropdown = document.querySelector('.dropdown');
         const body = document.querySelector('.investor-cover');

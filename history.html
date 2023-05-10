@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="main.js" defer></script>
     <title>History</title>
 </head>
@@ -41,75 +43,89 @@
         </div>
     </div>
 
-    <div class="history-text">
-        <div class="subheading">
+    <div class="history-text" data-aos="fade-right">
+        <div class="subheading" >
             <h4>Sthenic uses a time-tested approach to originate, acquire and manage structured commodity-backed transactions across more than 30 African countries.</h4>
         </div>
 
-        <div class="history-details">
+        <div class="history-details" data-aos="fade-left">
             <p>Sthenic seeks to generate equity-like returns in a capital-constrained market with relatively low volatility and limited correlation to the broader markets. Our strategy focuses on fully-funded or blended debt in the African commodity markets, using asset-backed loans with various forms of collateral. Portfolio Managers manage USD liquidity with respect to investor subscriptions.
                 The executive team is a hand-picked group of specialists with significant expertise in agricultural commodities, structured trade finance, logistics and loan management. Barak maintains a presence in Mauritius (Head Office), South Africa, United Kingdom, Kenya and Ivory Coast to ensure that the correct measures exist from a capital raising and correlating Barak fund deployment.
                 Experienced origination and conservative credit approval terms provide control over portfolio composition and asset management, enhancing fund performance. Although Barak’s advantage over banks is quicker turnaround times, the Investment Committee is made up of ex-bankers who maintain the same level of strict reviews once a potential deal is addressed by a Deal Originator to the Head of Credit.</p>
         </div>
 
     </div>
+    
     <div class="more-info">
-        <div class="more-info-text">
-            <h2>For more information on 
-                investment opportunities</h2>
-            <p>Sthenic finance has amassed a large and ever-expanding base of Fund investors 
-                from all over the world. The team at Sthenic Investor would love to hear from you.</p>
-            <button class="enquiry btn"><span>Enquiry</span><span><img class="btn-img" src="/images/Vector.svg" alt=""></span></button>
+        <div class="more-info-text" data-aos="fade-right">
+          <h2>For more information on investment opportunities</h2>
+          <p>
+            Sthenic finance has amassed a large and ever-expanding base of Fund
+            investors from all over the world. The team at Sthenic Investor would
+            love to hear from you.
+          </p>
+          <button class="enquiry btn">
+            <span>Enquiry</span
+            ><span><img class="btn-img" src="/images/Vector.svg" alt="" /></span>
+          </button>
         </div>
-
-        <div class="img-overlay"></div>
-        <div class="more-info-img">
-            <img src="/images/Rectangle 3.png" alt="">
+  
+        <div class="img-overlay" data-aos="fade-left"></div>
+        <div class="more-info-img" data-aos="fade-left">
+          <img src="/images/Rectangle 3.png" alt="" />
         </div>
-        
-    </div>
+      </div>
 
     <footer>
         <div class="footer-flex">
-            <div class="footer-flex-item">
-                <div class="top">
-                    <h4>Capital Management</h4>
-                    <p>investmentinfo@sthenicfinance.com</p>
-                </div>
-    
-                <div class="bottom">
-                    <h4>Finance Advisory</h4>
-                    <p>advisoryinfo@sthenicfinance.com</p>
-                </div>
+          <div class="footer-flex-item" data-aos="fade-right">
+            <div class="top">
+              <h4>Capital Management</h4>
+              <p>investmentinfo@sthenicfinance.com</p>
             </div>
-
-            <div class="footer-flex-item">
-                <div class="top">
-                    <h4>Address</h4>
-                    <p>112a association road, Dolphin Estate, Ikoyi. Lagos</p>
-                </div>
-    
-                <div class="bottom">
-                    <h4>Customer Service </h4>
-                    <p>+234(0) 16330151</p>
-                </div>
+  
+            <div class="bottom">
+              <h4>Finance Advisory</h4>
+              <p>advisoryinfo@sthenicfinance.com</p>
             </div>
-
-            <div class="footer-flex-item">
-                <ul>
-                    <li><a href="#"><img src="/images/facebook.png" alt=""></a></li>
-                    <li><a href="#"><img src="/images/twitter.png" alt=""></a></li>
-                    <li><a href="#"><img src="/images/insta.png" alt=""></a></li>
-                </ul>
+          </div>
+  
+          <div class="footer-flex-item" data-aos="fade-up">
+            <div class="top">
+              <h4>Address</h4>
+              <p>112a association road, Dolphin Estate, Ikoyi. Lagos</p>
             </div>
+  
+            <div class="bottom">
+              <h4>Customer Service</h4>
+              <p>+234(0) 16330151</p>
+            </div>
+          </div>
+  
+          <div class="footer-flex-item" data-aos="fade-left">
+            <ul>
+              <li>
+                <a href="#"><img src="/images/facebook.png" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="/images/twitter.png" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="/images/insta.png" alt="" /></a>
+              </li>
+            </ul>
+          </div>
         </div>
-
+  
         <div class="copyright">
-            <p>Copyright 2023 by Sthenic Finance and Advisory Limited. All Right Reserved.</p>
+          <p>
+            Copyright 2023 by Sthenic Finance and Advisory Limited. All Right
+            Reserved.
+          </p>
         </div>
-    </footer>
-
+      </footer>
     <script>
+      AOS.init();
         const btn = document.querySelector('.btn')
         const btnImg = document.querySelector('.btn-img');
 

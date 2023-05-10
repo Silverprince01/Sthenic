@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/main.js" defer></script>
     <title>About Us</title>
 </head>
@@ -67,12 +69,12 @@
     <div class="about-us-main">
 
         <div class="our-story">
-            <div class="about-us-title">
+            <div class="about-us-title" data-aos="fade-down">
                 <h3>Our Story</h3>
             </div>
 
             <div class="story-flex">
-                <div class="story-text">
+                <div class="story-text" data-aos="fade-right">
                     <h4>Company Overview and Strategy</h4>
                     <p>Sthenic Capital Management Limited is a Nigerian registered business with a focus on investment management. The company offer services in specialized financing, investing and trading to clientele which span our network, partners and ecosystem. The company is well known for its strong risk management tactics driven by value-added approaches.
                     It is led by a team with a deep understanding of the local investment terrain and strong capabilities for structuring private debt.
@@ -82,7 +84,7 @@
                     </p>
                 </div>
 
-                <div class="story-img">
+                <div class="story-img" data-aos="fade-left">
                     <img src="/images/image 1.png" alt="">
                 </div>
             </div>
@@ -91,55 +93,65 @@
 
     <div class="more-info about-more-info">
         <div class="more-info-text about-more-info-text">
-            <h2>For more information on 
+            <h2 data-aos="fade-down">For more information on 
                 investment opportunities</h2>
-            <p>Sthenic finance has amassed a large and ever-expanding base of Fund investors 
+            <p data-aos="fade-right">Sthenic finance has amassed a large and ever-expanding base of Fund investors 
                 from all over the world. The team at Sthenic Investor would love to hear from you.</p>
-                <button class="enquiry btn"><span>Enquiry</span><span><img class="btn-img" src="/images/Vector.svg" alt=""></span></button>
+                <button data-aos="fade-up" class="enquiry btn"><span>Enquiry</span><span><img class="btn-img" src="/images/Vector.svg" alt=""></span></button>
         </div>
     </div>
 
-    <footer class="about-footer">
+    <footer>
         <div class="footer-flex">
-            <div class="footer-flex-item">
-                <div class="top">
-                    <h4>Capital Management</h4>
-                    <p>investmentinfo@sthenicfinance.com</p>
-                </div>
-    
-                <div class="bottom">
-                    <h4>Finance Advisory</h4>
-                    <p>advisoryinfo@sthenicfinance.com</p>
-                </div>
+          <div class="footer-flex-item" data-aos="fade-right">
+            <div class="top">
+              <h4>Capital Management</h4>
+              <p>investmentinfo@sthenicfinance.com</p>
             </div>
-
-            <div class="footer-flex-item">
-                <div class="top">
-                    <h4>Address</h4>
-                    <p>112a association road, Dolphin Estate, Ikoyi. Lagos</p>
-                </div>
-    
-                <div class="bottom">
-                    <h4>Customer Service </h4>
-                    <p>+234(0) 16330151</p>
-                </div>
+  
+            <div class="bottom">
+              <h4>Finance Advisory</h4>
+              <p>advisoryinfo@sthenicfinance.com</p>
             </div>
-
-            <div class="footer-flex-item">
-                <ul>
-                    <li><a href="#"><img src="/images/facebook.png" alt=""></a></li>
-                    <li><a href="#"><img src="/images/twitter.png" alt=""></a></li>
-                    <li><a href="#"><img src="/images/insta.png" alt=""></a></li>
-                </ul>
+          </div>
+  
+          <div class="footer-flex-item" data-aos="fade-up">
+            <div class="top">
+              <h4>Address</h4>
+              <p>112a association road, Dolphin Estate, Ikoyi. Lagos</p>
             </div>
+  
+            <div class="bottom">
+              <h4>Customer Service</h4>
+              <p>+234(0) 16330151</p>
+            </div>
+          </div>
+  
+          <div class="footer-flex-item" data-aos="fade-left">
+            <ul>
+              <li>
+                <a href="#"><img src="/images/facebook.png" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="/images/twitter.png" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="/images/insta.png" alt="" /></a>
+              </li>
+            </ul>
+          </div>
         </div>
-
+  
         <div class="copyright">
-            <p>Copyright 2023 by Sthenic Finance and Advisory Limited. All Right Reserved.</p>
+          <p>
+            Copyright 2023 by Sthenic Finance and Advisory Limited. All Right
+            Reserved.
+          </p>
         </div>
-    </footer>
+      </footer>
 
     <script>
+        AOS.init()
         const dropdownBtn = document.querySelector('#dropdown-btn');
         const dropdown = document.querySelector('.dropdown');
         const body = document.querySelector('.about-us-cover');

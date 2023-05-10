@@ -1,274 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
     <script src="/main.js" defer></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <title>Portfolio</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="logo">
-            <a href="/index.html"><img src="/images/Stenic Capital logo only 1.png" alt=""></a>
-        </div>
+      <div class="logo">
+        <a href="/index.html"
+          ><img src="/images/Stenic Capital logo only 1.png" alt=""
+        /></a>
+      </div>
 
-        <nav id="nav" class="cap-nav">
-            <ul>
-                <li id="dropdown-btn"><a href="#" class="dropdown-link" >About Us<span id="down-arrow" style="margin-left: .5em;"><img src="/images/down.png" alt=""></span></a>
-                    <ul id="dropdown" class="dropdown hide-dropdown">
-                        <li><a href="/scm/about.html">
-                            <h3>Overview</h3>
-                            <p>Know more about where we have been and what 
-                                we have done</p>
-                        </a></li>
-                        <li><a href="/scm/story.html">
-                            <h3>Our Story</h3>
-                            <p>Know more about where we have been and what 
-                                we have done</p>
-                        </a></li>
-                        <li><a href="/scm/approach.html">
-                            <h3>Our Approach</h3>
-                            <p>Get more insight on our work processes</p>
-                        </a></li>
-                    </ul>
-                </li>
-                <li><a href="funds.html">Our Funds</a></li>
-                <li><a href="products.html">Our Products</a></li>
-                <li><a class="active" href="portfolio.html">Portfolio</a></li>
-                <li id="dropdown-btn2"><a class="dropdown-link" href="#">Investor<span id="down-arrow2" style="margin-left: .5em;"><img src="/images/down.png" alt=""></span></a>
-                    <ul id="dropdown2" class="dropdown dropdown2 hide-dropdown">
-                        <li><a href="/scm/investor.html">
-                            <h3>Investors</h3>
-                            <p>I have capital to invest</p>
-                        </a></li>
-                        <li><a href="/scm/investees.html">
-                            <h3>Investees</h3>
-                            <p>I need capital investment for my business</p>
-                        </a></li>
-                    </ul>
-                </li>
-                <li><a href="/careers.html">Careers</a></li>
+      <nav id="nav" class="cap-nav">
+        <ul>
+          <li id="dropdown-btn">
+            <a href="#" class="dropdown-link"
+              >About Us<span id="down-arrow" style="margin-left: 0.5em"
+                ><img src="/images/down.png" alt="" /></span
+            ></a>
+            <ul id="dropdown" class="dropdown hide-dropdown">
+              <li>
+                <a href="/scm/about.html">
+                  <h3>Overview</h3>
+                  <p>
+                    Know more about where we have been and what we have done
+                  </p>
+                </a>
+              </li>
+              <li>
+                <a href="/scm/story.html">
+                  <h3>Our Story</h3>
+                  <p>
+                    Know more about where we have been and what we have done
+                  </p>
+                </a>
+              </li>
+              <li>
+                <a href="/scm/approach.html">
+                  <h3>Our Approach</h3>
+                  <p>Get more insight on our work processes</p>
+                </a>
+              </li>
             </ul>
-        </nav>
+          </li>
+          <li><a href="funds.html">Our Funds</a></li>
+          <li><a href="products.html">Our Products</a></li>
+          <li><a class="active" href="portfolio.html">Portfolio</a></li>
+          <li id="dropdown-btn2">
+            <a class="dropdown-link" href="#"
+              >Investor<span id="down-arrow2" style="margin-left: 0.5em"
+                ><img src="/images/down.png" alt="" /></span
+            ></a>
+            <ul id="dropdown2" class="dropdown dropdown2 hide-dropdown">
+              <li>
+                <a href="/scm/investor.html">
+                  <h3>Investors</h3>
+                  <p>I have capital to invest</p>
+                </a>
+              </li>
+              <li>
+                <a href="/scm/investees.html">
+                  <h3>Investees</h3>
+                  <p>I need capital investment for my business</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="/careers.html">Careers</a></li>
+        </ul>
+      </nav>
 
-        <div class="menu">
-            <div class="bar"></div>
-        </div>
+      <div class="menu">
+        <div class="bar"></div>
+      </div>
     </header>
 
     <div class="investor-header">
-        <div class="investor-cover">
-            <h3>Portfolio Companies</h3>
-            <p>Sthenic Capital Management portfolio includes a wide range of funds that may offer organizations financial sustainability and development at levels of execution structure, speed, and cost that are unmatched globally. (confirm what industries they invest in.)</p>
-        </div>
+      <div class="investor-cover">
+        <h3>Portfolio Companies</h3>
+        <p>
+          Sthenic Capital Management portfolio includes a wide range of funds
+          that may offer organizations financial sustainability and development
+          at levels of execution structure, speed, and cost that are unmatched
+          globally. (confirm what industries they invest in.)
+        </p>
+      </div>
     </div>
-    
+
     <div class="logo-wrapper">
-        <div class="logo-card">
-            <div class="img">
-                <img src="/images/image 3.png" alt="">
-            </div>
-            <div class="logo-card-title">
-                <h3>Ridge</h3>
-            </div>
+      <div class="logo-card" data-aos="fade-down">
+        <div class="img">
+          <img src="/images/image 3.png" alt="" />
         </div>
+        <div class="logo-card-title">
+          <h3>Ridge</h3>
+        </div>
+      </div>
 
-        <div class="logo-card">
-            <div class="img">
-                <img src="/images/image 3 (1).png" alt="">
-            </div>
-            <div class="logo-card-title">
-                <h3>Mavoricon </h3>
-            </div>
+      <div class="logo-card" data-aos="fade-down">
+        <div class="img">
+          <img src="/images/image 3 (1).png" alt="" />
         </div>
+        <div class="logo-card-title">
+          <h3>Mavoricon</h3>
+        </div>
+      </div>
 
-        <div class="logo-card">
-            <div class="img">
-                <img src="/images/image 3 (2).png" alt="">
-            </div>
-            <div class="logo-card-title">
-                <h3>Nevada</h3>
-            </div>
+      <div class="logo-card" data-aos="fade-down">
+        <div class="img">
+          <img src="/images/image 3 (2).png" alt="" />
         </div>
+        <div class="logo-card-title">
+          <h3>Nevada</h3>
+        </div>
+      </div>
 
-        <div class="logo-card">
-            <div class="img">
-                <img src="/images/image 3 (3).png" alt="">
-            </div>
-            <div class="logo-card-title">
-                <h3>eticket solutions</h3>
-            </div>
+      <div class="logo-card" data-aos="fade-down">
+        <div class="img">
+          <img src="/images/image 3 (3).png" alt="" />
         </div>
+        <div class="logo-card-title">
+          <h3>eticket solutions</h3>
+        </div>
+      </div>
 
-        <div class="logo-card">
-            <div class="img">
-                <img src="/images/image 3 (4).png" alt="">
-            </div>
-            <div class="logo-card-title">
-                <h3>Ligare Technologies</h3>
-            </div>
+      <div class="logo-card" data-aos="fade-right">
+        <div class="img">
+          <img src="/images/image 3 (4).png" alt="" />
         </div>
+        <div class="logo-card-title">
+          <h3>Ligare Technologies</h3>
+        </div>
+      </div>
 
-        <div class="logo-card">
-            <div class="img">
-                <img src="/images/image 3 (5).png" alt="">
-            </div>
-            <div class="logo-card-title">
-                <h3>Naveen Healthcare</h3>
-            </div>
+      <div class="logo-card" data-aos="fade-right">
+        <div class="img">
+          <img src="/images/image 3 (5).png" alt="" />
         </div>
+        <div class="logo-card-title">
+          <h3>Naveen Healthcare</h3>
+        </div>
+      </div>
 
-        <div class="logo-card">
-            <div class="img">
-                <img src="/images/image 3 (6).png" alt="">
-            </div>
-            <div class="logo-card-title">
-                <h3>Hoop Telecoms</h3>
-            </div>
+      <div class="logo-card" data-aos="fade-right">
+        <div class="img">
+          <img src="/images/image 3 (6).png" alt="" />
         </div>
+        <div class="logo-card-title">
+          <h3>Hoop Telecoms</h3>
+        </div>
+      </div>
 
-        <div class="logo-card">
-            <div class="img">
-                <img src="/images/image 3 (7).png" alt="">
-            </div>
-            <div class="logo-card-title">
-                <h3>Cloudflex</h3>
-            </div>
+      <div class="logo-card" data-aos="fade-right">
+        <div class="img">
+          <img src="/images/image 3 (7).png" alt="" />
         </div>
+        <div class="logo-card-title">
+          <h3>Cloudflex</h3>
+        </div>
+      </div>
 
-        <div class="logo-card">
-            <div class="img">
-                <img src="/images/image 3 (8).png" alt="">
-            </div>
-            <div class="logo-card-title">
-                <h3>Sabroso</h3>
-            </div>
+      <div class="logo-card" data-aos="fade-left">
+        <div class="img">
+          <img src="/images/image 3 (8).png" alt="" />
         </div>
+        <div class="logo-card-title">
+          <h3>Sabroso</h3>
+        </div>
+      </div>
 
-        <div class="logo-card">
-            <div class="img">
-                <img src="/images/image 3 (9).png" alt="">
-            </div>
-            <div class="logo-card-title">
-                <h3>Qlite</h3>
-            </div>
+      <div class="logo-card" data-aos="fade-left">
+        <div class="img">
+          <img src="/images/image 3 (9).png" alt="" />
         </div>
+        <div class="logo-card-title">
+          <h3>Qlite</h3>
+        </div>
+      </div>
 
-        <div class="logo-card">
-            <div class="img">
-                <img src="/images/image 3 (10).png" alt="">
-            </div>
-            <div class="logo-card-title">
-                <h3>Ysidra</h3>
-            </div>
+      <div class="logo-card" data-aos="fade-left">
+        <div class="img">
+          <img src="/images/image 3 (10).png" alt="" />
         </div>
+        <div class="logo-card-title">
+          <h3>Ysidra</h3>
+        </div>
+      </div>
 
-        <div class="logo-card">
-            <div class="img">
-                <img src="/images/image 3 (11).png" alt="">
-            </div>
-            <div class="logo-card-title">
-                <h3>Zenith Agro</h3>
-            </div>
+      <div class="logo-card" data-aos="fade-left">
+        <div class="img">
+          <img src="/images/image 3 (11).png" alt="" />
         </div>
+        <div class="logo-card-title">
+          <h3>Zenith Agro</h3>
+        </div>
+      </div>
 
-        <div class="logo-card">
-            <div class="img">
-                <img src="/images/image 3 (12).png" alt="">
-            </div>
-            <div class="logo-card-title">
-                <h3>Nod Credit</h3>
-            </div>
+      <div class="logo-card" data-aos="fade-up">
+        <div class="img">
+          <img src="/images/image 3 (12).png" alt="" />
         </div>
+        <div class="logo-card-title">
+          <h3>Nod Credit</h3>
+        </div>
+      </div>
     </div>
 
     <footer>
-        <div class="footer-flex">
-            <div class="footer-flex-item">
-                <div class="top">
-                    <h4>Capital Management</h4>
-                    <p>investmentinfo@sthenicfinance.com</p>
-                </div>
-    
-                <div class="bottom">
-                    <h4>Finance Advisory</h4>
-                    <p>advisoryinfo@sthenicfinance.com</p>
-                </div>
-            </div>
+      <div class="footer-flex">
+        <div class="footer-flex-item" data-aos="fade-right">
+          <div class="top">
+            <h4>Capital Management</h4>
+            <p>investmentinfo@sthenicfinance.com</p>
+          </div>
 
-            <div class="footer-flex-item">
-                <div class="top">
-                    <h4>Address</h4>
-                    <p>112a association road, Dolphin Estate, Ikoyi. Lagos</p>
-                </div>
-    
-                <div class="bottom">
-                    <h4>Customer Service </h4>
-                    <p>+234(0) 16330151</p>
-                </div>
-            </div>
-
-            <div class="footer-flex-item">
-                <ul>
-                    <li><a href="#"><img src="/images/facebook.png" alt=""></a></li>
-                    <li><a href="#"><img src="/images/twitter.png" alt=""></a></li>
-                    <li><a href="#"><img src="/images/insta.png" alt=""></a></li>
-                </ul>
-            </div>
+          <div class="bottom">
+            <h4>Finance Advisory</h4>
+            <p>advisoryinfo@sthenicfinance.com</p>
+          </div>
         </div>
 
-        <div class="copyright">
-            <p>Copyright 2023 by Sthenic Finance and Advisory Limited. All Right Reserved.</p>
+        <div class="footer-flex-item" data-aos="fade-up">
+          <div class="top">
+            <h4>Address</h4>
+            <p>112a association road, Dolphin Estate, Ikoyi. Lagos</p>
+          </div>
+
+          <div class="bottom">
+            <h4>Customer Service</h4>
+            <p>+234(0) 16330151</p>
+          </div>
         </div>
+
+        <div class="footer-flex-item" data-aos="fade-left">
+          <ul>
+            <li>
+              <a href="#"><img src="/images/facebook.png" alt="" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="/images/twitter.png" alt="" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="/images/insta.png" alt="" /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p>
+          Copyright 2023 by Sthenic Finance and Advisory Limited. All Right
+          Reserved.
+        </p>
+      </div>
     </footer>
 
     <script>
-        const dropdownBtn = document.querySelector('#dropdown-btn');
-        const dropdown = document.querySelector('.dropdown');
-        const body = document.querySelector('body');
-        const downArrow = document.querySelector('#down-arrow');
+      AOS.init();
+      const dropdownBtn = document.querySelector("#dropdown-btn");
+      const dropdown = document.querySelector(".dropdown");
+      const body = document.querySelector("body");
+      const downArrow = document.querySelector("#down-arrow");
 
-        dropdownBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            dropdown.classList.toggle('hide-dropdown')
-            if (dropdown.classList.contains('hide-dropdown')) {
-                downArrow.style.transform = 'rotateX(0deg)';
-            } else {
-                downArrow.style.transform = 'rotateX(180deg)';
-            }
-            
-        })
+      dropdownBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        dropdown.classList.toggle("hide-dropdown");
+        if (dropdown.classList.contains("hide-dropdown")) {
+          downArrow.style.transform = "rotateX(0deg)";
+        } else {
+          downArrow.style.transform = "rotateX(180deg)";
+        }
+      });
 
-        body.addEventListener('click', (e) => {
-            dropdown.classList.add('hide-dropdown')
-            downArrow.style.transform = 'rotateX(0deg)';
-        }, false )
+      body.addEventListener(
+        "click",
+        (e) => {
+          dropdown.classList.add("hide-dropdown");
+          downArrow.style.transform = "rotateX(0deg)";
+        },
+        false
+      );
 
-        // investor dropdown 
+      // investor dropdown
 
-        const dropdownBtn2 = document.querySelector('#dropdown-btn2');
-        const dropdown2 = document.querySelector('.dropdown2');
-        const body2 = document.querySelector('body');
-        const downArrow2 = document.querySelector('#down-arrow2');
+      const dropdownBtn2 = document.querySelector("#dropdown-btn2");
+      const dropdown2 = document.querySelector(".dropdown2");
+      const body2 = document.querySelector("body");
+      const downArrow2 = document.querySelector("#down-arrow2");
 
-        dropdownBtn2.addEventListener('click', (e) => {
-            e.stopPropagation();
-            dropdown2.classList.toggle('hide-dropdown')
-            if (dropdown2.classList.contains('hide-dropdown')) {
-                downArrow2.style.transform = 'rotateX(0deg)';
-            } else {
-                downArrow2.style.transform = 'rotateX(180deg)';
-            }
-            
-        })
+      dropdownBtn2.addEventListener("click", (e) => {
+        e.stopPropagation();
+        dropdown2.classList.toggle("hide-dropdown");
+        if (dropdown2.classList.contains("hide-dropdown")) {
+          downArrow2.style.transform = "rotateX(0deg)";
+        } else {
+          downArrow2.style.transform = "rotateX(180deg)";
+        }
+      });
 
-        body2.addEventListener('click', (e) => {
-            dropdown2.classList.add('hide-dropdown')
-            downArrow2.style.transform = 'rotateX(0deg)';
-        }, false )
-
+      body2.addEventListener(
+        "click",
+        (e) => {
+          dropdown2.classList.add("hide-dropdown");
+          downArrow2.style.transform = "rotateX(0deg)";
+        },
+        false
+      );
     </script>
-</body>
+  </body>
 </html>

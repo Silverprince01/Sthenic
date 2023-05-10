@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
     <script src="/main.js" defer></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <title>Dealbook</title>
 </head>
 <body>
@@ -37,13 +39,13 @@
     </div>
     
     <div class="dealbook-main">
-        <div class="dealbook-wrapper">
-            <div class="deal-investor">
+        <div class="dealbook-wrapper" >
+            <div class="deal-investor" data-aos="fade-right">
                 <a href="/sfa/investor.html"><p>Investors</p><p>(Looking for deals to invest in)</p></a>
                 <img src="/images/Rectangle 50.png" alt="">
             </div>
     
-            <div class="deal-potential">
+            <div class="deal-potential" data-aos="fade-left">
                 <a href="/sfa/potential.html"><p>Potential Clients</p><p>(Looking for Advisers)</p></a>
                 <img src="/images/Rectangle 50 (1).png" alt="">
             </div>
@@ -52,42 +54,54 @@
 
     <footer>
         <div class="footer-flex">
-            <div class="footer-flex-item">
-                <div class="top">
-                    <h4>Capital Management</h4>
-                    <p>investmentinfo@sthenicfinance.com</p>
-                </div>
-    
-                <div class="bottom">
-                    <h4>Finance Advisory</h4>
-                    <p>advisoryinfo@sthenicfinance.com</p>
-                </div>
+          <div class="footer-flex-item" data-aos="fade-right">
+            <div class="top">
+              <h4>Capital Management</h4>
+              <p>investmentinfo@sthenicfinance.com</p>
             </div>
-
-            <div class="footer-flex-item">
-                <div class="top">
-                    <h4>Address</h4>
-                    <p>112a association road, Dolphin Estate, Ikoyi. Lagos</p>
-                </div>
-    
-                <div class="bottom">
-                    <h4>Customer Service </h4>
-                    <p>+234(0) 16330151</p>
-                </div>
+  
+            <div class="bottom">
+              <h4>Finance Advisory</h4>
+              <p>advisoryinfo@sthenicfinance.com</p>
             </div>
-
-            <div class="footer-flex-item">
-                <ul>
-                    <li><a href="#"><img src="/images/facebook.png" alt=""></a></li>
-                    <li><a href="#"><img src="/images/twitter.png" alt=""></a></li>
-                    <li><a href="#"><img src="/images/insta.png" alt=""></a></li>
-                </ul>
+          </div>
+  
+          <div class="footer-flex-item" data-aos="fade-up">
+            <div class="top">
+              <h4>Address</h4>
+              <p>112a association road, Dolphin Estate, Ikoyi. Lagos</p>
             </div>
+  
+            <div class="bottom">
+              <h4>Customer Service</h4>
+              <p>+234(0) 16330151</p>
+            </div>
+          </div>
+  
+          <div class="footer-flex-item" data-aos="fade-left">
+            <ul>
+              <li>
+                <a href="#"><img src="/images/facebook.png" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="/images/twitter.png" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="/images/insta.png" alt="" /></a>
+              </li>
+            </ul>
+          </div>
         </div>
-
+  
         <div class="copyright">
-            <p>Copyright 2023 by Sthenic Finance and Advisory Limited. All Right Reserved.</p>
+          <p>
+            Copyright 2023 by Sthenic Finance and Advisory Limited. All Right
+            Reserved.
+          </p>
         </div>
-    </footer>
+      </footer>
+      <script>
+        AOS.init()
+      </script>
 </body>
 </html>
