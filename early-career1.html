@@ -1,174 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <script src="main.js" defer></script>
     <title>Early career</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
+      <div class="head">
         <div class="logo">
-            <a href="/index.html"><img src="/images/Stenic Capital logo only 1.png" alt=""></a>
+          <a href="/index.html"
+            ><img src="/images/Stenic Capital logo only 1.png" alt=""
+          /></a>
         </div>
 
         <nav id="nav">
-            <ul>
-                <li><a href="index.html">Welcome</a></li>
-                <li><a href="history.html">History</a></li>
-                <li><a href="insights.html">Insights</a></li>
-                <li><a class="active" href="careers.html">Careers</a></li>
-                <li><a href="contact1.html">Contact Us</a></li>
-            </ul>
+          <ul>
+            <li><a href="index.html">Welcome</a></li>
+            <li><a href="service.html">Our Service</a></li>
+
+            <li><a href="history.html">History</a></li>
+            <li><a href="insights.html">Insights</a></li>
+            <li><a class="active" href="careers.html">Careers</a></li>
+            <li><a href="contact1.html">Contact Us</a></li>
+          </ul>
         </nav>
 
         <div class="menu">
-            <div class="bar"></div>
+          <div class="bar"></div>
         </div>
+      </div>
     </header>
 
     <div class="top-band"></div>
 
     <div class="early-career-container">
-        <div class="early-career-content">
-            <a href="careers.html" class="back">
-                <img src="/images/back.svg" alt="">
-                <span>Back</span>
-            </a>
-        
-            <div class="early-career-text">
-                <h3>Early Careers Application Page</h3>
-                <p>Welcome to our early career application page! We are excited that you are considering a career in finance and are interested in joining our team. Please submit your application below. We look forward to getting to know you better.
-                </p>
+      <div class="early-career-content">
+        <a href="careers.html" class="back">
+          <img src="/images/back.svg" alt="" />
+          <span>Back</span>
+        </a>
+
+        <div class="early-career-text">
+          <h3>Early Careers Application Page</h3>
+          <p>
+            Welcome to our early career application page! We are excited that
+            you are considering a career in finance and are interested in
+            joining our team. Please submit your application below. We look
+            forward to getting to know you better.
+          </p>
+        </div>
+
+        <form class="early-career-form" action="">
+          <div class="form-section">
+            <label for="location">Location</label>
+            <div class="select-wrapper">
+              <select name="location" id="location">
+                <option value="select-country">Select Country</option>
+                <option value="Nigeria">Nigeria</option>
+                <option value="Nigeria">USA</option>
+                <option value="Nigeria">Canada</option>
+                <option value="Nigeria">Australia</option>
+                <option value="Nigeria">China</option>
+              </select>
             </div>
-        
-            <form class="early-career-form" action="">
-                <div class="form-section">
-                    <label for="location">Location</label>
-                    <div class="select-wrapper">
-                        <select name="location" id="location">
-                            <option value="select-country">Select Country</option>
-                            <option value="Nigeria">Nigeria</option>
-                            <option value="Nigeria">USA</option>
-                            <option value="Nigeria">Canada</option>
-                            <option value="Nigeria">Australia</option>
-                            <option value="Nigeria">China</option>
-                        </select>
-                    </div>
-                </div>
-        
-                <div class="form-section">
-                    <label for="Job Type">Job Type</label>
-                    <div class="select-wrapper">
-                        <select name="job-type" id="job-type">
-                            <option value="select-job">Select Job Type</option>
-                            <option value="Designer">Designer</option>
-                            <option value="Designer">Developer</option>
-                            <option value="Designer">Designer</option>
-                            <option value="Designer">Developer</option>
-                        </select>
-                    </div>
-                    
-                </div>
-        
-                <div class="form-section">
-                    <label for="Business-Unit">Business Unit</label>
-                    <div class="select-wrapper">
-                        <select name="business-Unit" id="business-Unit">
-                            <option value="select-unit">Select Division/Unit</option>
-                            <option value="unit1">Unit1</option>
-                            <option value="Unit2">Unit2</option>
-                            <option value="unit3">Unit3</option>
-                            <option value="unit4">Unit4</option>
-                        </select>
-                    </div>
-                    
-                </div>
-        
-                <div class="form-section">
-                    <label for="sorting">Sort by</label>
-                    <div class="select-wrapper">
-                        <select name="sorting" id="Sorting">
-                            <option value="sort-vacancy">Sort Vacancy by</option>
-                            <option value="Location">Location</option>
-                            <option value="job-type">Job Type</option>
-                            <option value="business-Unit">Business Unit</option>
-                            <option value="sorting">Sort</option>
-                        </select>
-                    </div>
-                    
-                </div>
+          </div>
 
-                <button class="early-career-btn btn"><span>Submit</span><span><img class="btn-img" src="/images/Vector.svg" alt=""></span></button>
-            </form>
-        </div>
-        
+          <div class="form-section">
+            <label for="Job Type">Job Type</label>
+            <div class="select-wrapper">
+              <select name="job-type" id="job-type">
+                <option value="select-job">Select Job Type</option>
+                <option value="Designer">Designer</option>
+                <option value="Designer">Developer</option>
+                <option value="Designer">Designer</option>
+                <option value="Designer">Developer</option>
+              </select>
+            </div>
+          </div>
 
-        <div class="early-career-img">
-            <img src="/images/illustration.png" alt="">
-        </div>
+          <div class="form-section">
+            <label for="Business-Unit">Business Unit</label>
+            <div class="select-wrapper">
+              <select name="business-Unit" id="business-Unit">
+                <option value="select-unit">Select Division/Unit</option>
+                <option value="unit1">Unit1</option>
+                <option value="Unit2">Unit2</option>
+                <option value="unit3">Unit3</option>
+                <option value="unit4">Unit4</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <label for="sorting">Sort by</label>
+            <div class="select-wrapper">
+              <select name="sorting" id="Sorting">
+                <option value="sort-vacancy">Sort Vacancy by</option>
+                <option value="Location">Location</option>
+                <option value="job-type">Job Type</option>
+                <option value="business-Unit">Business Unit</option>
+                <option value="sorting">Sort</option>
+              </select>
+            </div>
+          </div>
+
+          <button class="early-career-btn btn">
+            <span>Submit</span
+            ><span
+              ><img class="btn-img" src="/images/Vector.svg" alt=""
+            /></span>
+          </button>
+        </form>
+      </div>
+
+      <div class="early-career-img">
+        <img src="/images/illustration.png" alt="" />
+      </div>
     </div>
 
-
     <footer>
-        <div class="footer-flex">
-            <div class="footer-flex-item">
-                <div class="top">
-                    <h4>Capital Management</h4>
-                    <p>investmentinfo@sthenicfinance.com</p>
-                </div>
-    
-                <div class="bottom">
-                    <h4>Finance Advisory</h4>
-                    <p>advisoryinfo@sthenicfinance.com</p>
-                </div>
-            </div>
+      <div class="footer-flex">
+        <div class="footer-flex-item">
+          <div class="top">
+            <h4>Capital Management</h4>
+            <p>investmentinfo@sthenicfinance.com</p>
+          </div>
 
-            <div class="footer-flex-item">
-                <div class="top">
-                    <h4>Address</h4>
-                    <p>112a association road, Dolphin Estate, Ikoyi. Lagos</p>
-                </div>
-    
-                <div class="bottom">
-                    <h4>Customer Service </h4>
-                    <p>+234(0) 16330151</p>
-                </div>
-            </div>
-
-            <div class="footer-flex-item">
-                <ul>
-                    <li><a href="#"><img src="/images/facebook.png" alt=""></a></li>
-                    <li><a href="#"><img src="/images/twitter.png" alt=""></a></li>
-                    <li><a href="#"><img src="/images/insta.png" alt=""></a></li>
-                </ul>
-            </div>
+          <div class="bottom">
+            <h4>Finance Advisory</h4>
+            <p>advisoryinfo@sthenicfinance.com</p>
+          </div>
         </div>
 
-        <div class="copyright">
-            <p>Copyright 2023 by Sthenic Finance and Advisory Limited. All Right Reserved.</p>
+        <div class="footer-flex-item">
+          <div class="top">
+            <h4>Address</h4>
+            <p>112a association road, Dolphin Estate, Ikoyi. Lagos</p>
+          </div>
+
+          <div class="bottom">
+            <h4>Customer Service</h4>
+            <p>+234(0) 16330151</p>
+          </div>
         </div>
+
+        <div class="footer-flex-item">
+          <ul>
+            <li>
+              <a href="#"><img src="/images/facebook.png" alt="" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="/images/twitter.png" alt="" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="/images/insta.png" alt="" /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p>
+          Copyright 2023 by Sthenic Finance and Advisory Limited. All Right
+          Reserved.
+        </p>
+      </div>
     </footer>
 
     <script>
-        const btn = document.querySelector('.btn')
-        const btnImg = document.querySelector('.btn-img');
+      const btn = document.querySelector(".btn");
+      const btnImg = document.querySelector(".btn-img");
 
-        btn.addEventListener('mouseover', () => {
-            console.log(btn);
-            btn.style.backgroundColor = '#3DB2ED';
-            btnImg.style.opacity = '1';
-            btn.style.width = '189px'
-        })
+      btn.addEventListener("mouseover", () => {
+        console.log(btn);
+        btn.style.backgroundColor = "#3DB2ED";
+        btnImg.style.opacity = "1";
+        btn.style.width = "189px";
+      });
 
-        btn.addEventListener('mouseleave', () => {
-            console.log(btn);
-            btn.style.backgroundColor = '#0177B2';
-            btnImg.style.opacity = '0';
-            btn.style.width = '139px'
-        })
+      btn.addEventListener("mouseleave", () => {
+        console.log(btn);
+        btn.style.backgroundColor = "#0177B2";
+        btnImg.style.opacity = "0";
+        btn.style.width = "139px";
+      });
     </script>
-</body>
+  </body>
 </html>

@@ -12,14 +12,16 @@
   </head>
   <body>
     <header>
-      <div class="logo">
-        <a href="/index.html"
-          ><img src="/images/Stenic Capital logo only 1.png" alt=""
-        /></a>
-      </div>
+      <div class="head">
 
-      <nav id="nav" class="cap-nav">
-        <ul>
+        <div class="logo">
+          <a href="/index.html"
+          ><img src="/images/Stenic Capital logo only 1.png" alt=""
+          /></a>
+        </div>
+        
+        <nav id="nav" class="cap-nav">
+          <ul>
           <li id="dropdown-btn">
             <a href="#" class="active dropdown-link"
               >About Us<span id="down-arrow" style="margin-left: 0.5em"
@@ -48,47 +50,55 @@
                   <p>Get more insight on our work processes</p>
                 </a>
               </li>
-            </ul>
-          </li>
-          <li><a href="funds.html">Our Funds</a></li>
-          <li><a href="products.html">Our Products</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li id="dropdown-btn2">
-            <a class="dropdown-link" href="#"
+              <li>
+                <a href="/scm/opportunity.html">
+                  <h3>African Opportunities</h3>
+                  <p>See available opportunities for African businesses
+                    and founders </p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="funds.html">Our Funds</a></li>
+            <li><a href="products.html">Our Products</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li id="dropdown-btn2">
+              <a class="dropdown-link" href="#"
               >Investor<span id="down-arrow2" style="margin-left: 0.5em"
-                ><img src="/images/down.png" alt="" /></span
-            ></a>
-            <ul id="dropdown2" class="dropdown dropdown2 hide-dropdown">
-              <li>
-                <a href="/scm/investor.html">
-                  <h3>Investors</h3>
-                  <p>I have capital to invest</p>
-                </a>
-              </li>
-              <li>
-                <a href="/scm/investees.html">
-                  <h3>Investees</h3>
-                  <p>I need capital investment for my business</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li><a href="/careers.html">Careers</a></li>
-        </ul>
-      </nav>
-
-      <div class="menu">
-        <div class="bar"></div>
+              ><img src="/images/down.png" alt="" /></span
+              ></a>
+              <ul id="dropdown2" class="dropdown dropdown2 hide-dropdown">
+                <li>
+                  <a href="/scm/investor.html">
+                    <h3>Investors</h3>
+                    <p>I have capital to invest</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="/scm/investees.html">
+                    <h3>Investees</h3>
+                    <p>I need capital investment for my business</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="/careers.html">Careers</a></li>
+          </ul>
+        </nav>
+        
+        <div class="menu">
+          <div class="bar"></div>
+        </div>
       </div>
-    </header>
-
-    <div class="about-us-header">
-      <div class="about-us-cover">
-        <h3>Sthenic Capital Management Limited</h3>
+      </header>
+      
+      <div class="about-us-header">
+        <div class="about-us-cover">
+          <h3>Sthenic Capital Management Limited</h3>
       </div>
     </div>
 
-    <div class="about-us-main">
+    <div class="about-us-main con">
       <div class="about-us-title">
         <h3 data-aos="fade-down">Overview</h3>
       </div>
@@ -228,7 +238,7 @@
       const downArrow = document.querySelector("#down-arrow");
       const nav = document.querySelector("nav");
 
-      dropdownBtn.addEventListener("mouseover", (e) => {
+      dropdownBtn.addEventListener("mouseover",  (e)=>   {
         e.stopPropagation();
         dropdown.classList.remove("hide-dropdown");
         // if (dropdown.classList.contains('hide-dropdown')) {
