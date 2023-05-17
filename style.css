@@ -10,7 +10,25 @@ body {
     font-size: 16px;
     font-family: 'EB Garamond', serif;
 }
-
+.con {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0;
+    padding-right: 0;
+    width: 40%;
+position: relative;  
+    @media screen and (max-width: 2280px) {
+      width: 65%;
+    }
+  
+    @media screen and (max-width: 2050px) {
+      width: 70%;
+    }
+  
+    @media screen and (max-width: 1800px) {
+      width: 100%;
+    }
+  }
 
 a {
     text-decoration: none;
@@ -21,10 +39,8 @@ p {
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
+    
     height: 68px;
-    padding: 0 3em;
     background: #001D45;
     color: #fff;
     position: fixed;
@@ -32,7 +48,26 @@ header {
     width: 100%;
     z-index: 6;
 }
-
+.head{
+    height: 68px;
+    padding: 0 3em;
+    display: flex;
+    justify-content: space-between;
+    margin-right: auto;
+    margin-left: auto;
+    width: 40%;
+    @media screen and (max-width: 2280px) {
+        width: 65%;
+      }
+    
+      @media screen and (max-width: 2050px) {
+        width: 70%;
+      }
+    
+      @media screen and (max-width: 1800px) {
+        width: 100%;
+      }
+}
 .logo img{
     width: 121px;
     height: 125px;
@@ -149,6 +184,7 @@ nav ul li a:hover{
     background: url(/images/bg-3.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
+    
 }
 
 .cover {
@@ -531,7 +567,13 @@ footer {
     text-align: center;
 }
 
-
+/* SERVICE PAGE */
+.cover-service{
+    background: url(/images/bg-3.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 120vh;
+}
 
 /* HISTORY PAGE */
 
@@ -1868,7 +1910,7 @@ legend {
     }
 
     .we {
-        padding: 7em 5em;
+        padding: 1em 5em;
     }
 
     .pic {
