@@ -268,7 +268,7 @@ nav ul li a:hover{
 }
 
 .we {
-    padding: 10em;
+    padding: 3em 10em;
 }
 
 .upper-grp {
@@ -314,7 +314,7 @@ nav ul li a:hover{
 .lower-grp {
     display: flex;
     justify-content: space-between;
-    margin-top: 5em;
+    margin-top: 2em;
 }
 
 .text-subtitle {
@@ -414,7 +414,7 @@ nav ul li a:hover{
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 10em;
+    padding: 3em 10em;
     background: linear-gradient(to right, #fff, #fef8df);
 }
 
@@ -596,7 +596,7 @@ footer {
 }
 
 .history-text {
-    padding: 6em;
+    padding: 3em;
     overflow-x: hidden;
 }
 
@@ -625,7 +625,7 @@ footer {
 }
 
 .main-content {
-    padding: 6em;
+    padding: 3em;
     /* margin-top: 100px; */
     display: flex;
     flex-direction: column-reverse;
