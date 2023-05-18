@@ -1,5 +1,5 @@
 const menuBtn = document.querySelector('.menu');
-const nav = document.getElementById('nav');
+// const nav = document.getElementById('nav');
 let menuOpen = false;
 
 menuBtn.addEventListener('click', function () {
