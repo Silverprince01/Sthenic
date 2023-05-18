@@ -16,7 +16,7 @@ body {
     padding-left: 0;
     padding-right: 0;
     width: 40%;
-position: relative;  
+    position: relative;  
     @media screen and (max-width: 2280px) {
       width: 65%;
     }
@@ -66,6 +66,7 @@ header {
     
       @media screen and (max-width: 1800px) {
         width: 100%;
+        padding:0;
       }
 }
 .logo img{
@@ -1223,6 +1224,9 @@ footer {
 .story-img {
     width: 40%;
 }
+.africa{
+    width: 100%;
+}
 
 .about-more-info {
     display: flex;
@@ -1267,15 +1271,16 @@ footer {
     height: max-content;
     position: absolute;
     display: block;
-    width: 280px;
+    width: 100%;
     flex-direction: column;
     top: 69px;
-    left: auto;
+    left: 0;
     background: #fff;
     padding: 2em;
     box-sizing: content-box;
-    border-radius: 16px;
-    margin-left: 200px;
+    /* border-radius: 16px; */
+    /* margin-left: 200px; */
+    z-index: 50;
 }
 
 .dropdown2 {
@@ -3179,11 +3184,13 @@ legend {
     }
 
     .story-img {
-        width: -webkit-max-content;
-        width: -moz-max-content;
-        width: max-content;
+        /* width: -webkit-max-content;
+        width: -moz-max-content; */
+        width: 100%;
     }
-
+.africa{
+    width: 100%;
+}
     .about-more-info-text {
         width: 100%;
         padding-inline: 0;
