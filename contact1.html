@@ -8,6 +8,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="main.js" defer></script>
+    <link href="/styles/output.css" rel="stylesheet" />
     <title>Contact</title>
   </head>
   <body>
@@ -89,9 +90,10 @@
       </div>
     </div>
 
-    <div class="more-info">
-      <div class="con">
-        <div class="more-info-text" data-aos="fade-right">
+    <div
+        class="more-info flex flex-col sm:flex-row justify-between items-center"
+      >
+        <div class="more-info-text">
           <h2>For more information on investment opportunities</h2>
           <p>
             Sthenic finance has amassed a large and ever-expanding base of Fund
@@ -105,17 +107,19 @@
             /></span>
           </button>
         </div>
-
-        <div class="img-overlay" data-aos="fade-left"></div>
-        <div class="more-info-img" data-aos="fade-left">
-          <img src="/images/Rectangle 3.png" alt="" />
+        <div class="w-full sm:w-[40%] relative left-0">
+          <div
+            class="bg-[#001D45] w-full h-full rounded-[60px] absolute left-[-20px] bottom-[-20px] shadow-lg"
+          ></div>
+          <div class="pt-[30px] w-full h-full relative">
+            <img src="/images/Rectangle 3.png" alt="" class="w-full h-full" />
+          </div>
         </div>
       </div>
-    </div>
 
     <footer>
       <div class="footer-flex">
-        <div class="footer-flex-item" data-aos="fade-right">
+        <div class="footer-flex-item" >
           <div class="top">
             <h4>Capital Management</h4>
             <p>investmentinfo@sthenicfinance.com</p>
@@ -127,7 +131,7 @@
           </div>
         </div>
 
-        <div class="footer-flex-item" data-aos="fade-up">
+        <div class="footer-flex-item" >
           <div class="top">
             <h4>Address</h4>
             <p>112a association road, Dolphin Estate, Ikoyi. Lagos</p>
@@ -139,7 +143,7 @@
           </div>
         </div>
 
-        <div class="footer-flex-item" data-aos="fade-left">
+        <div class="footer-flex-item" >
           <ul>
             <li>
               <a href="#"><img src="/images/facebook.png" alt="" /></a>
@@ -163,7 +167,7 @@
     </footer>
 
     <script>
-      AOS.init();
+      AOS.init({once:true});
       const btn = document.querySelector(".btn");
       const btnImg = document.querySelector(".btn-img");
 
