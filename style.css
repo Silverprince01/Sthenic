@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -70,7 +71,7 @@ header {
       }
 }
 .logo img{
-    width: 121px;
+    width: 100%;
     height: 125px;
     z-index: 7;
     position: relative;
@@ -189,7 +190,8 @@ nav ul li a:hover{
 }
 
 .cover {
-    height: 100vh;
+    /* height: 100vh; */
+    width: 100%;
     padding: 0 6em;
     background: #001D45;
     color: #fff;
@@ -201,7 +203,6 @@ nav ul li a:hover{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 68px;
 }
 
 .cover .title {
@@ -296,11 +297,13 @@ nav ul li a:hover{
 
 .pic {
     position: relative;
+    width: 50%;
 }
 
 .pic img {
     -o-object-fit: fill;
        object-fit: fill;
+       width: 100%;
 }
 
 .overlay {
@@ -455,9 +458,9 @@ nav ul li a:hover{
 }
 
 .more-info {
-    padding: 6em;
+    padding: 3em;
     position: relative;
-    height: 500px;
+    /* height: 500px; */
     margin-bottom: 100px;
     background: #5DDDFF;
     color: #001D45;
@@ -505,26 +508,26 @@ nav ul li a:hover{
     transition: all .3s ease-in-out;
 }
 
-.more-info-img {
-    position: absolute;
-    bottom: -50px;
-    right: 250px;
-}
 
-.more-info-img img {
+/* .more-info-img img {
     width: 300px;
     display: block;
-}
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}  */
 
 .img-overlay {
-    width: 300px;
-    height: 275px;
+    width: 80%;
+    height: 400px;
     background: #0177B2;
     position: absolute;
-    bottom: -65px;
-    right: 270px;
+    /* bottom: -40px; */
+    right: 70px;
     border-radius: 60px;
     box-shadow: -5px 1px 40px 2px #0177B2;
+    z-index: 0;
 }
 
 footer {
@@ -1422,6 +1425,15 @@ footer {
     font-size: 20px;
     line-height: 28px;
 }
+.structure-img {
+    width: 100%;
+    /* height: 10px; */
+}
+
+.chart {
+    width: 100%;
+    height: 50vh;
+}
 
 /* PRODUCTS PAGE */
 
@@ -1451,7 +1463,7 @@ footer {
 .product-flex {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
     gap: 3em;
     width: 90%;
     margin: 0 auto;
@@ -1462,16 +1474,16 @@ footer {
     width: 45%;
 }
 
-.product-text h3 {
+/* .product-text h3 {
     font-size: 28px;
     line-height: 36px;
     margin-bottom: .5em;
-}
+} */
 
-.product-text p {
+/* .product-text p {
     font-size: 14px;
     line-height: 28px;
-}
+} */
 
 .product-img {
     width: 45%;
@@ -1499,7 +1511,7 @@ footer {
 }
 
 .logo-card .img {
-    width: 242px;
+    width: 80%;
     height: 102px;
 }
 
@@ -1769,7 +1781,7 @@ legend {
 }
 
 .cap-grp-item {
-    width: 303px;
+    width: 100%;
 }
 
 .cap-grp-header {
@@ -1792,16 +1804,16 @@ legend {
     gap: .5em;
     padding: 2em;
     background: transparent;
-    /* border: 1px solid green; */
+    width: 100%;
 }
 
 .img-stack img {
+    width: 100%;
     margin: 0 auto;
     padding: 0;
     -o-object-fit: fill;
        object-fit: fill;
     display: block;
-    width: 220px;
     height: 70px;
     -webkit-filter: grayscale(100%);
             filter: grayscale(100%);
@@ -1836,7 +1848,7 @@ legend {
    display: flex;
    justify-content: center;
    align-items: center;
-   padding-block: 4em;
+   padding: 4em;
 }
 
 .dealbook-wrapper {
@@ -1899,7 +1911,7 @@ legend {
 
 @media screen and (max-width: 1024px) {
     .cover {
-        height: 100vh;
+        /* height: 100vh; */
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1945,14 +1957,14 @@ legend {
     }
 
     .more-info {
-        padding: 4em;
+        padding: 3em;
     }
 
     .more-info-text {
-        width: 58%;
+        width: 53%;
     }
     
-    .more-info-img {
+    /* .more-info-img {
         position: absolute;
         bottom: -50px;
         right: 60px;
@@ -1961,11 +1973,11 @@ legend {
     .more-info-img img {
         width: 300px;
         display: block;
-    }
+    } */
     
     .img-overlay {
         width: 300px;
-        height: 275px;
+        /* height: ; */
         background: #0177B2;
         position: absolute;
         bottom: -65px;
@@ -2121,6 +2133,12 @@ legend {
     .dealbook-cover h3 {
         width: 90%;
     }
+@media screen and (max-width: 1024px) {
+    .logo-wrapper {
+        padding-inline: 3em;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 }
 
 /* Tablet */
@@ -2131,12 +2149,13 @@ legend {
     }
 
     .cover {
-        height: 100vh;
+        /* height: 100vh; */
         display: flex;
-        padding-inline: 3em;
+        /* padding-inline: 3em; */
         flex-direction: column;
         justify-content: center;
-        padding-top: 68px;
+        padding: 10px 30px  ;
+        
     }
 
     .cover .title {
@@ -2325,11 +2344,11 @@ legend {
     }
 
     .insights-container {
-        width: 65%;
+        width: 100%;
     }
 
     .insight-aside {
-        width: 30%;
+        width: 100%;
     }
 
     .insight-card-title {
@@ -2342,6 +2361,9 @@ legend {
         line-height: 20px;
     }
 
+    .searchbar{
+        width: 80%;
+    }
     .searchbar input {
         padding: .5em 1em;
         font-size: 12px;
@@ -2491,9 +2513,12 @@ legend {
     }
 
     .story-img {
-        width: -webkit-max-content;
-        width: -moz-max-content;
-        width: max-content;
+        /* width: -webkit-max-content;
+        width: -moz-max-content; */
+        width: 100%;
+    }
+    .africa{
+width: 100%;
     }
 
     .about-more-info-text {
@@ -2532,10 +2557,12 @@ legend {
         margin-bottom: 0.5em;
     }
 
-    .structure-img {
+
+
+    .structure-img img {
         width: 100%;
     }
-
+    
     .structure-img img {
         width: 100%;
     }
@@ -2582,9 +2609,7 @@ legend {
         width: 100%;
     }
 
-    fieldset {
-        width: 100%;
-    }
+    
 
     .logo-wrapper {
         padding-inline: 3em;
@@ -3285,12 +3310,13 @@ legend {
 
     .logo-wrapper {
         padding: 2em;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         place-items: center;
     }
 
     .logo-card {
-        width: 121px;
+        width: 100%;
+        margin-bottom: 60px;
         height: 79px;
     }
 
@@ -3430,7 +3456,7 @@ legend {
     }
 
     .deal-investor img, .deal-potential img {
-        width: 100%;
+        width: 80%;
     }
 
     .dealbook-form-container {
