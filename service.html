@@ -12,6 +12,7 @@
       rel="stylesheet"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="/styles/output.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="main.js" defer></script>
     <title>Sthenic</title>
@@ -174,28 +175,32 @@
       </div>
     </div>
 
-    <div class="more-info">
-      <div class="con">
-
-        <div class="more-info-text" data-aos="fade-right">
+    <div
+        class="more-info flex flex-col sm:flex-row justify-between items-center"
+      >
+        <div class="more-info-text">
           <h2>For more information on investment opportunities</h2>
           <p>
-          Sthenic finance has amassed a large and ever-expanding base of Fund
-          investors from all over the world. The team at Sthenic Investor would
-          love to hear from you.
-        </p>
-        <button class="enquiry btn">
-          <span>Enquiry</span
-          ><span><img class="btn-img" src="/images/Vector.svg" alt="" /></span>
-        </button>
+            Sthenic finance has amassed a large and ever-expanding base of Fund
+            investors from all over the world. The team at Sthenic Investor
+            would love to hear from you.
+          </p>
+          <button class="enquiry btn">
+            <span>Enquiry</span
+            ><span
+              ><img class="btn-img" src="/images/Vector.svg" alt=""
+            /></span>
+          </button>
+        </div>
+        <div class="w-full sm:w-[40%] relative left-0">
+          <div
+            class="bg-[#001D45] w-full h-full rounded-[60px] absolute left-[-20px] bottom-[-20px] shadow-lg"
+          ></div>
+          <div class="pt-[30px] w-full h-full relative">
+            <img src="/images/Rectangle 3.png" alt="" class="w-full h-full" />
+          </div>
+        </div>
       </div>
-
-      <div class="img-overlay"></div>
-      <div class="more-info-img">
-        <img src="/images/Rectangle 3.png" alt="" />
-      </div>
-    </div>
-    </div>
     
     <footer>
       <div class="footer-flex">
@@ -247,7 +252,7 @@
     </footer>
 
     <script>
-      AOS.init();
+      AOS.init({once:true});
       const btn = document.querySelector(".btn");
       const btnImg = document.querySelector(".btn-img");
 

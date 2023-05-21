@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/style.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="/styles/output.css" rel="stylesheet" />
     <script src="/main.js" defer></script>
     <title>About Us</title>
   </head>
@@ -101,54 +102,49 @@
     </div>
 
     <div class="about-us-main con">
-      <div class="our-story">
-        <div class="about-us-title" data-aos="fade-down">
-          <h3>Our Story</h3>
+      <div class="py-16">
+        <h3 class="text-center text-[#001D45] text-[40px] mb-8">Our Story</h3>
+        <div data-aos="fade-right">
+          <p class="text-[16px]">
+            At Sthenic Capital Management, we understand that the path to
+            greatness often starts with humble beginnings. That is why we are
+            proud to say that our f irm was incorporated during the Covid year
+            in 2020. Despite the challenges posed by the pandemic, we believed
+            that resilience and adaptability are qualities for any successful
+            investor, and we have demonstrated both in our approach to managing
+            capital. Our f irm was built on an existing and robust advisory
+            ecosystem, with a clear mandate to grow investment into profitable
+            returns for our investors and provide financing to small and
+            mid-sized businesses. And We have displayed these mandate across
+            different firms and industries in our portfolio. We're proud to
+            continually serve the missing middle. Over the past three years of
+            operation, our Sthenic Special Situation Debt Fund has financed over
+            20 businesses with 63 specific investments, with cumulative
+            investments of NGN1.7bn over time. We are committed to making a
+            meaningful impact in the markets we serve, and we believe that the
+            opportunities in the African market remain unmatched. We see
+            increasing growth in wealth and savings among the middle class
+            across emerging markets; we can channel this wealth from surplus
+            hands to underserved markets to lead to significant gains in impact
+            investing and economic expansion. At Sthenic Capital Management, we
+            are here to ride on the opportunities provided by the markets we
+            serve to make a pivotal shift for the small and mid-sized markets.
+          </p>
         </div>
-
-        <div class="story-flex">
-          <div class="story-text" data-aos="fade-right">
-            <h4>Company Overview and Strategy</h4>
-            <p>
-              Sthenic Capital Management Limited is a Nigerian registered
-              business with a focus on investment management. The company offer
-              services in specialized financing, investing and trading to
-              clientele which span our network, partners and ecosystem. The
-              company is well known for its strong risk management tactics
-              driven by value-added approaches. It is led by a team with a deep
-              understanding of the local investment terrain and strong
-              capabilities for structuring private debt.
-            </p>
+        <div class="bg-[#5DDDFF] flex flex-col md:flex-row relative mt-8 rounded-[30px] flex p-[27px]">
+          <div class="w-full md:w-[60%]  ">
             <h4>Our Strategy</h4>
-            <p>
+            <p class="text-[16px]">
               The cornerstones of our strategy include execution strength,
               agility, and speed. Our platform helps us achieve this by bringing
               together established investors looking for alphas and growth firms
               looking for investments that unlock high returns to build value.
             </p>
           </div>
-
-          <div class="story-img" data-aos="fade-left">
-            <img class="africa" src="/images/image 1.png" alt="" />
+          <div class="static w-full md:w-[35%] md:absolute right-0 top-[-20px] bottom-0  h-[300px]  pt-[20px]">
+            <img src="/images/chess.png" alt="" class="w-full shadow-lg h-full">
           </div>
         </div>
-      </div>
-    </div>
-
-    <div class="more-info about-more-info">
-      <div class="more-info-text about-more-info-text">
-        <h2 data-aos="fade-down">
-          For more information on investment opportunities
-        </h2>
-        <p data-aos="fade-right">
-          Sthenic finance has amassed a large and ever-expanding base of Fund
-          investors from all over the world. The team at Sthenic Investor would
-          love to hear from you.
-        </p>
-        <button data-aos="fade-up" class="enquiry btn">
-          <span>Enquiry</span
-          ><span><img class="btn-img" src="/images/Vector.svg" alt="" /></span>
-        </button>
       </div>
     </div>
 
@@ -202,7 +198,7 @@
     </footer>
 
     <script>
-      AOS.init();
+      AOS.init({ once: true });
       const dropdownBtn = document.querySelector("#dropdown-btn");
       const dropdown = document.querySelector(".dropdown");
       const body = document.querySelector(".about-us-cover");
