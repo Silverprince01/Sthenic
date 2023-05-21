@@ -927,11 +927,11 @@ footer {
 .contact-cover {
     background-image: url(/images/Rectangle\ 22\ \(2\).png);
     padding-top: 0 !important;
+    height: 100vh;
 }
 
 .contact-container {
-    padding: 6em 11em;
-    padding-top: 162px;
+    padding: 9em 11em;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -1178,7 +1178,7 @@ footer {
     font-size: 28px;
     line-height: 36px;
     color: #001D45;
-    margin-block: 1em;
+    /* margin-block: 1em; */
 }
 
 .about-us-main p {
@@ -1190,6 +1190,9 @@ footer {
 .p-flex {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin: 70px 0;
+
 }
 
 .p-flex-item {
@@ -1991,8 +1994,8 @@ legend {
     }
 
     .contact-container {
-        padding: 6em;
-        padding-top: 3em;
+        padding:3em 6em;
+        /* padding-top: 3em; */
     }
 
     .contact-q-container {
