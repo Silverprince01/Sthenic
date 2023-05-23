@@ -461,7 +461,7 @@ nav ul li a:hover{
     padding: 3em;
     position: relative;
     /* height: 500px; */
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
     background: #5DDDFF;
     color: #001D45;
 }
@@ -531,11 +531,10 @@ nav ul li a:hover{
 }
 
 footer {
-    margin-top: 2em;
     background:  #001D45;
     color: #fff;
     padding-top: 3em;
-    background: url(/images/Footer\ 1.png);
+    background: url(images/Footer\ 1.png);
 }
 
 .footer-flex {
