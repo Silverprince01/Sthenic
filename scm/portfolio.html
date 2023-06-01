@@ -93,7 +93,7 @@
       </div>
     </header>
 
-    <div class="investor-header">
+    <div class="investor-header sect ">
       <div class="investor-cover">
         <h3>Portfolio Companies</h3>
         <p>
@@ -105,12 +105,11 @@
       </div>
     </div>
 
-    <div class="logo-wrapper con">
+    <div class="logo-wrapper con sect">
       <div class="logo-card" data-aos="fade-down">
         <div class="img">
           <img src="/images/image 3.png" alt="" />
         </div>
-        
       </div>
 
       <div class="logo-card" data-aos="fade-down">
@@ -187,7 +186,7 @@
     </div>
 
     <footer>
-      <div class="footer-flex">
+      <div class="footer-flex sect">
         <div class="footer-flex-item">
           <div class="top">
             <h4>Capital Management</h4>
@@ -236,15 +235,105 @@
     </footer>
 
     <script>
+      let isScrollEnabled = true;
+
+document.addEventListener("keydown", handleKeyDown);
+
+function handleKeyDown(event) {
+  if (event.key === "ArrowDown") {
+    event.preventDefault(); // Prevent default scrolling behavior
+
+    if (!isScrollEnabled) {
+      return;
+    }
+
+    const currentSection = getCurrentSection();
+    const nextSection = getNextSection(currentSection);
+
+    if (nextSection) {
+      const scrollToPos = nextSection.offsetTop;
+      smoothScrollTo(scrollToPos, 3000); // Set the duration of the scrolling animation in milliseconds
+      disableScrollingForInterval(1000); // Set the time limit in milliseconds (here, 1000ms = 1 second)
+    }
+  }
+}
+
+function getCurrentSection() {
+  const currentScrollPos = window.pageYOffset;
+  const sections = Array.from(document.getElementsByClassName("sect"));
+
+  for (let i = sections.length - 1; i >= 0; i--) {
+    if (sections[i].offsetTop <= currentScrollPos) {
+      return sections[i];
+    }
+  }
+
+  return null;
+}
+
+function getNextSection(currentSection) {
+  const sections = Array.from(document.getElementsByClassName("sect"));
+  const currentIndex = sections.indexOf(currentSection);
+
+  if (currentIndex < sections.length - 1) {
+    return sections[currentIndex + 1];
+  }
+
+  return null;
+}
+
+function smoothScrollTo(targetPosition, duration) {
+  const startPosition = window.pageYOffset;
+  const distance = targetPosition - startPosition;
+  let startTime = null;
+
+  function animation(currentTime) {
+    if (startTime === null) {
+      startTime = currentTime;
+    }
+
+    const timeElapsed = currentTime - startTime;
+    const scrollProgress = easeInOutCubic(
+      timeElapsed,
+      startPosition,
+      distance,
+      duration
+    );
+
+    window.scrollTo(0, scrollProgress);
+
+    if (timeElapsed < duration) {
+      requestAnimationFrame(animation);
+    }
+  }
+
+  requestAnimationFrame(animation);
+}
+
+function easeInOutCubic(t, b, c, d) {
+  t /= d / 2;
+  if (t < 1) return (c / 2) * t * t * t + b;
+  t -= 2;
+  return (c / 2) * (t * t * t + 2) + b;
+}
+
+function disableScrollingForInterval(interval) {
+  isScrollEnabled = false;
+
+  setTimeout(() => {
+    isScrollEnabled = true;
+  }, interval);
+}
+
       AOS.init({ once: true });
       const dropdownBtn = document.querySelector("#dropdown-btn");
       const dropdown = document.querySelector(".dropdown");
       const body = document.querySelector("body");
       const downArrow = document.querySelector("#down-arrow");
 
-      dropdownBtn.addEventListener("click", (e) => {
+      dropdownBtn.addEventListener("mouseover", (e) => {
         e.stopPropagation();
-        dropdown.classList.toggle("hide-dropdown");
+        dropdown.classList.remove("hide-dropdown");
         if (dropdown.classList.contains("hide-dropdown")) {
           downArrow.style.transform = "rotateX(0deg)";
         } else {
@@ -268,14 +357,14 @@
       const body2 = document.querySelector("body");
       const downArrow2 = document.querySelector("#down-arrow2");
 
-      dropdownBtn2.addEventListener("click", (e) => {
+      dropdownBtn2.addEventListener("mouseover", (e) => {
         e.stopPropagation();
-        dropdown2.classList.toggle("hide-dropdown");
-        if (dropdown2.classList.contains("hide-dropdown")) {
-          downArrow2.style.transform = "rotateX(0deg)";
-        } else {
-          downArrow2.style.transform = "rotateX(180deg)";
-        }
+        dropdown2.classList.remove("hide-dropdown");
+        // if (dropdown2.classList.contains("hide-dropdown")) {
+        //   downArrow2.style.transform = "rotateX(0deg)";
+        // } else {
+        //   downArrow2.style.transform = "rotateX(180deg)";
+        // }
       });
 
       body2.addEventListener(

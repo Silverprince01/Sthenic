@@ -100,13 +100,13 @@
           Sthenic Capital Management portfolio includes a wide range of funds
           that may offer organizations financial sustainability and development
           at levels of execution structure, speed, and cost that are unmatched
-          globally. (confirm what industries they invest in.
+          globally. (confirm what industries they invest in.)
         </p>
       </div>
     </div>
 
     <div class="fund-main con">
-      <div class="about-the-fund">
+      <div class="about-the-fund sect">
         <h4 data-aos="fade-right">About the Fund</h4>
         <p data-aos="fade-left">
           Our fund has invested in a variety of industries, including food and
@@ -126,42 +126,43 @@
           underperformance and shock in times of economic downturns.
         </p>
       </div>
+      <div class="sect">
+        <div class="thesis">
+          <h3 data-aos="fade-down">Investment Philosophy/Thesis</h3>
+          <div class="thesis-grid">
+            <div class="thesis-item" data-aos="fade-right">
+              <h4>Investment Structure</h4>
+              <p>
+                Growth financing using smart debt that is purpose-specific and
+                structurally flexible. These funds will be utilized for the
+                growth of the company & to leverage value chain opportunities.
+              </p>
+            </div>
 
-      <div class="thesis">
-        <h3 data-aos="fade-down">Investment Philosophy/Thesis</h3>
-        <div class="thesis-grid">
-          <div class="thesis-item" data-aos="fade-right">
-            <h4>Investment Structure</h4>
-            <p>
-              Growth financing using smart debt that is purpose-specific and
-              structurally flexible. These funds will be utilized for the growth
-              of the company & to leverage value chain opportunities.
-            </p>
-          </div>
+            <div class="thesis-item" data-aos="fade-up">
+              <h4>Geographic Focus</h4>
+              <p>
+                The fund identifies businesses in developing markets in Africa
+                with an emphasis on providing alternative funding options.
+              </p>
+            </div>
 
-          <div class="thesis-item" data-aos="fade-up">
-            <h4>Geographic Focus</h4>
-            <p>
-              The fund identifies businesses in developing markets in Africa
-              with an emphasis on providing alternative funding options.
-            </p>
-          </div>
-
-          <div class="thesis-item" data-aos="fade-left">
-            <h4>Investment Size</h4>
-            <p>
-              Our typical investment size is …….. We also leverage our
-              co-investor network and arrange investment consortiums as required
-              (confirm this). The Sthenic portfolio manages three funds with a
-              total AUM of more than NGN500,000,000.00. The fund is continually
-              looking for new investments where it can unleash its potential and
-              value.
-            </p>
+            <div class="thesis-item" data-aos="fade-left">
+              <h4>Investment Size</h4>
+              <p>
+                Our typical investment size is …….. We also leverage our
+                co-investor network and arrange investment consortiums as
+                required (confirm this). The Sthenic portfolio manages three
+                funds with a total AUM of more than NGN500,000,000.00. The fund
+                is continually looking for new investments where it can unleash
+                its potential and value.
+              </p>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="structure-diagram">
+      <div class="structure-diagram sect">
         <div class="structure-heading" data-aos="fade-right">
           <h3>Our Fund Structure</h3>
           <p>OPerational Organogram of Sthenic Capital Management</p>
@@ -174,8 +175,8 @@
     </div>
 
     <footer>
-      <div class="footer-flex ">
-        <div class="footer-flex-item" >
+      <div class="footer-flex sect">
+        <div class="footer-flex-item">
           <div class="top">
             <h4>Capital Management</h4>
             <p>investmentinfo@sthenicfinance.com</p>
@@ -187,7 +188,7 @@
           </div>
         </div>
 
-        <div class="footer-flex-item" >
+        <div class="footer-flex-item">
           <div class="top">
             <h4>Address</h4>
             <p>112a association road, Dolphin Estate, Ikoyi. Lagos</p>
@@ -199,7 +200,7 @@
           </div>
         </div>
 
-        <div class="footer-flex-item" >
+        <div class="footer-flex-item">
           <ul>
             <li>
               <a href="#"><img src="/images/facebook.png" alt="" /></a>
@@ -223,7 +224,97 @@
     </footer>
 
     <script>
-      AOS.init({once:true});
+      let isScrollEnabled = true;
+
+document.addEventListener("keydown", handleKeyDown);
+
+function handleKeyDown(event) {
+  if (event.key === "ArrowDown") {
+    event.preventDefault(); // Prevent default scrolling behavior
+
+    if (!isScrollEnabled) {
+      return;
+    }
+
+    const currentSection = getCurrentSection();
+    const nextSection = getNextSection(currentSection);
+
+    if (nextSection) {
+      const scrollToPos = nextSection.offsetTop;
+      smoothScrollTo(scrollToPos, 3000); // Set the duration of the scrolling animation in milliseconds
+      disableScrollingForInterval(1000); // Set the time limit in milliseconds (here, 1000ms = 1 second)
+    }
+  }
+}
+
+function getCurrentSection() {
+  const currentScrollPos = window.pageYOffset;
+  const sections = Array.from(document.getElementsByClassName("sect"));
+
+  for (let i = sections.length - 1; i >= 0; i--) {
+    if (sections[i].offsetTop <= currentScrollPos) {
+      return sections[i];
+    }
+  }
+
+  return null;
+}
+
+function getNextSection(currentSection) {
+  const sections = Array.from(document.getElementsByClassName("sect"));
+  const currentIndex = sections.indexOf(currentSection);
+
+  if (currentIndex < sections.length - 1) {
+    return sections[currentIndex + 1];
+  }
+
+  return null;
+}
+
+function smoothScrollTo(targetPosition, duration) {
+  const startPosition = window.pageYOffset;
+  const distance = targetPosition - startPosition;
+  let startTime = null;
+
+  function animation(currentTime) {
+    if (startTime === null) {
+      startTime = currentTime;
+    }
+
+    const timeElapsed = currentTime - startTime;
+    const scrollProgress = easeInOutCubic(
+      timeElapsed,
+      startPosition,
+      distance,
+      duration
+    );
+
+    window.scrollTo(0, scrollProgress);
+
+    if (timeElapsed < duration) {
+      requestAnimationFrame(animation);
+    }
+  }
+
+  requestAnimationFrame(animation);
+}
+
+function easeInOutCubic(t, b, c, d) {
+  t /= d / 2;
+  if (t < 1) return (c / 2) * t * t * t + b;
+  t -= 2;
+  return (c / 2) * (t * t * t + 2) + b;
+}
+
+function disableScrollingForInterval(interval) {
+  isScrollEnabled = false;
+
+  setTimeout(() => {
+    isScrollEnabled = true;
+  }, interval);
+}
+
+      AOS.init({ once: true });
 
       const dropdownBtn = document.querySelector("#dropdown-btn");
       const dropdown = document.querySelector(".dropdown");
@@ -256,7 +347,7 @@
       const body2 = document.querySelector("body");
       const downArrow2 = document.querySelector("#down-arrow2");
 
-      dropdownBtn2.addEventListener("click", (e) => {
+      dropdownBtn2.addEventListener("mouseover", (e) => {
         e.stopPropagation();
         dropdown2.classList.toggle("hide-dropdown");
         if (dropdown2.classList.contains("hide-dropdown")) {

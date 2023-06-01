@@ -11,6 +11,9 @@ body {
     font-size: 16px;
     font-family: 'EB Garamond', serif;
 }
+/* .sect{
+    height: 80vh;
+} */
 .con {
     margin-right: auto;
     margin-left: auto;
@@ -924,7 +927,7 @@ footer {
 /* CONTACT PAGE */
 
 .contact-cover {
-    background-image: url(/images/Rectangle\ 22\ \(2\).png);
+    background-image: url(images/contact\ us.jpg);
     padding-top: 0 !important;
     height: 100vh;
 }
@@ -1141,11 +1144,28 @@ footer {
     margin-top: 1.5em;
 }
 
+/* .portfolio {
+    height: 100vh;
+    background: url(images/overview.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding-inline: 12em;
+}
+
+.portfolio h3 {
+    color: #fff;
+    font-size: 98px;
+    line-height: 90px;
+    width: 80%;
+} */
+
 /* About Us page */
 
 .about-us-cover {
     height: 100vh;
-    background: url(/images/Rectangle\ 23\ \(1\).png);
+    background: url(images/overview.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -1162,7 +1182,7 @@ footer {
 
 .about-us-main {
     padding-inline: 11em;
-    padding-bottom: 5em;
+    /* padding-bottom: 5em; */
 }
 
 .about-us-title h3 {
@@ -1337,7 +1357,7 @@ footer {
 
 .our-funds-cover {
     height: 100vh;
-    background: url(/images/Rectangle\ 23.png);
+    background: url(images/our\ funds.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -1441,7 +1461,7 @@ footer {
 
 .our-products-cover {
     height: 100vh;
-    background: url(/images/Rectangle\ 23.png);
+    background: url(images/our\ product.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -1651,8 +1671,42 @@ legend {
     margin-top: 1em;
 }
 
+/* opportunities */
+.opportunities {
+    height: 100vh;
+    background: url(images/african\ opportunity.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding-inline: 12em;
+}
+
+.opportunities h3 {
+    color: #fff;
+    font-size: 98px;
+    line-height: 90px;
+    width: 80%;
+}
 
 
+
+.approach {
+    height: 100vh;
+    background: url(images/our\ approach.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding-inline: 12em;
+}
+
+.approach h3 {
+    color: #fff;
+    font-size: 98px;
+    line-height: 90px;
+    width: 80%;
+}
 /* about us page (sthenic finance) */
 
 .our-strategy {
@@ -1685,18 +1739,20 @@ legend {
 /* our services page */
 
 .our-services-header {
-    background: url(/images/women.png);
+    /* background: url(images/our\ services.jpg); */
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .our-services-cover {
     height: 100vh;
-    background: rgba(0 0 0 / 0.5);
+    background: url(images/our\ services.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding-inline: 10em;
+    /* padding-inline: 12em; */
 }
 
 .our-services-cover h3 {
@@ -1748,7 +1804,7 @@ legend {
 /* CAPABILITIES PAGE */
 
 .capabilities-header {
-    background: url(/images/dart.png);
+    background: url(images/our\ capabilities.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -1825,7 +1881,7 @@ legend {
 /* DEALBOOK PAGE */
 
 .dealbook-header {
-    background: url(/images/hand.png);
+    background: url(images/dealbooks.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }

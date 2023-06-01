@@ -62,8 +62,8 @@
                 </li>
               </ul>
             </li>
-            <li><a href="our-fund.html">Our Funds</a></li>
-            <li><a href="our-products.html">Our Products</a></li>
+            <li><a href="funds.html">Our Funds</a></li>
+            <li><a href="products.html">Our Products</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
             <li id="dropdown-btn2">
               <a class="dropdown-link" href="#"
@@ -102,7 +102,7 @@
     </div>
 
     <div class="about-us-main con">
-      <div class="py-16">
+      <div class="py-16 sect">
         <h3 class="text-center text-[#001D45] text-[40px] mb-8">Our Story</h3>
         <div data-aos="fade-right">
           <p class="text-[16px]">
@@ -132,7 +132,7 @@
           </p>
         </div>
         <div class="bg-[#5DDDFF] flex flex-col md:flex-row relative mt-8 rounded-[30px] flex p-[27px]">
-          <div class="w-full md:w-[60%]  ">
+          <div class="w-full md:w-[60%] sect">
             <h4>Our Strategy</h4>
             <p class="text-[16px]">
               The cornerstones of our strategy include execution strength,
@@ -141,7 +141,7 @@
               looking for investments that unlock high returns to build value.
             </p>
           </div>
-          <div class="static w-full md:w-[35%] md:absolute right-0 top-[-20px] bottom-0  h-[300px]  pt-[20px]">
+          <div class="static w-full md:w-[35%] md:absolute right-0 top-[-20px] bottom-0  h-[300px]  pt-[20px] sect">
             <img src="/images/chess.png" alt="" class="w-full shadow-lg h-full">
           </div>
         </div>
@@ -149,7 +149,7 @@
     </div>
 
     <footer>
-      <div class="footer-flex">
+      <div class="footer-flex sect">
         <div class="footer-flex-item" >
           <div class="top">
             <h4>Capital Management</h4>
@@ -198,6 +198,96 @@
     </footer>
 
     <script>
+let isScrollEnabled = true;
+
+document.addEventListener("keydown", handleKeyDown);
+
+function handleKeyDown(event) {
+  if (event.key === "ArrowDown") {
+    event.preventDefault(); // Prevent default scrolling behavior
+
+    if (!isScrollEnabled) {
+      return;
+    }
+
+    const currentSection = getCurrentSection();
+    const nextSection = getNextSection(currentSection);
+
+    if (nextSection) {
+      const scrollToPos = nextSection.offsetTop;
+      smoothScrollTo(scrollToPos, 3000); // Set the duration of the scrolling animation in milliseconds
+      disableScrollingForInterval(1000); // Set the time limit in milliseconds (here, 1000ms = 1 second)
+    }
+  }
+}
+
+function getCurrentSection() {
+  const currentScrollPos = window.pageYOffset;
+  const sections = Array.from(document.getElementsByClassName("sect"));
+
+  for (let i = sections.length - 1; i >= 0; i--) {
+    if (sections[i].offsetTop <= currentScrollPos) {
+      return sections[i];
+    }
+  }
+
+  return null;
+}
+
+function getNextSection(currentSection) {
+  const sections = Array.from(document.getElementsByClassName("sect"));
+  const currentIndex = sections.indexOf(currentSection);
+
+  if (currentIndex < sections.length - 1) {
+    return sections[currentIndex + 1];
+  }
+
+  return null;
+}
+
+function smoothScrollTo(targetPosition, duration) {
+  const startPosition = window.pageYOffset;
+  const distance = targetPosition - startPosition;
+  let startTime = null;
+
+  function animation(currentTime) {
+    if (startTime === null) {
+      startTime = currentTime;
+    }
+
+    const timeElapsed = currentTime - startTime;
+    const scrollProgress = easeInOutCubic(
+      timeElapsed,
+      startPosition,
+      distance,
+      duration
+    );
+
+    window.scrollTo(0, scrollProgress);
+
+    if (timeElapsed < duration) {
+      requestAnimationFrame(animation);
+    }
+  }
+
+  requestAnimationFrame(animation);
+}
+
+function easeInOutCubic(t, b, c, d) {
+  t /= d / 2;
+  if (t < 1) return (c / 2) * t * t * t + b;
+  t -= 2;
+  return (c / 2) * (t * t * t + 2) + b;
+}
+
+function disableScrollingForInterval(interval) {
+  isScrollEnabled = false;
+
+  setTimeout(() => {
+    isScrollEnabled = true;
+  }, interval);
+}
+
       AOS.init({ once: true });
       const dropdownBtn = document.querySelector("#dropdown-btn");
       const dropdown = document.querySelector(".dropdown");
@@ -225,22 +315,22 @@
         // downArrow.style.transform = 'rotateX(0deg)';
       });
 
-      const btn = document.querySelector(".btn");
+      // const btn = document.querySelector(".btn");
       const btnImg = document.querySelector(".btn-img");
 
-      btn.addEventListener("mouseover", () => {
-        console.log(btn);
-        btn.style.backgroundColor = "#3DB2ED";
-        btnImg.style.opacity = "1";
-        btn.style.width = "189px";
-      });
+      // btn.addEventListener("mouseover", () => {
+      //   console.log(btn);
+      //   btn.style.backgroundColor = "#3DB2ED";
+      //   btnImg.style.opacity = "1";
+      //   btn.style.width = "189px";
+      // });
 
-      btn.addEventListener("mouseleave", () => {
-        console.log(btn);
-        btn.style.backgroundColor = "#001D45";
-        btnImg.style.opacity = "0";
-        btn.style.width = "139px";
-      });
+      // btn.addEventListener("mouseleave", () => {
+      //   console.log(btn);
+      //   btn.style.backgroundColor = "#001D45";
+      //   btnImg.style.opacity = "0";
+      //   btn.style.width = "139px";
+      // });
 
       // investor dropdown
 

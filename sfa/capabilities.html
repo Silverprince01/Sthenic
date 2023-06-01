@@ -48,7 +48,7 @@
 
     <div class="capabilities-main con">
       <div class="cap-grp-grid">
-        <div class="cap-grp-item" data-aos="fade-right">
+        <div class="cap-grp-item sect" data-aos="fade-right">
           <div class="cap-grp-header">
             <h4>Media & Entertainment</h4>
             <img src="/images/Vector A.svg" alt="" />
@@ -62,7 +62,7 @@
           </div>
         </div>
 
-        <div class="cap-grp-item" data-aos="fade-down">
+        <div class="cap-grp-item sect" data-aos="fade-down">
           <div class="cap-grp-header">
             <h4>Fintech</h4>
             <img src="/images/Vector B.png" alt="" />
@@ -76,7 +76,7 @@
           </div>
         </div>
 
-        <div class="cap-grp-item" data-aos="fade-left">
+        <div class="cap-grp-item sect" data-aos="fade-left">
           <div class="cap-grp-header">
             <h4>Construction & Fabrication</h4>
             <img src="/images/Vector C.svg" alt="" />
@@ -90,7 +90,7 @@
           </div>
         </div>
 
-        <div class="cap-grp-item" data-aos="fade-right">
+        <div class="cap-grp-item sect" data-aos="fade-right">
           <div class="cap-grp-header">
             <h4>Publishing</h4>
             <img src="/images/Vector D.svg" alt="" />
@@ -104,7 +104,7 @@
           </div>
         </div>
 
-        <div class="cap-grp-item" data-aos="fade-down">
+        <div class="cap-grp-item sect" data-aos="fade-down">
           <div class="cap-grp-header">
             <h4>Agro Alliedt</h4>
             <img src="/images/Vector E.svg" alt="" />
@@ -118,7 +118,7 @@
           </div>
         </div>
 
-        <div class="cap-grp-item" data-aos="fade-left">
+        <div class="cap-grp-item sect" data-aos="fade-left">
           <div class="cap-grp-header">
             <h4>Food & Beverage</h4>
             <img src="/images/Vector F.svg" alt="" />
@@ -132,7 +132,7 @@
           </div>
         </div>
 
-        <div class="cap-grp-item" data-aos="fade-right">
+        <div class="cap-grp-item sect" data-aos="fade-right">
           <div class="cap-grp-header">
             <h4>Food & Beverage</h4>
             <img src="/images/Vector G.svg" alt="" />
@@ -146,7 +146,7 @@
           </div>
         </div>
 
-        <div class="cap-grp-item" data-aos="fade-up">
+        <div class="cap-grp-item sect" data-aos="fade-up">
           <div class="cap-grp-header">
             <h4>Technology</h4>
             <img src="/images/Vector H.svg" alt="" />
@@ -160,7 +160,7 @@
           </div>
         </div>
 
-        <div class="cap-grp-item" data-aos="fade-left">
+        <div class="cap-grp-item sect" data-aos="fade-left">
           <div class="cap-grp-header">
             <h4>Healthcare</h4>
             <img src="/images/Vector I.svg" alt="" />
@@ -177,7 +177,7 @@
     </div>
 
     <footer>
-      <div class="footer-flex">
+      <div class="footer-flex sect">
         <div class="footer-flex-item" >
           <div class="top">
             <h4>Capital Management</h4>
@@ -226,6 +226,96 @@
     </footer>
 
     <script>
+let isScrollEnabled = true;
+
+document.addEventListener("keydown", handleKeyDown);
+
+function handleKeyDown(event) {
+  if (event.key === "ArrowDown") {
+    event.preventDefault(); // Prevent default scrolling behavior
+
+    if (!isScrollEnabled) {
+      return;
+    }
+
+    const currentSection = getCurrentSection();
+    const nextSection = getNextSection(currentSection);
+
+    if (nextSection) {
+      const scrollToPos = nextSection.offsetTop;
+      smoothScrollTo(scrollToPos, 3000); // Set the duration of the scrolling animation in milliseconds
+      disableScrollingForInterval(1000); // Set the time limit in milliseconds (here, 1000ms = 1 second)
+    }
+  }
+}
+
+function getCurrentSection() {
+  const currentScrollPos = window.pageYOffset;
+  const sections = Array.from(document.getElementsByClassName("sect"));
+
+  for (let i = sections.length - 1; i >= 0; i--) {
+    if (sections[i].offsetTop <= currentScrollPos) {
+      return sections[i];
+    }
+  }
+
+  return null;
+}
+
+function getNextSection(currentSection) {
+  const sections = Array.from(document.getElementsByClassName("sect"));
+  const currentIndex = sections.indexOf(currentSection);
+
+  if (currentIndex < sections.length - 1) {
+    return sections[currentIndex + 1];
+  }
+
+  return null;
+}
+
+function smoothScrollTo(targetPosition, duration) {
+  const startPosition = window.pageYOffset;
+  const distance = targetPosition - startPosition;
+  let startTime = null;
+
+  function animation(currentTime) {
+    if (startTime === null) {
+      startTime = currentTime;
+    }
+
+    const timeElapsed = currentTime - startTime;
+    const scrollProgress = easeInOutCubic(
+      timeElapsed,
+      startPosition,
+      distance,
+      duration
+    );
+
+    window.scrollTo(0, scrollProgress);
+
+    if (timeElapsed < duration) {
+      requestAnimationFrame(animation);
+    }
+  }
+
+  requestAnimationFrame(animation);
+}
+
+function easeInOutCubic(t, b, c, d) {
+  t /= d / 2;
+  if (t < 1) return (c / 2) * t * t * t + b;
+  t -= 2;
+  return (c / 2) * (t * t * t + 2) + b;
+}
+
+function disableScrollingForInterval(interval) {
+  isScrollEnabled = false;
+
+  setTimeout(() => {
+    isScrollEnabled = true;
+  }, interval);
+}
+
       AOS.init({once:true});
       const capGrpItem = document.querySelectorAll(".cap-grp-item");
       const capHeader = document.querySelector(".cap-grp-header");

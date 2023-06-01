@@ -43,8 +43,8 @@
       </div>
     </header>
 
-    <div class="cover-container">
-      <div class="cover history-cover">
+    <div class="our-services-cover sect">
+      <div class="cover our-services-header">
         <div class="title">
           <h2>Our Service</h2>
         </div>
@@ -58,7 +58,7 @@
       </div>
     </div>
 
-    <div class="we con">
+    <div class="we con sect">
       <div class="lower-grp">
         <div class="text-content" data-aos="fade-right">
           <div class="text-subtitle">
@@ -176,35 +176,33 @@
     </div>
 
     <div
-        class="more-info flex flex-col sm:flex-row justify-between items-center"
-      >
-        <div class="more-info-text">
-          <h2>For more information on investment opportunities</h2>
-          <p>
-            Sthenic finance has amassed a large and ever-expanding base of Fund
-            investors from all over the world. The team at Sthenic Investor
-            would love to hear from you.
-          </p>
-          <button class="enquiry btn">
-            <span>Enquiry</span
-            ><span
-              ><img class="btn-img" src="images/Vector.svg" alt=""
-            /></span>
-          </button>
-        </div>
-        <div class="w-full sm:w-[40%] relative left-0">
-          <div
-            class="bg-[#001D45] w-full h-full rounded-[60px] absolute left-[-20px] bottom-[-20px] shadow-lg"
-          ></div>
-          <div class="pt-[30px] w-full h-full relative">
-            <img src="images/Rectangle 3.png" alt="" class="w-full h-full" />
-          </div>
+      class="more-info flex flex-col sm:flex-row justify-between items-center sect"
+    >
+      <div class="more-info-text">
+        <h2>For more information on investment opportunities</h2>
+        <p>
+          Sthenic finance has amassed a large and ever-expanding base of Fund
+          investors from all over the world. The team at Sthenic Investor would
+          love to hear from you.
+        </p>
+        <button class="enquiry btn">
+          <span>Enquiry</span
+          ><span><img class="btn-img" src="images/Vector.svg" alt="" /></span>
+        </button>
+      </div>
+      <div class="w-full sm:w-[40%] relative left-0">
+        <div
+          class="bg-[#001D45] w-full h-full rounded-[60px] absolute left-[-20px] bottom-[-20px] shadow-lg"
+        ></div>
+        <div class="pt-[30px] w-full h-full relative">
+          <img src="images/Rectangle 3.png" alt="" class="w-full h-full" />
         </div>
       </div>
-    
+    </div>
+
     <footer>
-      <div class="footer-flex">
-        <div class="footer-flex-item" >
+      <div class="footer-flex sect">
+        <div class="footer-flex-item">
           <div class="top">
             <h4>Capital Management</h4>
             <p>investmentinfo@sthenicfinance.com</p>
@@ -216,7 +214,7 @@
           </div>
         </div>
 
-        <div class="footer-flex-item" >
+        <div class="footer-flex-item">
           <div class="top">
             <h4>Address</h4>
             <p>112a association road, Dolphin Estate, Ikoyi. Lagos</p>
@@ -228,7 +226,7 @@
           </div>
         </div>
 
-        <div class="footer-flex-item" >
+        <div class="footer-flex-item">
           <ul>
             <li>
               <a href="#"><img src="images/facebook.png" alt="" /></a>
@@ -252,7 +250,97 @@
     </footer>
 
     <script>
-      AOS.init({once:true});
+      let isScrollEnabled = true;
+
+      document.addEventListener("keydown", handleKeyDown);
+
+      function handleKeyDown(event) {
+        if (event.key === "ArrowDown") {
+          event.preventDefault(); // Prevent default scrolling behavior
+
+          if (!isScrollEnabled) {
+            return;
+          }
+
+          const currentSection = getCurrentSection();
+          const nextSection = getNextSection(currentSection);
+
+          if (nextSection) {
+            const scrollToPos = nextSection.offsetTop;
+            smoothScrollTo(scrollToPos, 3000); // Set the duration of the scrolling animation in milliseconds
+            disableScrollingForInterval(1000); // Set the time limit in milliseconds (here, 1000ms = 1 second)
+          }
+        }
+      }
+
+      function getCurrentSection() {
+        const currentScrollPos = window.pageYOffset;
+        const sections = Array.from(document.getElementsByClassName("sect"));
+
+        for (let i = sections.length - 1; i >= 0; i--) {
+          if (sections[i].offsetTop <= currentScrollPos) {
+            return sections[i];
+          }
+        }
+
+        return null;
+      }
+
+      function getNextSection(currentSection) {
+        const sections = Array.from(document.getElementsByClassName("sect"));
+        const currentIndex = sections.indexOf(currentSection);
+
+        if (currentIndex < sections.length - 1) {
+          return sections[currentIndex + 1];
+        }
+
+        return null;
+      }
+
+      function smoothScrollTo(targetPosition, duration) {
+        const startPosition = window.pageYOffset;
+        const distance = targetPosition - startPosition;
+        let startTime = null;
+
+        function animation(currentTime) {
+          if (startTime === null) {
+            startTime = currentTime;
+          }
+
+          const timeElapsed = currentTime - startTime;
+          const scrollProgress = easeInOutCubic(
+            timeElapsed,
+            startPosition,
+            distance,
+            duration
+          );
+
+          window.scrollTo(0, scrollProgress);
+
+          if (timeElapsed < duration) {
+            requestAnimationFrame(animation);
+          }
+        }
+
+        requestAnimationFrame(animation);
+      }
+
+      function easeInOutCubic(t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return (c / 2) * t * t * t + b;
+        t -= 2;
+        return (c / 2) * (t * t * t + 2) + b;
+      }
+
+      function disableScrollingForInterval(interval) {
+        isScrollEnabled = false;
+
+        setTimeout(() => {
+          isScrollEnabled = true;
+        }, interval);
+      }
+
+      AOS.init({ once: true });
       const btn = document.querySelector(".btn");
       const btnImg = document.querySelector(".btn-img");
 

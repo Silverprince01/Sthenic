@@ -97,17 +97,17 @@
     </header>
 
     <div class="about-us-header">
-      <div class="about-us-cover">
+      <div class="opportunities">
         <h3>Sthenic Capital Management Limited</h3>
       </div>
     </div>
 
     <div class="products-main con">
 
-      <div class="about-us-title" data-aos="fade-down">
+      <div class="about-us-title sect" data-aos="fade-down">
         <h3>African Opportunities</h3>
       </div>
-      <div class="product-flex">
+      <div class="product-flex sect">
         <div class="product-text" data-aos="fade-right">
           <h3>Unleashing the Potential of a Vibrant Market</h3>
           <p>
@@ -140,7 +140,7 @@
         </div>
       </div>
 
-      <div class="product-flex">
+      <div class="product-flex sect">
         <div class="product-img" data-aos="fade-right">
           <img src="/images/Rectangle 61.png" alt="" />
         </div>
@@ -175,7 +175,7 @@
     </div>
 
     <footer>
-      <div class="footer-flex">
+      <div class="footer-flex sect">
         <div class="footer-flex-item" >
           <div class="top">
             <h4>Capital Management</h4>
@@ -223,6 +223,96 @@
       </div>
     </footer>
     <script>
+let isScrollEnabled = true;
+
+document.addEventListener("keydown", handleKeyDown);
+
+function handleKeyDown(event) {
+  if (event.key === "ArrowDown") {
+    event.preventDefault(); // Prevent default scrolling behavior
+
+    if (!isScrollEnabled) {
+      return;
+    }
+
+    const currentSection = getCurrentSection();
+    const nextSection = getNextSection(currentSection);
+
+    if (nextSection) {
+      const scrollToPos = nextSection.offsetTop;
+      smoothScrollTo(scrollToPos, 3000); // Set the duration of the scrolling animation in milliseconds
+      disableScrollingForInterval(1000); // Set the time limit in milliseconds (here, 1000ms = 1 second)
+    }
+  }
+}
+
+function getCurrentSection() {
+  const currentScrollPos = window.pageYOffset;
+  const sections = Array.from(document.getElementsByClassName("sect"));
+
+  for (let i = sections.length - 1; i >= 0; i--) {
+    if (sections[i].offsetTop <= currentScrollPos) {
+      return sections[i];
+    }
+  }
+
+  return null;
+}
+
+function getNextSection(currentSection) {
+  const sections = Array.from(document.getElementsByClassName("sect"));
+  const currentIndex = sections.indexOf(currentSection);
+
+  if (currentIndex < sections.length - 1) {
+    return sections[currentIndex + 1];
+  }
+
+  return null;
+}
+
+function smoothScrollTo(targetPosition, duration) {
+  const startPosition = window.pageYOffset;
+  const distance = targetPosition - startPosition;
+  let startTime = null;
+
+  function animation(currentTime) {
+    if (startTime === null) {
+      startTime = currentTime;
+    }
+
+    const timeElapsed = currentTime - startTime;
+    const scrollProgress = easeInOutCubic(
+      timeElapsed,
+      startPosition,
+      distance,
+      duration
+    );
+
+    window.scrollTo(0, scrollProgress);
+
+    if (timeElapsed < duration) {
+      requestAnimationFrame(animation);
+    }
+  }
+
+  requestAnimationFrame(animation);
+}
+
+function easeInOutCubic(t, b, c, d) {
+  t /= d / 2;
+  if (t < 1) return (c / 2) * t * t * t + b;
+  t -= 2;
+  return (c / 2) * (t * t * t + 2) + b;
+}
+
+function disableScrollingForInterval(interval) {
+  isScrollEnabled = false;
+
+  setTimeout(() => {
+    isScrollEnabled = true;
+  }, interval);
+}
+
       AOS.init({once:true});
       const dropdownBtn = document.querySelector("#dropdown-btn");
       const dropdown = document.querySelector(".dropdown");
