@@ -188,8 +188,8 @@ nav ul li a:hover{
 .cover-container {
     background: url(/images/bg-3.jpeg);
     background-repeat: no-repeat;
-    background-size: cover;
-    
+    background-size: cover;    
+    width: 100%;
 }
 
 .cover {
@@ -230,6 +230,36 @@ nav ul li a:hover{
     font-size: 24px;
     line-height: 32px;
 }
+.history {
+    background: url(images/history.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;    
+    background-position: center;
+    width: 100%;
+}
+
+.history-cover {
+    /* height: 100vh; */
+    width: 100%;
+    padding: 0 6em;
+    background: #001D45;
+    color: #fff;
+    background: rgba(0 0 0 / 0.3);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-position: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.history-cover .title {
+    font-size: 84px;
+    line-height: 56px;
+    padding-top: 2em;
+}
+
 
 .categories {
     display: flex;
@@ -928,6 +958,8 @@ footer {
 
 .contact-cover {
     background-image: url(images/contact\ us.jpg);
+    background-size: cover;
+    background-position: center;
     padding-top: 0 !important;
     height: 100vh;
 }
@@ -1144,22 +1176,31 @@ footer {
     margin-top: 1.5em;
 }
 
-/* .portfolio {
+.portfolio-cover {
     height: 100vh;
-    background: url(images/overview.jpg);
+    background: url(images/portfolio.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     display: flex;
-    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     padding-inline: 12em;
 }
 
-.portfolio h3 {
+.portfolio-cover h3 {
     color: #fff;
     font-size: 98px;
     line-height: 90px;
     width: 80%;
-} */
+}
+.portfolio-cover p {
+    color: #fff;
+    font-size: 18px;
+    line-height: 24px;
+    width: 60%;
+    margin-top: 2em;
+}
 
 /* About Us page */
 
@@ -1168,6 +1209,7 @@ footer {
     background: url(images/overview.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
     padding-inline: 12em;
@@ -1360,6 +1402,7 @@ footer {
     background: url(images/our\ funds.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -1464,6 +1507,7 @@ footer {
     background: url(images/our\ product.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -1557,9 +1601,10 @@ footer {
 
 .investor-cover {
     height: 100vh;
-    background: url(/images/Rectangle\ 23.png);
+    background: url(images/investor.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -1696,9 +1741,10 @@ legend {
     background: url(images/our\ approach.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
-    padding-inline: 12em;
+    padding-inline: 5em;
 }
 
 .approach h3 {
@@ -1738,29 +1784,38 @@ legend {
 
 /* our services page */
 
-.our-services-header {
-    /* background: url(images/our\ services.jpg); */
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
 .our-services-cover {
-    height: 100vh;
+    /* position: relative; */
     background: url(images/our\ services.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    /* background-position: right; */
+    width: fit-content;
+}
+.our-services-header {
+    height: 100vh;
+    /* background: url(images/our\ services.jpg); */
+    width: 100%;
+    padding: 0 6em;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-position: left;
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
     /* padding-inline: 12em; */
 }
 
-.our-services-cover h3 {
-    color: #fff;
-    font-size: 92px;
-    line-height: 90px;
-    width: 60%;
+.our-services-header .title {
+    font-size: 84px;
+    line-height: 56px;
+    padding-top: 2em;
 }
+
 
 .services-main {
    padding-inline: 6em;
@@ -1807,6 +1862,7 @@ legend {
     background: url(images/our\ capabilities.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 .capabilities-cover {
@@ -1884,6 +1940,7 @@ legend {
     background: url(images/dealbooks.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 .dealbook-cover {
@@ -1975,8 +2032,42 @@ legend {
         justify-content: center;
         padding-top: 68px;
     }
-
+    .history-cover {
+        /* height: 100vh; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 68px;
+    }
+    .opportunities {
+        /* height: 100vh; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 68px;
+    }
+    .approach h3{
+        font-size: 50px;
+        line-height: 60px;
+    }
     .cover .title {
+        font-size: 3.5rem;
+    }
+    .history-cover .title {
+        font-size: 3.5rem;
+    }
+    .opportunities h3 {
+        font-size: 3.5rem;
+    }
+    .our-services-header {
+        /* height: 100vh; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 68px;
+    }
+
+    .our-services-header .title {
         font-size: 3.5rem;
     }
 
@@ -2215,8 +2306,45 @@ legend {
         padding: 10px 30px  ;
         
     }
+    .history-cover {
+        /* height: 100vh; */
+        display: flex;
+        /* padding-inline: 3em; */
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px 30px  ;
+        
+    }
+    .oppoertunities {
+        /* height: 100vh; */
+        display: flex;
+        /* padding-inline: 3em; */
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px 30px  ;
+        
+    }
 
     .cover .title {
+        font-size: 2.3rem;
+    }
+    .history-cover .title {
+        font-size: 2.3rem;
+    }
+    .opportunities h3 {
+        font-size: 2.3rem;
+    }
+    .our-services-header {
+        /* height: 100vh; */
+        display: flex;
+        /* padding-inline: 3em; */
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px 30px  ;
+        
+    }
+
+    .our-services-header .title {
         font-size: 2.3rem;
     }
 
@@ -2653,6 +2781,19 @@ width: 100%;
     .investor-cover p {
         width: 100%;
     }
+    .portfolio-cover {
+        padding-inline: 6em;
+    }
+
+    .portfolio-cover h3 {
+        width: 100%;
+        font-size: 56px;
+        line-height: 68px;
+    }
+
+    .portfolio-cover p {
+        width: 100%;
+    }
 
     .investor-main {
         padding-inline: 5em;
@@ -2902,12 +3043,35 @@ width: 100%;
     .cover {
         padding: 0 2em;
     }
+    .history-cover {
+        padding: 0 2em;
+    }
+    .opportunities {
+        padding: 0 2em;
+    }
 
     .cover .title {
         padding-top: 3em;
     }
+    .opportunities h3 {
+        padding-top: 3em;
+    }
 
     .cover .title h2 {
+        font-size: 50px !important;
+    }
+    .history-cover .title h2 {
+        font-size: 50px !important;
+    }
+    .our-services-header {
+        padding: 0 2em;
+    }
+
+    .our-services-header .title {
+        padding-top: 3em;
+    }
+
+    .our-services-header .title h2 {
         font-size: 50px !important;
     }
 
@@ -3360,6 +3524,19 @@ width: 100%;
     .investor-cover p {
         width: 100%;
     }
+    .portfolio-cover {
+        padding-inline: 2em;
+        padding-top: 62px;
+    }
+
+    .portfolio-cover h3 {
+        width: 100%;
+        font-size: 32px !important;
+    }
+
+    .portfolio-cover p {
+        width: 100%;
+    }
 
     .investor-main {
         padding-inline: 2em;
@@ -3545,6 +3722,18 @@ width: 100%;
         font-size: 1.9rem;
         padding-top: 3em;
     }
+    .history-cover .title {
+        font-size: 1.9rem;
+        padding-top: 3em;
+    }
+    .opportunities h3 {
+        font-size: 1.9rem;
+        padding-top: 3em;
+    }
+    .our-services-header .title {
+        font-size: 1.9rem;
+        padding-top: 3em;
+    }
 
     .subtitle h3 {
         margin-bottom: .5em;
@@ -3584,8 +3773,27 @@ width: 100%;
         font-size: 1.7rem;
         padding-top: 3em;
     }
+    .history-cover .title {
+        font-size: 1.7rem;
+        padding-top: 3em;
+    }
+    .opportunities h3 {
+        font-size: 1.7rem;
+        padding-top: 3em;
+    }
 
     .cover .title h2 {
+        font-size: 40px !important;
+    }
+    .history-cover .title h2 {
+        font-size: 40px !important;
+    }
+    .our-services-header .title {
+        font-size: 1.7rem;
+        padding-top: 3em;
+    }
+
+    .our-services-header .title h2 {
         font-size: 40px !important;
     }
 
