@@ -305,6 +305,10 @@ nav ul li a:hover{
 .we {
     padding: 3em 10em;
 }
+.we h3{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
 
 .upper-grp {
      display: flex; 
@@ -323,7 +327,7 @@ nav ul li a:hover{
 }
 
 .upper-grp .text p{
-    margin-top: 2em;
+    /* margin-top: 2em; */
     line-height: 24px;
     font-size: 18px;
 }
